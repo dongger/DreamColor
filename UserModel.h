@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NetWorkTool.h"
+#import "User.h"
+#import <YYModel.h>
 
 @interface UserModel : NSObject
+
++ (void)login:(NSString*)urlString
+   parameters:(NSDictionary*)parameters
+      success:(void(^)(User* user))successBlock
+      failure:(void(^)(NSString * errorMessage))failueBlock;
 
 @end
