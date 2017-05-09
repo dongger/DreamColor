@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import <YYModel.h>
 #import "LoginUser.h"
+#import "MBProgressHUD.h"
 
 //默认请求超时时间
 static const NSTimeInterval timeoutInterval = 15.0;
@@ -73,9 +74,15 @@ static const NSTimeInterval timeoutInterval = 15.0;
     netManager.requestSerializer.timeoutInterval = timeoutInterval;
     NSString *url = [NSString stringWithFormat:@"%@%@",baseUrl,urlString];
     NSDictionary *dic = @{@"params":  [[NetWorkTool addPublicParametersTo:parameters] yy_modelToJSONString]};
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] keyWindow] animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    
     [netManager POST:url parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
-        
+        hud.progressObject = downloadProgress;
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [hud hideAnimated:YES];
         if (successBlock) {
             NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
             if ([dic[@"Code"]  isEqual: @"0"]) {
@@ -85,6 +92,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
             }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [hud hideAnimated:YES];
         if (failueBlock) {
             failueBlock(error.localizedDescription);
         }
@@ -162,7 +170,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
         }
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
-        
+
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         

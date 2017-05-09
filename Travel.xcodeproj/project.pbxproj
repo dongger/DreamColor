@@ -11,6 +11,7 @@
 		0DE81E131EC2061E0001782B /* LoginTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E121EC2061E0001782B /* LoginTypeController.m */; };
 		0DE81E161EC20A350001782B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E151EC20A350001782B /* LoginViewController.m */; };
 		0DE81E191EC213980001782B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E181EC213980001782B /* BaseViewController.m */; };
+		0DE81E1C1EC218D70001782B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E1B1EC218D70001782B /* MBProgressHUD.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */; };
 		B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A11EC19DFD00BD1A5F /* FirstViewController.m */; };
@@ -36,6 +37,8 @@
 		0DE81E151EC20A350001782B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0DE81E171EC213980001782B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = SOURCE_ROOT; };
 		0DE81E181EC213980001782B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = SOURCE_ROOT; };
+		0DE81E1A1EC218D70001782B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
+		0DE81E1B1EC218D70001782B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 		B555B5BE1EC19FCF00BD1A5F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81E1A1EC218D70001782B /* MBProgressHUD.h */,
+				0DE81E1B1EC218D70001782B /* MBProgressHUD.m */,
 				B555B5DC1EC1E39C00BD1A5F /* LoginUser */,
 				B555B5DB1EC1E39200BD1A5F /* Cache */,
 				B555B5DA1EC1E37B00BD1A5F /* NetWork */,
@@ -381,6 +386,7 @@
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
+				0DE81E1C1EC218D70001782B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
