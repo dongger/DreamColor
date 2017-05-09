@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RTRootNavigationController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17D7E2C7A00E4BC9EF5707DEF0385031</key>
+		<key>88A59AD23B4F85F223BD26CDE47CADE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91C83E98B4162C9920EAE0B62E94A48B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C876949729188DAAF54ECB8444B7A8A2</key>
+		<key>EEDD1FA17F6D0ADAF4871996AC91EF63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E05461394FEC57CC4CB4D068A3304114</key>
+		<key>FB3B02FC8E0898261D93FC6B44447AB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

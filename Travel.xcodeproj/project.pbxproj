@@ -77,6 +77,8 @@
 		B555B5821EC0980700BD1A5F /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5BE1EC19FCF00BD1A5F /* Tool */,
+				B555B5BD1EC19FC700BD1A5F /* Model */,
 				B555B59D1EC19DFD00BD1A5F /* Controller */,
 				B555B5A51EC19DFD00BD1A5F /* Resource */,
 				B555B5A81EC19DFD00BD1A5F /* View */,
@@ -119,6 +121,20 @@
 			name = View;
 			path = Travel/View;
 			sourceTree = SOURCE_ROOT;
+		};
+		B555B5BD1EC19FC700BD1A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B555B5BE1EC19FCF00BD1A5F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tool;
+			sourceTree = "<group>";
 		};
 		E8ABBF00DEC2B87A8A697F15 /* Pods */ = {
 			isa = PBXGroup;

@@ -7,5 +7,6 @@ target 'Travel' do
   pod 'MJRefresh', '~> 3.1.12’
   pod 'IQKeyboardManager', '~> 4.0.9'
   pod 'YYModel', '~> 1.0.4'
+  pod 'RTRootNavigationController', '~> 0.5.24'
 end
 
