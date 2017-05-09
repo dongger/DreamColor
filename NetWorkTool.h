@@ -21,7 +21,7 @@
 + (void)GET:(NSString*_Nonnull)urlString
  parameters:(NSDictionary*_Nullable)parameters
     success:(void(^_Nullable)(NSDictionary* _Nullable dictionary))successBlock
-    failure:(void(^_Nullable)(NSError * _Nonnull error))failueBlock;
+    failure:(void(^_Nullable)(NSString * _Nullable errorMessage))failueBlock;
 
 /**
  *  post请求
@@ -35,7 +35,7 @@
 + (void)POST:(NSString*_Nonnull)urlString
   parameters:(NSDictionary*_Nullable)parameters
      success:(void(^_Nullable)(NSDictionary* _Nullable dictionary))successBlock
-     failure:(void(^_Nullable)(NSError * _Nonnull error))failueBlock;
+     failure:(void(^_Nullable)(NSString * _Nullable errorMessage))failueBlock;
 
 /**
  *  图片上传

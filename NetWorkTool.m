@@ -25,7 +25,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
 + (void)GET:(NSString*)urlString
  parameters:(NSDictionary*)parameters
     success:(void(^)(NSDictionary* dictionary))successBlock
-    failure:(void(^)(NSError * _Nonnull error))failueBlock {
+    failure:(void(^)(NSString * errorMessage))failueBlock {
     AFJSONResponseSerializer *serializer = [AFJSONResponseSerializer serializer];
     serializer.removesKeysWithNullValues = YES;
     AFHTTPSessionManager *netManager = [AFHTTPSessionManager manager];
@@ -36,13 +36,17 @@ static const NSTimeInterval timeoutInterval = 15.0;
     
     [netManager GET:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
         if (successBlock) {
-            successBlock(dic);
+            NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+            if ([dic[@"Code"]  isEqual: @"0"]) {
+                successBlock(dic[@"Data"]);
+            } else {
+                failueBlock(dic[@"Message"]);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failueBlock) {
-            failueBlock(error);
+            failueBlock(error.localizedDescription);
         }
     }];
 }
@@ -59,7 +63,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
 + (void)POST:(NSString*)urlString
   parameters:(NSDictionary*)parameters
      success:(void(^)(NSDictionary* dictionary))successBlock
-     failure:(void(^)(NSError * _Nonnull error))failueBlock {
+     failure:(void(^)(NSString * errorMessage))failueBlock {
     AFHTTPSessionManager *netManager   = [AFHTTPSessionManager manager];
     netManager.requestSerializer      = [AFHTTPRequestSerializer serializer];
     netManager.responseSerializer     = [AFHTTPResponseSerializer serializer];
@@ -67,13 +71,17 @@ static const NSTimeInterval timeoutInterval = 15.0;
     [netManager POST:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
         if (successBlock) {
-            successBlock(dic);
+            NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+            if ([dic[@"Code"]  isEqual: @"0"]) {
+                successBlock(dic[@"Data"]);
+            } else {
+                failueBlock(dic[@"Message"]);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failueBlock) {
-            failueBlock(error);
+            failueBlock(error.localizedDescription);
         }
     }];
 }
