@@ -17,6 +17,8 @@
 		B555B5B41EC19DFD00BD1A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B555B5AB1EC19DFD00BD1A5F /* Main.storyboard */; };
 		B555B5BC1EC19EAD00BD1A5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B555B5BB1EC19EAD00BD1A5F /* Info.plist */; };
 		B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */; };
+		B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5C71EC1AC6A00BD1A5F /* User.m */; };
+		B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5CA1EC1ADB900BD1A5F /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		B555B5BB1EC19EAD00BD1A5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B555B5BF1EC1A36300BD1A5F /* NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = SOURCE_ROOT; };
 		B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTool.m; sourceTree = SOURCE_ROOT; };
+		B555B5C61EC1AC6A00BD1A5F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Travel/Entity/User.h; sourceTree = SOURCE_ROOT; };
+		B555B5C71EC1AC6A00BD1A5F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Travel/Entity/User.m; sourceTree = SOURCE_ROOT; };
+		B555B5C91EC1ADB900BD1A5F /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = SOURCE_ROOT; };
+		B555B5CA1EC1ADB900BD1A5F /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		B555B5BD1EC19FC700BD1A5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5C91EC1ADB900BD1A5F /* UserModel.h */,
+				B555B5CA1EC1ADB900BD1A5F /* UserModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +153,8 @@
 		B555B5C21EC1AA8400BD1A5F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5C61EC1AC6A00BD1A5F /* User.h */,
+				B555B5C71EC1AC6A00BD1A5F /* User.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -284,6 +294,8 @@
 			files = (
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
+				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
+				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,

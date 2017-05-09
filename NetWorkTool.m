@@ -33,7 +33,8 @@ static const NSTimeInterval timeoutInterval = 15.0;
     netManager.responseSerializer    = [AFHTTPResponseSerializer serializer];
     netManager.requestSerializer.timeoutInterval = timeoutInterval;
     
-    [netManager GET:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    
+    [netManager GET:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
         if (successBlock) {
@@ -63,7 +64,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
     netManager.requestSerializer      = [AFHTTPRequestSerializer serializer];
     netManager.responseSerializer     = [AFHTTPResponseSerializer serializer];
     netManager.requestSerializer.timeoutInterval = timeoutInterval;
-    [netManager POST:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    [netManager POST:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
@@ -157,6 +158,15 @@ static const NSTimeInterval timeoutInterval = 15.0;
         
     }];
 }
+
+
++ (NSDictionary *)addPublicParametersTo: (NSDictionary *)dic {
+    NSMutableDictionary *tempDic = [[NSMutableDictionary alloc]initWithDictionary:dic];
+    tempDic[@"123"] = @"qwe";
+    
+    return tempDic;
+}
+
 
 //获取当前时区的当前时间
 + (NSString*)nowTime:(NSString*)dateType
