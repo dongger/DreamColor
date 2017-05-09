@@ -28,7 +28,7 @@ static User *loginUser = nil;
 }
 
 +(BOOL)isLogin {
-    if (loginUser.Session.length < 1) {
+    if (LoginUser.share.Session.length < 1) {
         return NO;
     } else {
         return YES;

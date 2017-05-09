@@ -11,7 +11,9 @@
 #import "CyAlertView.h"
 #import "UserModel.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property BOOL isEnterprise;
 @end
 
@@ -40,4 +42,13 @@
     }];
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([textField isEqual:_phoneTextField]) {
+        NSString *tempString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if (tempString.length > 11) {
+            return NO;
+        }
+    }
+    return YES;
+}
 @end
