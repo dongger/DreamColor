@@ -8,6 +8,8 @@
 
 #import "NetWorkTool.h"
 #import <AFNetworking.h>
+#import <YYModel.h>
+#import "LoginUser.h"
 
 //默认请求超时时间
 static const NSTimeInterval timeoutInterval = 15.0;
@@ -33,8 +35,9 @@ static const NSTimeInterval timeoutInterval = 15.0;
     netManager.responseSerializer    = [AFHTTPResponseSerializer serializer];
     netManager.requestSerializer.timeoutInterval = timeoutInterval;
     
+    NSString *url = [NSString stringWithFormat:@"%@%@",baseUrl,urlString];
     
-    [netManager GET:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
+    [netManager GET:url parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (successBlock) {
             NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
@@ -68,7 +71,9 @@ static const NSTimeInterval timeoutInterval = 15.0;
     netManager.requestSerializer      = [AFHTTPRequestSerializer serializer];
     netManager.responseSerializer     = [AFHTTPResponseSerializer serializer];
     netManager.requestSerializer.timeoutInterval = timeoutInterval;
-    [netManager POST:urlString parameters:[NetWorkTool addPublicParametersTo:parameters] progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSString *url = [NSString stringWithFormat:@"%@%@",baseUrl,urlString];
+    NSDictionary *dic = @{@"params":  [[NetWorkTool addPublicParametersTo:parameters] yy_modelToJSONString]};
+    [netManager POST:url parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (successBlock) {
@@ -169,9 +174,19 @@ static const NSTimeInterval timeoutInterval = 15.0;
 
 
 + (NSDictionary *)addPublicParametersTo: (NSDictionary *)dic {
+    NSString *session = LoginUser.share.Session;
+    if (session.length < 1) {
+        session = @"";
+    }
     NSMutableDictionary *tempDic = [[NSMutableDictionary alloc]initWithDictionary:dic];
-    tempDic[@"123"] = @"qwe";
-    
+    NSDictionary *publicParametersDic = @{@"ApiVersion":[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"],
+                                          @"OS":[[UIDevice currentDevice] systemName],
+                                          @"OsVersion": [[UIDevice currentDevice] systemVersion],
+                                          @"Model":@"44",
+                                          @"DeviceID":[[[UIDevice currentDevice] identifierForVendor] UUIDString],
+                                          @"Session": session,
+                                          @"ChannelID":@"0"};
+    [tempDic setValuesForKeysWithDictionary:publicParametersDic];
     return tempDic;
 }
 

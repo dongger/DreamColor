@@ -17,4 +17,7 @@
 //设置登录用户
 +(void)loadInfo: (User *)user;
 
+//是否登录
++(BOOL)isLogin;
+
 @end

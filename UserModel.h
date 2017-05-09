@@ -13,8 +13,7 @@
 
 @interface UserModel : NSObject
 
-+ (void)login:(NSString*)urlString
-   parameters:(NSDictionary*)parameters
++ (void)login:(NSDictionary*)parameters
       success:(void(^)(User* user))successBlock
       failure:(void(^)(NSString * errorMessage))failueBlock;
 

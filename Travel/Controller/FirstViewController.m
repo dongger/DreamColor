@@ -10,7 +10,7 @@
 #import "UserModel.h"
 #import "LoginUser.h"
 #import "NSObject+Cache.h"
-
+#import "CyAlertView.h"
 
 @interface FirstViewController ()
 
@@ -21,14 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [UserModel login:@"123123" parameters:@{@"123": @"123"} success:^(User *user) {
-        
-    } failure:^(NSString *errorMessage) {
-        
-    }];
+
+    NSDictionary *dic = @{@"Account":@"18628169720",
+                          @"Password":@"123456",
+                          @"Type":@1};
     
-    [@{@"uid":@"998", @"name":@"zhangyunpeng"} saveWithKey:@"kLoginUser"];
-    [LoginUser loadInfo:[User getFromKey:@"kLoginUser"]];
+    [UserModel login:dic success:^(User *user) {
+        [LoginUser loadInfo:user];
+        [CyAlertView message:LoginUser.share.Session];
+    } failure:^(NSString *errorMessage) {
+        [CyAlertView message:errorMessage];
+    }];
     
 }
 

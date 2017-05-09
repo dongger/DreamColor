@@ -13,11 +13,10 @@
 /**
  *  登录
  */
-+ (void)login:(NSString*)urlString
- parameters:(NSDictionary*)parameters
++ (void)login:(NSDictionary*)parameters
     success:(void(^)(User* user))successBlock
     failure:(void(^)(NSString * errorMessage))failueBlock {
-    [NetWorkTool POST:mlllogin parameters:nil success:^(NSDictionary * _Nullable dictionary) {
+    [NetWorkTool POST:__login parameters:parameters success:^(NSDictionary * _Nullable dictionary) {
         User *user = [User yy_modelWithJSON:dictionary];
         successBlock(user);
     } failure:^(NSString * _Nullable errorMessage) {

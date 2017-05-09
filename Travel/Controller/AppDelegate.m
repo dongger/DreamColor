@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginUser.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if ([LoginUser isLogin]) {
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    } else {
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateInitialViewController];
+    }
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

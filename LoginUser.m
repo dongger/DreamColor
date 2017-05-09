@@ -23,7 +23,16 @@ static User *loginUser = nil;
 }
 
 +(void)loadInfo: (User *)user {
+    [user saveWithKey:@"kLoginUser"];
     loginUser = user;
+}
+
++(BOOL)isLogin {
+    if (loginUser.Session.length < 1) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 @end

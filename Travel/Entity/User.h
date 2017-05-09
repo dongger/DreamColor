@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-@property UInt64 uid;
-@property NSString *name;
-@property NSDate *created;
+
+@property UInt64 UserID;
+@property NSString *Type;
+@property NSString *Session;
+
 @end

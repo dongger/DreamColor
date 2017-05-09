@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DE81E0F1EC1FEC30001782B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE81E0E1EC1FEC30001782B /* Login.storyboard */; };
+		0DE81E131EC2061E0001782B /* LoginTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E121EC2061E0001782B /* LoginTypeController.m */; };
+		0DE81E161EC20A350001782B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E151EC20A350001782B /* LoginViewController.m */; };
+		0DE81E191EC213980001782B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E181EC213980001782B /* BaseViewController.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */; };
 		B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A11EC19DFD00BD1A5F /* FirstViewController.m */; };
@@ -25,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE81E0E1EC1FEC30001782B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0DE81E111EC2061E0001782B /* LoginTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTypeController.h; sourceTree = "<group>"; };
+		0DE81E121EC2061E0001782B /* LoginTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTypeController.m; sourceTree = "<group>"; };
+		0DE81E141EC20A350001782B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0DE81E151EC20A350001782B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0DE81E171EC213980001782B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = SOURCE_ROOT; };
+		0DE81E181EC213980001782B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = SOURCE_ROOT; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DE81E101EC205F80001782B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0DE81E111EC2061E0001782B /* LoginTypeController.h */,
+				0DE81E121EC2061E0001782B /* LoginTypeController.m */,
+				0DE81E141EC20A350001782B /* LoginViewController.h */,
+				0DE81E151EC20A350001782B /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +132,7 @@
 		B555B59D1EC19DFD00BD1A5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81E101EC205F80001782B /* Login */,
 				B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */,
 				B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */,
 				B555B5A01EC19DFD00BD1A5F /* FirstViewController.h */,
@@ -137,6 +160,7 @@
 			children = (
 				B555B5A91EC19DFD00BD1A5F /* LaunchScreen.storyboard */,
 				B555B5AB1EC19DFD00BD1A5F /* Main.storyboard */,
+				0DE81E0E1EC1FEC30001782B /* Login.storyboard */,
 			);
 			name = View;
 			path = Travel/View;
@@ -158,6 +182,8 @@
 				B555B5DB1EC1E39200BD1A5F /* Cache */,
 				B555B5DA1EC1E37B00BD1A5F /* NetWork */,
 				B555B5D91EC1E36C00BD1A5F /* Alert */,
+				0DE81E171EC213980001782B /* BaseViewController.h */,
+				0DE81E181EC213980001782B /* BaseViewController.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -183,9 +209,9 @@
 		B555B5DA1EC1E37B00BD1A5F /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5CC1EC1B81900BD1A5F /* URLConfig.h */,
 				B555B5BF1EC1A36300BD1A5F /* NetWorkTool.h */,
 				B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */,
-				B555B5CC1EC1B81900BD1A5F /* URLConfig.h */,
 			);
 			name = NetWork;
 			sourceTree = "<group>";
@@ -282,6 +308,7 @@
 				B555B5BC1EC19EAD00BD1A5F /* Info.plist in Resources */,
 				B555B5B31EC19DFD00BD1A5F /* LaunchScreen.storyboard in Resources */,
 				B555B5B11EC19DFD00BD1A5F /* Assets.xcassets in Resources */,
+				0DE81E0F1EC1FEC30001782B /* Login.storyboard in Resources */,
 				B555B5B41EC19DFD00BD1A5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE81E131EC2061E0001782B /* LoginTypeController.m in Sources */,
 				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
@@ -348,6 +376,8 @@
 				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
 				B555B5D81EC1E36700BD1A5F /* CyAlertView.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
+				0DE81E161EC20A350001782B /* LoginViewController.m in Sources */,
+				0DE81E191EC213980001782B /* BaseViewController.m in Sources */,
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,

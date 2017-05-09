@@ -8,5 +8,9 @@
 
 // 网络请求地址
 
-static NSString *mlllogin = @"login";
+static NSString *baseUrl = @"http://app.mifo36.com/";
+
+
+
+static NSString *__login = @"PersonalLogin.cc";
 
