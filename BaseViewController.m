@@ -21,6 +21,7 @@
                        forBarPosition:UIBarPositionAny
                            barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 @end
