@@ -20,13 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     [UserModel login:@"123123" parameters:@{@"123": @"123"} success:^(User *user) {
         
     } failure:^(NSString *errorMessage) {
         
-    }];    
+    }];
     
     [@{@"uid":@"998", @"name":@"zhangyunpeng"} saveWithKey:@"kLoginUser"];
     [LoginUser loadInfo:[User getFromKey:@"kLoginUser"]];
