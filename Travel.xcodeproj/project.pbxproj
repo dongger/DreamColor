@@ -16,6 +16,7 @@
 		B555B5B31EC19DFD00BD1A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B555B5A91EC19DFD00BD1A5F /* LaunchScreen.storyboard */; };
 		B555B5B41EC19DFD00BD1A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B555B5AB1EC19DFD00BD1A5F /* Main.storyboard */; };
 		B555B5BC1EC19EAD00BD1A5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B555B5BB1EC19EAD00BD1A5F /* Info.plist */; };
+		B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		B555B5AA1EC19DFD00BD1A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B555B5AC1EC19DFD00BD1A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B555B5BB1EC19EAD00BD1A5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B555B5BF1EC1A36300BD1A5F /* NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = SOURCE_ROOT; };
+		B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTool.m; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		B555B5821EC0980700BD1A5F /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5C21EC1AA8400BD1A5F /* Entity */,
 				B555B5BE1EC19FCF00BD1A5F /* Tool */,
 				B555B5BD1EC19FC700BD1A5F /* Model */,
 				B555B59D1EC19DFD00BD1A5F /* Controller */,
@@ -132,8 +136,17 @@
 		B555B5BE1EC19FCF00BD1A5F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5BF1EC1A36300BD1A5F /* NetWorkTool.h */,
+				B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */,
 			);
 			name = Tool;
+			sourceTree = "<group>";
+		};
+		B555B5C21EC1AA8400BD1A5F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		E8ABBF00DEC2B87A8A697F15 /* Pods */ = {
@@ -273,6 +286,7 @@
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
+				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
