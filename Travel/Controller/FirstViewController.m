@@ -8,6 +8,9 @@
 
 #import "FirstViewController.h"
 #import "UserModel.h"
+#import "LoginUser.h"
+#import "NSObject+Cache.h"
+
 
 @interface FirstViewController ()
 
@@ -23,7 +26,10 @@
         
     } failure:^(NSString *errorMessage) {
         
-    }];
+    }];    
+    
+    [@{@"uid":@"998", @"name":@"zhangyunpeng"} saveWithKey:@"kLoginUser"];
+    [LoginUser loadInfo:[User getFromKey:@"kLoginUser"]];
     
 }
 

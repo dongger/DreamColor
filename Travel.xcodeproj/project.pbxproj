@@ -19,6 +19,8 @@
 		B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */; };
 		B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5C71EC1AC6A00BD1A5F /* User.m */; };
 		B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5CA1EC1ADB900BD1A5F /* UserModel.m */; };
+		B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5D11EC1C82800BD1A5F /* LoginUser.m */; };
+		B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5D41EC1D48500BD1A5F /* NSObject+Cache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		B555B5C91EC1ADB900BD1A5F /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = SOURCE_ROOT; };
 		B555B5CA1EC1ADB900BD1A5F /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = SOURCE_ROOT; };
 		B555B5CC1EC1B81900BD1A5F /* URLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConfig.h; sourceTree = SOURCE_ROOT; };
+		B555B5D01EC1C82800BD1A5F /* LoginUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUser.h; sourceTree = SOURCE_ROOT; };
+		B555B5D11EC1C82800BD1A5F /* LoginUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginUser.m; sourceTree = SOURCE_ROOT; };
+		B555B5D31EC1D48500BD1A5F /* NSObject+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Cache.h"; sourceTree = SOURCE_ROOT; };
+		B555B5D41EC1D48500BD1A5F /* NSObject+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Cache.m"; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,10 @@
 				B555B5BF1EC1A36300BD1A5F /* NetWorkTool.h */,
 				B555B5C01EC1A36300BD1A5F /* NetWorkTool.m */,
 				B555B5CC1EC1B81900BD1A5F /* URLConfig.h */,
+				B555B5D01EC1C82800BD1A5F /* LoginUser.h */,
+				B555B5D11EC1C82800BD1A5F /* LoginUser.m */,
+				B555B5D31EC1D48500BD1A5F /* NSObject+Cache.h */,
+				B555B5D41EC1D48500BD1A5F /* NSObject+Cache.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -294,12 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
 				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
+				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
