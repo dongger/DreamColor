@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "URLConfig.h"
 
 @interface NetWorkTool : NSObject
 
