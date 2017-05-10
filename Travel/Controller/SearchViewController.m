@@ -8,6 +8,8 @@
 
 #import "SearchViewController.h"
 #import <RTRootNavigationController.h>
+#import "CalendarViewController.h"
+
 @interface SearchViewController ()
 
 @end
@@ -17,9 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 - (IBAction)pickDate:(id)sender {
-
+    CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
+        NSLog(@"%@", [date description]);
+    }];
+    [self.navigationController pushViewController:calendar animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

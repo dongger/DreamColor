@@ -12,10 +12,16 @@
 @interface CalendarViewController ()
 @property NSDate *startDate;
 @property NSDate *endDate;
-
 @end
 
 @implementation CalendarViewController
+
++ (CalendarViewController *)instance:(void(^_Nullable)(NSDate* _Nullable date))didSelectBlock {
+    CalendarViewController *calendar = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CalendarViewController"];
+    calendar.selectBlock = didSelectBlock;
+    return calendar;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -75,6 +81,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MonthCell *cell = [tableView dequeueReusableCellWithIdentifier:@"monthCell" forIndexPath:indexPath];
     [cell loadDate:[self cellDateForIndexPath:indexPath.section]];
+    cell.calendar = self;
     return cell;
 }
 

@@ -8,6 +8,7 @@
 
 #import "MonthCell.h"
 #import "DayCell.h"
+#import "CyAlertView.h"
 
 @interface MonthCell ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -68,6 +69,11 @@
     }
 }
 
+- (NSInteger)day:(NSIndexPath *)indexPath {
+    NSInteger emptyCount = 7 + _startDay - 2;
+    return indexPath.row - emptyCount;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _startDay + _numOfDays + 7;
 }
@@ -78,8 +84,7 @@
     if (indexPath.row < 7) {
         [cell loadInfo:[NSString stringWithFormat:@"%@",_titleArray[indexPath.row]]];
     } else if ([self needShowDay:indexPath]) {
-        NSInteger emptyCount = 7 + _startDay - 2;
-        [cell loadInfo: (indexPath.row - emptyCount) date:_startDate];
+        [cell loadInfo: [self day:indexPath] date:_startDate];
     } else {
         [cell loadInfo:@" "];
     }
@@ -87,15 +92,13 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row > 6) {
-        NSInteger startIndex = 7 + _startDay - 1;
-//        if (indexPath.row < startIndex) {
-////            [cell loadInfo:@" "];
-//        } else if ((long)indexPath.row - startIndex < _numOfDays) {
-//            [cell loadInfo: (indexPath.row - startIndex + 1) date:_startDate];
-//        } else {
-////            [cell loadInfo:@" "];
-//        }
+    if ([self needShowDay:indexPath]) {
+        DayCell *cell = (DayCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        if ([cell isEnble:[self day:indexPath] date:_startDate]) {
+            [CyAlertView message:[cell.cellDate description]];
+            self.calendar.selectBlock(cell.cellDate);
+            [self.calendar.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 

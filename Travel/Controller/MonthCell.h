@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalendarViewController.h"
 
 @interface MonthCell : UITableViewCell
 @property NSDate *startDate;
+@property (weak) CalendarViewController *calendar;
 - (void)loadDate: (NSDate *)date;
 + (CGFloat)heightOfDate: (NSDate *)date;
 @end

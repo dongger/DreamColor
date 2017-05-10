@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8s-EK-npT" id="iKG-rj-gqo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -153,18 +153,18 @@
                                         <rect key="frame" x="0.0" y="158" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j7Z-oN-Ko9" id="Q2v-Bd-UcA">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="我的资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bGX-aW-tGo">
-                                                    <rect key="frame" x="15" y="12" width="70" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="69.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXG-2Y-2eJ">
-                                                    <rect key="frame" x="336" y="12" width="4" height="20"/>
+                                                    <rect key="frame" x="335.5" y="12" width="4.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -329,7 +329,6 @@
                                         <state key="normal" title="日历"/>
                                         <connections>
                                             <action selector="pickDate:" destination="Hf4-gB-RJA" eventType="touchUpInside" id="T4u-Ov-GJO"/>
-                                            <segue destination="CZ8-5V-wgE" kind="show" id="hqI-aT-LJH"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4月30日 明天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-aF-y2s">
@@ -379,17 +378,17 @@
         <!--Calendar View Controller-->
         <scene sceneID="TL2-hE-mhM">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="CZ8-5V-wgE" customClass="CalendarViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CalendarViewController" hidesBottomBarWhenPushed="YES" id="CZ8-5V-wgE" customClass="CalendarViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="9zL-lL-9Pq">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="monthCell" rowHeight="270" id="axU-F3-a5T" customClass="MonthCell">
-                                <rect key="frame" x="0.0" y="56" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axU-F3-a5T" id="Xff-kI-MsL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="269.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wsg-k1-6TD">
