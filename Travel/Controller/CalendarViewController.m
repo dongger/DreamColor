@@ -62,51 +62,10 @@
     return iCurMonth;
 }
 
-//- (void)dateForMonth {
-//    // 获取代表公历的NSCalendar对象
-//    NSCalendar *gregorian = [[NSCalendar alloc]
-//                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-//    // 获取当前日期
-//    NSDate* dt = [NSDate date];
-//    // 定义一个时间字段的旗标，指定将会获取指定年、月、日、时、分、秒的信息
-//    unsigned unitFlags = NSCalendarUnitYear |
-//    NSCalendarUnitMonth |  NSCalendarUnitDay |
-//    NSCalendarUnitHour |  NSCalendarUnitMinute |
-//    NSCalendarUnitSecond | NSCalendarUnitWeekday;
-//    // 获取不同时间字段的信息
-//    NSDateComponents* comp = [gregorian components: unitFlags
-//                                          fromDate:dt];
-//    // 获取各时间字段的数值
-////    NSLog(@"现在是%ld年" , comp.year);
-////    NSLog(@"现在是%ld月 " , comp.month);
-////    NSLog(@"现在是%ld日" , comp.day);
-////    NSLog(@"现在是%ld时" , comp.hour);
-////    NSLog(@"现在是%ld分" , comp.minute);
-////    NSLog(@"现在是%ld秒" , comp.second);
-////    NSLog(@"现在是星期%ld" , comp.weekday);
-//}
-
-//- (void)dateFormCompont: (NSDateComponents *) comp {
-//    NSCalendar *gregorian = [[NSCalendar alloc]
-//                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-//    // 再次创建一个NSDateComponents对象
-//    NSDateComponents* comp2 = [[NSDateComponents alloc]
-//                               init];
-//    // 设置各时间字段的数值
-//    comp2.year = 2013;
-//    comp2.month = 4;
-//    comp2.day = 5;
-//    comp2.hour = 18;
-//    comp2.minute = 34;
-//    // 通过NSDateComponents所包含的时间字段的数值来恢复NSDate对象
-//    NSDate *date = [gregorian dateFromComponents:comp2];
-//    NSLog(@"获取的日期为：%@" , date);
-//}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self monthForDate:_endDate] - [self monthForDate:_startDate];
+    return [self monthForDate:_endDate] - [self monthForDate:_startDate] + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -134,8 +93,6 @@
     
     NSInteger iCurMonth = [components month];  //当前的月份
     
-//    NSInteger iCurDay = [components day];  // 当前的号数
-
     label.text =  [NSString stringWithFormat:@"%ld-%ld",(long)iCurYear,(long)iCurMonth];
 
     return label;

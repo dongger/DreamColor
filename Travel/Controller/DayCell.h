@@ -12,4 +12,6 @@
 
 - (void)loadInfo: (NSString *)info;
 
+- (void)loadInfo: (NSInteger)day date: (NSDate *)date;
+
 @end

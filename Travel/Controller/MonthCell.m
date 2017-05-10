@@ -78,7 +78,7 @@
         if (indexPath.row < startIndex) {
             [cell loadInfo:@" "];
         } else if ((long)indexPath.row - startIndex < _numOfDays) {
-            [cell loadInfo:[NSString stringWithFormat:@"%ld",(long)indexPath.row - startIndex + 1]];
+            [cell loadInfo: (indexPath.row - startIndex + 1) date:_startDate];
         } else {
             [cell loadInfo:@" "];
         }
