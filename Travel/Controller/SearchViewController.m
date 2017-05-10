@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import <RTRootNavigationController.h>
 #import "CalendarViewController.h"
+#import "CitiesViewController.h"
 
 @interface SearchViewController ()
 
@@ -18,9 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
 }
+
 - (IBAction)pickDate:(id)sender {
     CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
         NSLog(@"%@", [date description]);
@@ -28,19 +28,9 @@
     [self.navigationController pushViewController:calendar animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pickCity:(id)sender {
+    CitiesViewController *citiesVC = [CitiesViewController instance];
+    [self.navigationController pushViewController:citiesVC animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

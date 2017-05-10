@@ -11,12 +11,18 @@
 #import "CyAlertView.h"
 #import "NSObject+Cache.h"
 #import "CitiesGroup.h"
+#import "City.h"
 
 @interface CitiesViewController ()
 @property NSArray *CitiesData;
 @end
 
 @implementation CitiesViewController
+
++ (CitiesViewController *)instance {
+    CitiesViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CitiesViewController"];
+    return vc;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,24 +47,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return _CitiesData.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    CitiesGroup *group = _CitiesData[section];
+    return group.Cities.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    CitiesGroup *group = _CitiesData[indexPath.section];
+    City *city = group.Cities[indexPath.row];
+    cell.textLabel.text = city.CityName;
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

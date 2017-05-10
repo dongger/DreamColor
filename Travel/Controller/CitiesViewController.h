@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CitiesViewController : UITableViewController
-
++ (CitiesViewController *)instance;
 @end
