@@ -33,6 +33,10 @@
 		B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5D11EC1C82800BD1A5F /* LoginUser.m */; };
 		B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5D41EC1D48500BD1A5F /* NSObject+Cache.m */; };
 		B555B5D81EC1E36700BD1A5F /* CyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5D71EC1E36700BD1A5F /* CyAlertView.m */; };
+		B555B5E11EC321B600BD1A5F /* CitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E01EC321B600BD1A5F /* CitiesModel.m */; };
+		B555B5E41EC3232C00BD1A5F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E31EC3232C00BD1A5F /* City.m */; };
+		B555B5EA1EC3249400BD1A5F /* CitiesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E91EC3249400BD1A5F /* CitiesGroup.m */; };
+		B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,14 @@
 		B555B5D41EC1D48500BD1A5F /* NSObject+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Cache.m"; sourceTree = SOURCE_ROOT; };
 		B555B5D61EC1E36700BD1A5F /* CyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyAlertView.h; sourceTree = SOURCE_ROOT; };
 		B555B5D71EC1E36700BD1A5F /* CyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CyAlertView.m; sourceTree = SOURCE_ROOT; };
+		B555B5DF1EC321B600BD1A5F /* CitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesModel.h; sourceTree = "<group>"; };
+		B555B5E01EC321B600BD1A5F /* CitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesModel.m; sourceTree = "<group>"; };
+		B555B5E21EC3232C00BD1A5F /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = SOURCE_ROOT; };
+		B555B5E31EC3232C00BD1A5F /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = SOURCE_ROOT; };
+		B555B5E81EC3249400BD1A5F /* CitiesGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesGroup.h; sourceTree = SOURCE_ROOT; };
+		B555B5E91EC3249400BD1A5F /* CitiesGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesGroup.m; sourceTree = SOURCE_ROOT; };
+		B555B5EE1EC32A3300BD1A5F /* CitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesViewController.h; sourceTree = "<group>"; };
+		B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +134,10 @@
 		0DE81E211EC223020001782B /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5DE1EC3219500BD1A5F /* Model */,
 				0DE81E2B1EC22AD20001782B /* View */,
+				B555B5EE1EC32A3300BD1A5F /* CitiesViewController.h */,
+				B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */,
 				0DE81E221EC223350001782B /* SearchViewController.h */,
 				0DE81E231EC223350001782B /* SearchViewController.m */,
 				0DE81E281EC229280001782B /* CalendarViewController.h */,
@@ -252,6 +267,10 @@
 			children = (
 				B555B5C61EC1AC6A00BD1A5F /* User.h */,
 				B555B5C71EC1AC6A00BD1A5F /* User.m */,
+				B555B5E21EC3232C00BD1A5F /* City.h */,
+				B555B5E31EC3232C00BD1A5F /* City.m */,
+				B555B5E81EC3249400BD1A5F /* CitiesGroup.h */,
+				B555B5E91EC3249400BD1A5F /* CitiesGroup.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -291,6 +310,15 @@
 				B555B5D11EC1C82800BD1A5F /* LoginUser.m */,
 			);
 			name = LoginUser;
+			sourceTree = "<group>";
+		};
+		B555B5DE1EC3219500BD1A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B555B5DF1EC321B600BD1A5F /* CitiesModel.h */,
+				B555B5E01EC321B600BD1A5F /* CitiesModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		E8ABBF00DEC2B87A8A697F15 /* Pods */ = {
@@ -428,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE81E131EC2061E0001782B /* LoginTypeController.m in Sources */,
+				B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */,
 				0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */,
 				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
@@ -438,14 +467,17 @@
 				0DE81E241EC223350001782B /* SearchViewController.m in Sources */,
 				0DE81E2E1EC22AEB0001782B /* MonthCell.m in Sources */,
 				B555B5D81EC1E36700BD1A5F /* CyAlertView.m in Sources */,
+				B555B5E11EC321B600BD1A5F /* CitiesModel.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
 				0DE81E161EC20A350001782B /* LoginViewController.m in Sources */,
 				0DE81E201EC21F7B0001782B /* MeViewController.m in Sources */,
 				0DE81E191EC213980001782B /* BaseViewController.m in Sources */,
+				B555B5E41EC3232C00BD1A5F /* City.m in Sources */,
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				0DE81E311EC22C7D0001782B /* DayCell.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
+				B555B5EA1EC3249400BD1A5F /* CitiesGroup.m in Sources */,
 				0DE81E1C1EC218D70001782B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

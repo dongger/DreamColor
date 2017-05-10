@@ -35,7 +35,7 @@
 
 + (void)POST:(NSString*_Nonnull)urlString
   parameters:(NSDictionary*_Nullable)parameters
-     success:(void(^_Nullable)(NSDictionary* _Nullable dictionary))successBlock
+     success:(void(^_Nullable)(id _Nullable responseObject))successBlock
      failure:(void(^_Nullable)(NSString * _Nullable errorMessage))failueBlock;
 
 /**

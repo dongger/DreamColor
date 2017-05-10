@@ -66,7 +66,7 @@ static const NSTimeInterval timeoutInterval = 15.0;
 
 + (void)POST:(NSString*)urlString
   parameters:(NSDictionary*)parameters
-     success:(void(^)(NSDictionary* dictionary))successBlock
+     success:(void(^)(id responseObject))successBlock
      failure:(void(^)(NSString * errorMessage))failueBlock {
     AFHTTPSessionManager *netManager   = [AFHTTPSessionManager manager];
     netManager.requestSerializer      = [AFHTTPRequestSerializer serializer];

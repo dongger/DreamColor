@@ -12,5 +12,6 @@ static NSString *baseUrl = @"http://app.mifo36.com/";
 
 
 
-static NSString *__login = @"PersonalLogin.cc";
+static NSString *__login = @"PersonalLogin.cc"; //登录
+static NSString *__getCities = @"GetCities.cc"; //城市列表
 

@@ -21,6 +21,9 @@
     return [self yy_modelWithJSON:[NSUserDefaults.standardUserDefaults valueForKey:key]];
 }
 
++(NSArray *)getArrayFromKey: (NSString *)key {
+    NSArray *array = [NSUserDefaults.standardUserDefaults valueForKey:key];
+    return [NSArray yy_modelArrayWithClass:self json:array];
+}
+
 @end
-
-

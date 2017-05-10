@@ -14,5 +14,7 @@
 -(void)saveWithKey: (NSString *)key;
 //读取
 +(id)getFromKey: (NSString *)key;
+//读取数组
++(NSArray *)getArrayFromKey: (NSString *)key;
 
 @end
