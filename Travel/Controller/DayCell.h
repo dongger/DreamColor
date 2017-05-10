@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DayCell : UICollectionViewCell
-
+@property NSDate *cellDate;
 - (void)loadInfo: (NSString *)info;
-
 - (void)loadInfo: (NSInteger)day date: (NSDate *)date;
-
+- (BOOL)isEnble: (NSInteger)day date: (NSDate *)date;
 @end

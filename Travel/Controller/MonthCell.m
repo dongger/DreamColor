@@ -56,11 +56,16 @@
     NSInteger cellCount = comp.weekday + days.length + 7;
     NSLog(@"%ld",(long)cellCount);
     NSInteger row = cellCount/7 + (cellCount%7==0?0:1);
-    
-    if (row != 6) {
-        
-    }
     return row*50;
+}
+
+- (BOOL)needShowDay: (NSIndexPath *)indexPath {
+    NSInteger startIndex = 7 + _startDay - 1;
+    if (indexPath.row - startIndex < _numOfDays && indexPath.row >= startIndex) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -72,22 +77,26 @@
     
     if (indexPath.row < 7) {
         [cell loadInfo:[NSString stringWithFormat:@"%@",_titleArray[indexPath.row]]];
+    } else if ([self needShowDay:indexPath]) {
+        NSInteger emptyCount = 7 + _startDay - 2;
+        [cell loadInfo: (indexPath.row - emptyCount) date:_startDate];
     } else {
-        NSInteger startIndex = 7 + _startDay - 1;
-        
-        if (indexPath.row < startIndex) {
-            [cell loadInfo:@" "];
-        } else if ((long)indexPath.row - startIndex < _numOfDays) {
-            [cell loadInfo: (indexPath.row - startIndex + 1) date:_startDate];
-        } else {
-            [cell loadInfo:@" "];
-        }
-        
+        [cell loadInfo:@" "];
     }
     return cell;
 }
 
-
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row > 6) {
+        NSInteger startIndex = 7 + _startDay - 1;
+//        if (indexPath.row < startIndex) {
+////            [cell loadInfo:@" "];
+//        } else if ((long)indexPath.row - startIndex < _numOfDays) {
+//            [cell loadInfo: (indexPath.row - startIndex + 1) date:_startDate];
+//        } else {
+////            [cell loadInfo:@" "];
+//        }
+    }
+}
 
 @end
