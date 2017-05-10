@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MonthCell : UITableViewCell
-
+@property NSDate *startDate;
+- (void)loadDate: (NSDate *)date;
++ (CGFloat)heightOfDate: (NSDate *)date;
 @end
