@@ -10,8 +10,9 @@
 #import "NSString+ToDate.h"
 #import "NSDate+ToString.h"
 #import "NSString+Attributed.h"
+#import "CabinInfoCell.h"
 
-@interface FlightInfoCell()
+@interface FlightInfoCell()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *startTime;
 @property (weak, nonatomic) IBOutlet UILabel *endTime;
 @property (weak, nonatomic) IBOutlet UILabel *moreDayMark;
@@ -20,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *endPlace;
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *airLineInfo;
+@property Flight *flight;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -31,6 +34,7 @@
 }
 
 - (void)loadInfo: (Flight *)flight {
+    _flight = flight;
     _startTime.text = [[flight.TakeOffDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"HH:MM"];
     _endTime.text = [[flight.ArrivalDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"HH:MM"];
     NSString *moneyString = [NSString stringWithFormat:@"￥%.0f元",flight.LowestPrice];
@@ -38,6 +42,26 @@
     _startPlace.text = [NSString stringWithFormat:@"%@ %@", flight.TakeoffAirportName, flight.TakeoffTerm];
     _endPlace.text = [NSString stringWithFormat:@"%@ %@", flight.ArriveAirportName, flight.ArrivalTerm];
     _airLineInfo.text = [NSString stringWithFormat:@"%@%@ | %@", flight.AirlineName, flight.FligthNo, flight.PlaneModel];
+}
+
++ (CGFloat)heightOfCabinsCount: (NSInteger)count {
+    return count*60 + 90;
+}
+#pragma mark - Table view data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _flight.Cabins.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CabinInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CabinInfoCell" forIndexPath:indexPath];
+    Cabin *cabin = _flight.Cabins[indexPath.row];
+    [cell loadInfo:cabin];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
 }
 
 @end

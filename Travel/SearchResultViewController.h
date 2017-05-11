@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 #import "QueryFlightResult.h"
+#import "City.h"
 
-@interface SearchResultViewController : BaseTableViewController
-+ (SearchResultViewController *)instance: (QueryFlightResult *)result;
+@interface SearchResultViewController : BaseViewController
+
+@property City *startCity;
+@property City *destinationCity;
+@property NSDate *searchDate;
+@property NSInteger bookType; //1:普通乘客 2:公务员
+@property NSInteger travelType; //1:因公 2:因私
+
++ (SearchResultViewController *)instance;
 @end

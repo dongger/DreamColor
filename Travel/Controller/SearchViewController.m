@@ -66,18 +66,13 @@
     [self.navigationController pushViewController:citiesVC animated:YES];
 }
 - (IBAction)queryFlight:(id)sender {
-    [QueryFlightModel fetchWithStartCityCode:_startCity.Code
-                         destinationCityCode:_destinationCity.Code
-                                        date:_searchDate
-                                    bookType:_bookType
-                                  travelType:_travelType
-                                     success:^(QueryFlightResult* result)
-    {
-        SearchResultViewController *vc = [SearchResultViewController instance:result];
-        [self.navigationController pushViewController:vc animated:YES];
-    } failure:^(NSString *errorMessage) {
-        
-    }];
+    SearchResultViewController *vc = [SearchResultViewController instance];
+    vc.startCity = _startCity;
+    vc.destinationCity = _destinationCity;
+    vc.searchDate = _searchDate;
+    vc.bookType = _bookType;
+    vc.travelType = _travelType;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -11,4 +11,5 @@
 
 @interface FlightInfoCell : UITableViewCell
 - (void)loadInfo: (Flight *)flight;
++ (CGFloat)heightOfCabinsCount: (NSInteger)count;
 @end

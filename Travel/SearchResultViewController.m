@@ -8,22 +8,40 @@
 
 #import "SearchResultViewController.h"
 #import "FlightInfoCell.h"
+#import "QueryFlightModel.h"
 
-@interface SearchResultViewController ()
+@interface SearchResultViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property QueryFlightResult* result;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSInteger selectedRow;
 @end
 
 @implementation SearchResultViewController
 
-+ (SearchResultViewController *)instance: (QueryFlightResult *)result {
++ (SearchResultViewController *)instance {
     SearchResultViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SearchResultViewController"];
-    vc.result = result;
     return vc;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _selectedRow = -1;
+    [self fetchData];
+}
 
+- (void)fetchData {
+    [QueryFlightModel fetchWithStartCityCode:_startCity.Code
+                         destinationCityCode:_destinationCity.Code
+                                        date:_searchDate
+                                    bookType:_bookType
+                                  travelType:_travelType
+                                     success:^(QueryFlightResult* result)
+     {
+         _result = result;
+         [self.tableView reloadData];
+     } failure:^(NSString *errorMessage) {
+         
+     }];
 }
 
 #pragma mark - Table view data source
@@ -40,6 +58,20 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+    if (_selectedRow == indexPath.row) {
+        Flight *flight = _result.Flights[indexPath.row];
+        return [FlightInfoCell heightOfCabinsCount:flight.Cabins.count];
+    } else {
+        return [FlightInfoCell heightOfCabinsCount:0];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (_selectedRow == indexPath.row) {
+        _selectedRow = -1;
+    } else {
+        _selectedRow = indexPath.row;
+    }
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 @end
