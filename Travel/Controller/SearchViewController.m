@@ -13,6 +13,8 @@
 #import "CyAlertView.h"
 #import "City.h"
 #import "QueryFlightModel.h"
+#import "SearchResultViewController.h"
+#import "NSDate+ToString.h"
 
 @interface SearchViewController ()
 @property City *startCity;
@@ -38,15 +40,7 @@
     CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
         NSLog(@"%@", [date description]);
         _searchDate = date;
-        
-        
-        NSTimeZone* GTMzone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-        [dateFormatter setTimeZone:GTMzone];
-
-        NSString *takeoffDate = [dateFormatter stringFromDate:_searchDate];
-        _dateLabel.text = takeoffDate;
+        _dateLabel.text = [_searchDate convertWith:@"yyyy-MM-dd"];
 
     }];
     [self.navigationController pushViewController:calendar animated:YES];
@@ -77,8 +71,10 @@
                                         date:_searchDate
                                     bookType:_bookType
                                   travelType:_travelType
-                                     success:^(QueryFlightResult* result) {
-                                         
+                                     success:^(QueryFlightResult* result)
+    {
+        SearchResultViewController *vc = [SearchResultViewController instance:result];
+        [self.navigationController pushViewController:vc animated:YES];
     } failure:^(NSString *errorMessage) {
         
     }];
