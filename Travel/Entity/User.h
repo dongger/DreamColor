@@ -14,4 +14,9 @@
 @property NSString *Type;
 @property NSString *Session;
 
+@property NSString *KfPhone;
+@property NSString *LinkName;
+@property NSString *LinkPhone;
+@property NSString *Address;
+
 @end

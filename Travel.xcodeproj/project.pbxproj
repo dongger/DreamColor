@@ -44,6 +44,8 @@
 		B555B6071EC48DA100BD1A5F /* QueryFlightResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6061EC48DA100BD1A5F /* QueryFlightResult.m */; };
 		B555B60A1EC4926E00BD1A5F /* Insurances.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6091EC4926E00BD1A5F /* Insurances.m */; };
 		B555B60D1EC4930600BD1A5F /* CheckPriceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B60C1EC4930600BD1A5F /* CheckPriceResult.m */; };
+		B555B6101EC493F300BD1A5F /* Passenger.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B60F1EC493F300BD1A5F /* Passenger.m */; };
+		B555B6141EC4975000BD1A5F /* SendCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6131EC4975000BD1A5F /* SendCodeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,10 @@
 		B555B6091EC4926E00BD1A5F /* Insurances.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insurances.m; sourceTree = SOURCE_ROOT; };
 		B555B60B1EC4930600BD1A5F /* CheckPriceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPriceResult.h; sourceTree = SOURCE_ROOT; };
 		B555B60C1EC4930600BD1A5F /* CheckPriceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPriceResult.m; sourceTree = SOURCE_ROOT; };
+		B555B60E1EC493F300BD1A5F /* Passenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Passenger.h; sourceTree = SOURCE_ROOT; };
+		B555B60F1EC493F300BD1A5F /* Passenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Passenger.m; sourceTree = SOURCE_ROOT; };
+		B555B6121EC4975000BD1A5F /* SendCodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendCodeModel.h; sourceTree = "<group>"; };
+		B555B6131EC4975000BD1A5F /* SendCodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCodeModel.m; sourceTree = "<group>"; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 		0DE81E101EC205F80001782B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B555B6111EC4973600BD1A5F /* Model */,
 				0DE81E111EC2061E0001782B /* LoginTypeController.h */,
 				0DE81E121EC2061E0001782B /* LoginTypeController.m */,
 				0DE81E141EC20A350001782B /* LoginViewController.h */,
@@ -298,6 +305,8 @@
 				B555B6091EC4926E00BD1A5F /* Insurances.m */,
 				B555B60B1EC4930600BD1A5F /* CheckPriceResult.h */,
 				B555B60C1EC4930600BD1A5F /* CheckPriceResult.m */,
+				B555B60E1EC493F300BD1A5F /* Passenger.h */,
+				B555B60F1EC493F300BD1A5F /* Passenger.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -370,6 +379,15 @@
 				B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */,
 			);
 			name = CityPicker;
+			sourceTree = "<group>";
+		};
+		B555B6111EC4973600BD1A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B555B6121EC4975000BD1A5F /* SendCodeModel.h */,
+				B555B6131EC4975000BD1A5F /* SendCodeModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		E8ABBF00DEC2B87A8A697F15 /* Pods */ = {
@@ -520,6 +538,7 @@
 				0DE81E2A1EC229280001782B /* CalendarViewController.m in Sources */,
 				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
 				0DE81E241EC223350001782B /* SearchViewController.m in Sources */,
+				B555B6101EC493F300BD1A5F /* Passenger.m in Sources */,
 				B555B6011EC489E700BD1A5F /* Flight.m in Sources */,
 				B555B60D1EC4930600BD1A5F /* CheckPriceResult.m in Sources */,
 				0DE81E2E1EC22AEB0001782B /* MonthCell.m in Sources */,
@@ -532,6 +551,7 @@
 				0DE81E191EC213980001782B /* BaseViewController.m in Sources */,
 				B555B5E41EC3232C00BD1A5F /* City.m in Sources */,
 				0DE81E311EC22C7D0001782B /* DayCell.m in Sources */,
+				B555B6141EC4975000BD1A5F /* SendCodeModel.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5F81EC4571100BD1A5F /* CityCollectionCell.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
