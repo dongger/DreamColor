@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="ch8-C0-P0v" customClass="RTRootNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="订单" id="ZFX-kp-KH2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QxT-BU-nhx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="QxT-BU-nhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -291,11 +291,16 @@
         <!--Cities View Controller-->
         <scene sceneID="aaK-tQ-chS">
             <objects>
-                <tableViewController storyboardIdentifier="CitiesViewController" id="6gP-1U-V86" customClass="CitiesViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CitiesViewController" hidesBottomBarWhenPushed="YES" id="6gP-1U-V86" customClass="CitiesViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0sj-cG-rLR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="slZ-E4-Lee">
+                            <rect key="frame" x="0.0" y="72" width="375" height="0.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" textLabel="nNZ-Bw-pMJ" style="IBUITableViewCellStyleDefault" id="jSw-QA-Qda">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -320,10 +325,11 @@
                             <outlet property="delegate" destination="6gP-1U-V86" id="Xhc-Xk-yuQ"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9o-dD-2ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="-1604"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="-1604.3478260869567"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Xvo-R4-HVP">
@@ -405,6 +411,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="dwadwad" translatesAutoresizingMaskIntoConstraints="NO" id="KAq-d5-aP7">
+                                <rect key="frame" x="0.0" y="457" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

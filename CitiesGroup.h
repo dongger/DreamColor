@@ -10,7 +10,7 @@
 
 @interface CitiesGroup : NSObject
 
-@property NSArray *Cities;
+@property NSMutableArray *Cities;
 @property NSString *FirstLetter;
 
 @end

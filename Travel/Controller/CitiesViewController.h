@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface CitiesViewController : UITableViewController
+@interface CitiesViewController : BaseTableViewController
 + (CitiesViewController *)instance;
 @end

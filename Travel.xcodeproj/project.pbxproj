@@ -37,6 +37,7 @@
 		B555B5E41EC3232C00BD1A5F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E31EC3232C00BD1A5F /* City.m */; };
 		B555B5EA1EC3249400BD1A5F /* CitiesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E91EC3249400BD1A5F /* CitiesGroup.m */; };
 		B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */; };
+		B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		B555B5E91EC3249400BD1A5F /* CitiesGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesGroup.m; sourceTree = SOURCE_ROOT; };
 		B555B5EE1EC32A3300BD1A5F /* CitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesViewController.h; sourceTree = "<group>"; };
 		B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
+		B555B5F11EC4395200BD1A5F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = SOURCE_ROOT; };
+		B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				B555B5D91EC1E36C00BD1A5F /* Alert */,
 				0DE81E171EC213980001782B /* BaseViewController.h */,
 				0DE81E181EC213980001782B /* BaseViewController.m */,
+				B555B5F11EC4395200BD1A5F /* BaseTableViewController.h */,
+				B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */,
 				0DE81E351EC232B70001782B /* UIColor+Hex.h */,
 				0DE81E361EC232B70001782B /* UIColor+Hex.m */,
 			);
@@ -459,6 +464,7 @@
 				B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */,
 				0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */,
 				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
+				B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
