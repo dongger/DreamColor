@@ -10,8 +10,8 @@
 
 @interface City : NSObject
 
-@property NSString *CityCode;
-@property NSString *CityName;
+@property NSString *Code;
+@property NSString *Name;
 @property NSString *FirstLetter;
 @property NSString *Initials;
 @property NSString *IsHotCity;

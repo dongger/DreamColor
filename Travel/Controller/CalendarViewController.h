@@ -10,7 +10,7 @@
 typedef void(^_Nullable DatePickedBlock)(NSDate* _Nullable date);
 
 @interface CalendarViewController : UITableViewController
-@property (weak) DatePickedBlock selectBlock;
+@property DatePickedBlock selectBlock;
 
 + (CalendarViewController *_Nullable)instance:(void(^_Nullable)(NSDate* _Nullable date))didSelectBlock;
 

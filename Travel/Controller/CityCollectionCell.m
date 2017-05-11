@@ -40,7 +40,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CityMarkCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CityMarkCell" forIndexPath:indexPath];
     City *city = _cities[indexPath.row];
-    cell.name.text = city.CityName;
+    cell.name.text = city.Name;
 
     return cell;
 }

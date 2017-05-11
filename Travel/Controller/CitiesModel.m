@@ -16,7 +16,7 @@
     [NetWorkTool POST:__getCities parameters:nil success:^(id  _Nullable responseObject) {
         successBlock([NSArray yy_modelArrayWithClass:[CitiesGroup class] json:responseObject]);
     } failure:^(NSString * _Nullable errorMessage) {
-        
+        failueBlock(errorMessage);
     }];
 }
 

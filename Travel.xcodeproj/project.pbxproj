@@ -40,6 +40,9 @@
 		B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */; };
 		B555B5F81EC4571100BD1A5F /* CityCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5F71EC4571100BD1A5F /* CityCollectionCell.m */; };
 		B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */; };
+		B555B5FE1EC47C0800BD1A5F /* QueryFlightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5FD1EC47C0800BD1A5F /* QueryFlightModel.m */; };
+		B555B6011EC489E700BD1A5F /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6001EC489E700BD1A5F /* Flight.m */; };
+		B555B6041EC48A0500BD1A5F /* Cabin.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6031EC48A0500BD1A5F /* Cabin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,12 @@
 		B555B5F71EC4571100BD1A5F /* CityCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCollectionCell.m; sourceTree = "<group>"; };
 		B555B5F91EC457C500BD1A5F /* CityMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityMarkCell.h; sourceTree = "<group>"; };
 		B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityMarkCell.m; sourceTree = "<group>"; };
+		B555B5FC1EC47C0800BD1A5F /* QueryFlightModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFlightModel.h; sourceTree = "<group>"; };
+		B555B5FD1EC47C0800BD1A5F /* QueryFlightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFlightModel.m; sourceTree = "<group>"; };
+		B555B5FF1EC489E700BD1A5F /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flight.h; sourceTree = SOURCE_ROOT; };
+		B555B6001EC489E700BD1A5F /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flight.m; sourceTree = SOURCE_ROOT; };
+		B555B6021EC48A0500BD1A5F /* Cabin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cabin.h; sourceTree = SOURCE_ROOT; };
+		B555B6031EC48A0500BD1A5F /* Cabin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cabin.m; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +289,10 @@
 				B555B5E31EC3232C00BD1A5F /* City.m */,
 				B555B5E81EC3249400BD1A5F /* CitiesGroup.h */,
 				B555B5E91EC3249400BD1A5F /* CitiesGroup.m */,
+				B555B5FF1EC489E700BD1A5F /* Flight.h */,
+				B555B6001EC489E700BD1A5F /* Flight.m */,
+				B555B6021EC48A0500BD1A5F /* Cabin.h */,
+				B555B6031EC48A0500BD1A5F /* Cabin.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -326,6 +339,8 @@
 			children = (
 				B555B5DF1EC321B600BD1A5F /* CitiesModel.h */,
 				B555B5E01EC321B600BD1A5F /* CitiesModel.m */,
+				B555B5FC1EC47C0800BD1A5F /* QueryFlightModel.h */,
+				B555B5FD1EC47C0800BD1A5F /* QueryFlightModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -488,16 +503,19 @@
 			files = (
 				0DE81E131EC2061E0001782B /* LoginTypeController.m in Sources */,
 				B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */,
+				B555B5FE1EC47C0800BD1A5F /* QueryFlightModel.m in Sources */,
 				0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */,
 				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
 				B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */,
+				B555B6041EC48A0500BD1A5F /* Cabin.m in Sources */,
 				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
 				0DE81E2A1EC229280001782B /* CalendarViewController.m in Sources */,
 				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
 				0DE81E241EC223350001782B /* SearchViewController.m in Sources */,
+				B555B6011EC489E700BD1A5F /* Flight.m in Sources */,
 				0DE81E2E1EC22AEB0001782B /* MonthCell.m in Sources */,
 				B555B5D81EC1E36700BD1A5F /* CyAlertView.m in Sources */,
 				B555B5E11EC321B600BD1A5F /* CitiesModel.m in Sources */,

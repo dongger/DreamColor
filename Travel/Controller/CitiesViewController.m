@@ -75,9 +75,21 @@
 
 - (NSInteger)indexInTitles: (NSInteger)index {
     NSString *letter = _titlesArray[index];
+    NSMutableArray *groupFirstLetterArray = [[NSMutableArray alloc] init];
     for (CitiesGroup *group in _CitiesData) {
-        if ([group.FirstLetter isEqualToString:letter]) {
-            return [_CitiesData indexOfObject:group];
+        if (group.Cities.count > 0) {
+            [groupFirstLetterArray addObject:group.FirstLetter];
+        }
+    }
+    if ([self hasHistory]) {
+        groupFirstLetterArray[0] = @"历史";
+        groupFirstLetterArray[1] = @"热门";
+    } else {
+        groupFirstLetterArray[0] = @"热门";
+    }
+    for (NSString *groupletter in groupFirstLetterArray) {
+        if ([groupletter isEqualToString:letter]) {
+            return [groupFirstLetterArray indexOfObject:groupletter];
         }
     }
     return 0;
@@ -108,8 +120,8 @@
             [resultArray addObject:tempGroup];
             for (City *city in group.Cities) {
                 NSString *searchString = [_searchBar.text lowercaseString];
-                if ([city.CityCode containsString:searchString] ||
-                    [city.CityName containsString:searchString] ||
+                if ([city.Code containsString:searchString] ||
+                    [city.Name containsString:searchString] ||
                     [city.Initials containsString:searchString] ||
                     [city.Pinyin containsString:searchString]) {
                     [tempGroup.Cities addObject:city];
@@ -190,7 +202,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell" forIndexPath:indexPath];
         CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
         City *city = group.Cities[indexPath.row];
-        cell.textLabel.text = city.CityName;
+        cell.textLabel.text = city.Name;
         return cell;
     }
 }

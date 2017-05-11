@@ -14,7 +14,7 @@
 - (void)cacheToHistory {
     NSMutableArray *history = [[NSMutableArray alloc] initWithArray:[City getArrayFromKey:@"kCitiesHistory"]];
     for (City *historyCity in history) {
-        if ([historyCity.CityName isEqualToString:self.CityName]) {
+        if ([historyCity.Name isEqualToString:self.Name]) {
             return;
         }
     }
