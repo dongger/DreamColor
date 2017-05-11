@@ -17,8 +17,8 @@
 @property NSString *CabinType;
 @property NSInteger CabinDiscount; //折扣
 @property NSInteger Surplus; //剩余座位数
-@property CGFloat MinRefundFee;
-@property NSString *PriceSource;
+@property CGFloat MinRefundFee; //最低退改签费
+@property NSString *PriceSource; // 票价来源(普通、官网、私有运价)
 @property CGFloat SalePrice; //销售价
 @property CGFloat TicketPrice; //票面价
 

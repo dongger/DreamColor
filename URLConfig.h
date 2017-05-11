@@ -17,3 +17,8 @@ static NSString *__getCities = @"GetCities.cc"; //城市列表
 static NSString *__queryFlight = @"QueryFlight.cc"; //航班查询
 
 
+static NSString *__checkPrice = @"CheckPrice.cc"; //价格验证
+
+
+
+
