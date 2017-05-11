@@ -11,9 +11,10 @@
 #import "CyAlertView.h"
 #import "NSObject+Cache.h"
 #import "CitiesGroup.h"
-#import "City.h"
 #import <RTRootNavigationController.h>
 #import "UIColor+Hex.h"
+#import "CityCollectionCell.h"
+
 
 @interface CitiesViewController ()<UISearchBarDelegate>
 @property NSMutableArray *CitiesData;
@@ -24,8 +25,9 @@
 
 @implementation CitiesViewController
 
-+ (CitiesViewController *)instance {
++ (CitiesViewController *)instance:(void(^_Nullable)(City* _Nullable city))didSelectBlock {
     CitiesViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CitiesViewController"];
+    vc.selectBlock = didSelectBlock;
     return vc;
 }
 
@@ -38,14 +40,14 @@
 - (void)initCitiesData {
     if ([CitiesGroup getArrayFromKey:@"kCitiesData"].count > 0) {
         _CitiesData = [[NSMutableArray alloc] initWithArray:[CitiesGroup getArrayFromKey:@"kCitiesData"]];
-        [self initTitles];
+        [self prepareCitiesData];
         [self.tableView reloadData];
     } else {
         [CitiesModel fetchWithSuccess:^(NSArray *citiesData) {
             [CyAlertView message:[citiesData description]];
             [citiesData saveWithKey:@"kCitiesData"];
             _CitiesData = [[NSMutableArray alloc] initWithArray:citiesData];
-            [self initTitles];
+            [self prepareCitiesData];
             [self.tableView reloadData];
         } failure:^(NSString *errorMessage) {
             [CyAlertView message:errorMessage];
@@ -53,12 +55,21 @@
     }
 }
 
-- (void)initTitles {
+- (void)prepareCitiesData {
+    [self HistoryCitiesGroup];
     _titlesArray = [[NSMutableArray alloc] init];
     for (CitiesGroup *group in _CitiesData) {
         if (group.Cities.count > 0) {
             [_titlesArray addObject:group.FirstLetter];
         }
+    }
+    if ([self hasHistory]) {
+        ((CitiesGroup *)(_CitiesData[1])).FirstLetter = @"热门城市";
+        _titlesArray[0] = @"历史";
+        _titlesArray[1] = @"热门";
+    } else {
+        ((CitiesGroup *)(_CitiesData.firstObject)).FirstLetter = @"热门城市";
+        _titlesArray[0] = @"热门";
     }
 }
 
@@ -74,6 +85,8 @@
 
 - (void)initUI {
     self.tableView.sectionIndexColor = [UIColor colorWithRed:0/255.0 green:134/255.0 blue:216/255.0 alpha:1];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(60, 0, [[UIScreen mainScreen] bounds].size.width - 75, 44)];
     _searchBar.placeholder = @"北京/beijing/bj                           ";
     _searchBar.delegate = self;
@@ -104,33 +117,109 @@
             }
         }
         _CitiesData = resultArray;
-        [self initTitles];
+        [self prepareCitiesData];
     }
     [self.tableView reloadData];
 }
 
+- (void)HistoryCitiesGroup {
+    if ([self hasHistory]) {
+        NSMutableArray *history = [[NSMutableArray alloc] initWithArray:[City getArrayFromKey:@"kCitiesHistory"]];
+        CitiesGroup *group = [[CitiesGroup alloc] init];
+        group.FirstLetter = @"历史选择";
+        group.Cities = history;
+        [_CitiesData insertObject:group atIndex:0];
+    }
+}
+
+- (BOOL)hasHistory {
+    NSMutableArray *history = [[NSMutableArray alloc] initWithArray:[City getArrayFromKey:@"kCitiesHistory"]];
+    if (history.count > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)isCollectionCell: (NSInteger)index {
+    NSMutableArray *history = [[NSMutableArray alloc] initWithArray:[City getArrayFromKey:@"kCitiesHistory"]];
+    if (history.count > 0) {
+        if (index < 2) {
+            return YES;
+        }
+    } else if (index < 1) {
+        return YES;
+    }
+    return NO;
+}
+
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self isCollectionCell:indexPath.section]) {
+    
+    } else {
+        CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
+        City *city = group.Cities[indexPath.row];
+        [city cacheToHistory];
+        self.selectBlock(city);
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return _titlesArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    CitiesGroup *group = _CitiesData[[self indexInTitles:section]];
-    return group.Cities.count;
+    if ([self isCollectionCell: section]) {
+        return 1;
+    } else {
+        CitiesGroup *group = _CitiesData[[self indexInTitles:section]];
+        return group.Cities.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell" forIndexPath:indexPath];
-    CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
-    City *city = group.Cities[indexPath.row];
-    cell.textLabel.text = city.CityName;
-    return cell;
+    if ([self isCollectionCell:indexPath.section]) {
+        CityCollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CityCollectionCell" forIndexPath:indexPath];
+        CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
+        [cell loadCities:group.Cities];
+        cell.citiesVC = self;
+        return cell;
+    } else {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell" forIndexPath:indexPath];
+        CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
+        City *city = group.Cities[indexPath.row];
+        cell.textLabel.text = city.CityName;
+        return cell;
+    }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self isCollectionCell:indexPath.section]) {
+        CitiesGroup *group = _CitiesData[[self indexInTitles:indexPath.section]];
+        return [CityCollectionCell heightOfCitiesCount:group.Cities.count];
+    } else {
+        return 44;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.0, [[UIScreen mainScreen] bounds].size.width, 30)];
+    view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+    UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 0.0, [[UIScreen mainScreen] bounds].size.width - 15, 30)];
+    headerLabel.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+    headerLabel.opaque = NO;
+    headerLabel.textColor = [UIColor lightGrayColor];
+    headerLabel.font = [UIFont boldSystemFontOfSize:14];
     CitiesGroup *group = _CitiesData[[self indexInTitles:section]];
-    return group.FirstLetter;
+    headerLabel.text = group.FirstLetter;
+    [view addSubview:headerLabel];
+    return view;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
 }
 
 //添加索引列

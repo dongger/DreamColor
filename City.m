@@ -7,7 +7,22 @@
 //
 
 #import "City.h"
+#import "NSObject+Cache.h"
 
 @implementation City
+
+- (void)cacheToHistory {
+    NSMutableArray *history = [[NSMutableArray alloc] initWithArray:[City getArrayFromKey:@"kCitiesHistory"]];
+    for (City *historyCity in history) {
+        if ([historyCity.CityName isEqualToString:self.CityName]) {
+            return;
+        }
+    }
+    if (history.count == 3) {
+        [history removeObjectAtIndex:0];
+    }
+    [history addObject:self];
+    [history saveWithKey:@"kCitiesHistory"];
+}
 
 @end

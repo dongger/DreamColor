@@ -10,6 +10,8 @@
 #import <RTRootNavigationController.h>
 #import "CalendarViewController.h"
 #import "CitiesViewController.h"
+#import "CyAlertView.h"
+#import "City.h"
 
 @interface SearchViewController ()
 
@@ -29,7 +31,11 @@
 }
 
 - (IBAction)pickCity:(id)sender {
-    CitiesViewController *citiesVC = [CitiesViewController instance];
+    CitiesViewController *citiesVC = [CitiesViewController instance:^(City* _Nullable city) {
+        [CyAlertView message:city.CityName];
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }];
     [self.navigationController pushViewController:citiesVC animated:YES];
 }
 

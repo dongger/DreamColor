@@ -17,4 +17,6 @@
 @property NSString *IsHotCity;
 @property NSString *Pinyin;
 
+- (void)cacheToHistory;
+
 @end

@@ -38,6 +38,8 @@
 		B555B5EA1EC3249400BD1A5F /* CitiesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5E91EC3249400BD1A5F /* CitiesGroup.m */; };
 		B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */; };
 		B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */; };
+		B555B5F81EC4571100BD1A5F /* CityCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5F71EC4571100BD1A5F /* CityCollectionCell.m */; };
+		B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +99,10 @@
 		B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
 		B555B5F11EC4395200BD1A5F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = SOURCE_ROOT; };
 		B555B5F21EC4395200BD1A5F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = SOURCE_ROOT; };
+		B555B5F61EC4571100BD1A5F /* CityCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCollectionCell.h; sourceTree = "<group>"; };
+		B555B5F71EC4571100BD1A5F /* CityCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCollectionCell.m; sourceTree = "<group>"; };
+		B555B5F91EC457C500BD1A5F /* CityMarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityMarkCell.h; sourceTree = "<group>"; };
+		B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityMarkCell.m; sourceTree = "<group>"; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,10 +158,8 @@
 		0DE81E2B1EC22AD20001782B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0DE81E2C1EC22AEB0001782B /* MonthCell.h */,
-				0DE81E2D1EC22AEB0001782B /* MonthCell.m */,
-				0DE81E2F1EC22C7D0001782B /* DayCell.h */,
-				0DE81E301EC22C7D0001782B /* DayCell.m */,
+				B555B5F51EC456AB00BD1A5F /* CityPicker */,
+				B555B5F41EC4569A00BD1A5F /* DatePicker */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -326,6 +330,28 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		B555B5F41EC4569A00BD1A5F /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0DE81E2C1EC22AEB0001782B /* MonthCell.h */,
+				0DE81E2D1EC22AEB0001782B /* MonthCell.m */,
+				0DE81E2F1EC22C7D0001782B /* DayCell.h */,
+				0DE81E301EC22C7D0001782B /* DayCell.m */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
+		B555B5F51EC456AB00BD1A5F /* CityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				B555B5F61EC4571100BD1A5F /* CityCollectionCell.h */,
+				B555B5F71EC4571100BD1A5F /* CityCollectionCell.m */,
+				B555B5F91EC457C500BD1A5F /* CityMarkCell.h */,
+				B555B5FA1EC457C500BD1A5F /* CityMarkCell.m */,
+			);
+			name = CityPicker;
+			sourceTree = "<group>";
+		};
 		E8ABBF00DEC2B87A8A697F15 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +493,7 @@
 				B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */,
 				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
+				B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */,
 				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
 				0DE81E2A1EC229280001782B /* CalendarViewController.m in Sources */,
 				B555B5C81EC1AC6A00BD1A5F /* User.m in Sources */,
@@ -482,6 +509,7 @@
 				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				0DE81E311EC22C7D0001782B /* DayCell.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
+				B555B5F81EC4571100BD1A5F /* CityCollectionCell.m in Sources */,
 				B555B5C11EC1A36300BD1A5F /* NetWorkTool.m in Sources */,
 				B555B5EA1EC3249400BD1A5F /* CitiesGroup.m in Sources */,
 				0DE81E1C1EC218D70001782B /* MBProgressHUD.m in Sources */,
