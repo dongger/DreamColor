@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NetWorkTool.h"
 #import <YYModel.h>
+#import "QueryFlightResult.h"
 
 @interface QueryFlightModel : NSObject
 
@@ -17,7 +18,7 @@
                           date: (NSDate *)date
                       bookType: (NSInteger)bookType
                     travelType: (NSInteger)travelType
-                       success: (void(^)(id responseObject))successBlock
+                       success: (void(^)(QueryFlightResult* result))successBlock
                        failure: (void(^)(NSString * errorMessage))failueBlock;
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Cabin.h"
 #import <UIKit/UIKit.h>
+#import "Cabin.h"
 
 @interface Flight : NSObject
 
@@ -28,14 +28,10 @@
 @property NSString *TakeoffAirportName; //出发机场名字
 @property NSString *TakeoffCityCode;
 @property NSString *TakeoffCityName;
-@property CGFloat FuelFee;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
-@property NSString *FligthNo;
+@property CGFloat FuelFee; //燃油费
+@property CGFloat LowestPrice; //最低售价
+@property NSString *ArriveAirportName;
+@property NSString *ArriveCityCode;
+@property NSString *ArriveCityName;
 
 @end

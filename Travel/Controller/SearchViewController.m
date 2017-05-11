@@ -77,9 +77,7 @@
                                         date:_searchDate
                                     bookType:_bookType
                                   travelType:_travelType
-                                     success:^(id responseObject) {
-        
-                                         
+                                     success:^(QueryFlightResult* result) {
                                          
     } failure:^(NSString *errorMessage) {
         

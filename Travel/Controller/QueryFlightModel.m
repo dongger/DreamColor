@@ -16,7 +16,7 @@
                           date: (NSDate *)date
                       bookType: (NSInteger)bookType
                     travelType: (NSInteger)travelType
-                       success: (void(^)(id responseObject))successBlock
+                       success: (void(^)(QueryFlightResult* result))successBlock
                        failure: (void(^)(NSString * errorMessage))failueBlock {
     NSTimeZone* GTMzone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -29,7 +29,7 @@
                                  @"BookType":@(bookType),
                                  @"TravelType":@(travelType)};
     [NetWorkTool POST:__queryFlight parameters:parameters success:^(id  _Nullable responseObject) {
-        successBlock(responseObject);
+        successBlock([QueryFlightResult yy_modelWithJSON:responseObject]);
     } failure:^(NSString * _Nullable errorMessage) {
         failueBlock(errorMessage);
     }];

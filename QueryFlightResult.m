@@ -1,17 +1,17 @@
 //
-//  Flight.m
+//  QueryFlightResult.m
 //  Travel
 //
 //  Created by caiyang on 2017/5/11.
 //  Copyright © 2017年 Nil. All rights reserved.
 //
 
-#import "Flight.h"
+#import "QueryFlightResult.h"
 
-@implementation Flight
+@implementation QueryFlightResult
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"Cabins" : [Cabin class]};
+    return @{@"Flights" : [Flight class]};
 }
 
 @end

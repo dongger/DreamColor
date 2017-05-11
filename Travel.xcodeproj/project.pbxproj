@@ -20,9 +20,7 @@
 		0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E361EC232B70001782B /* UIColor+Hex.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */; };
-		B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A11EC19DFD00BD1A5F /* FirstViewController.m */; };
 		B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A21EC19DFD00BD1A5F /* main.m */; };
-		B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A41EC19DFD00BD1A5F /* SecondViewController.m */; };
 		B555B5B11EC19DFD00BD1A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B555B5A61EC19DFD00BD1A5F /* Assets.xcassets */; };
 		B555B5B31EC19DFD00BD1A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B555B5A91EC19DFD00BD1A5F /* LaunchScreen.storyboard */; };
 		B555B5B41EC19DFD00BD1A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B555B5AB1EC19DFD00BD1A5F /* Main.storyboard */; };
@@ -43,6 +41,7 @@
 		B555B5FE1EC47C0800BD1A5F /* QueryFlightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5FD1EC47C0800BD1A5F /* QueryFlightModel.m */; };
 		B555B6011EC489E700BD1A5F /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6001EC489E700BD1A5F /* Flight.m */; };
 		B555B6041EC48A0500BD1A5F /* Cabin.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6031EC48A0500BD1A5F /* Cabin.m */; };
+		B555B6071EC48DA100BD1A5F /* QueryFlightResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6061EC48DA100BD1A5F /* QueryFlightResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,11 +69,7 @@
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B555B5A01EC19DFD00BD1A5F /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B555B5A11EC19DFD00BD1A5F /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		B555B5A21EC19DFD00BD1A5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B555B5A31EC19DFD00BD1A5F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B555B5A41EC19DFD00BD1A5F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B555B5A61EC19DFD00BD1A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B555B5AA1EC19DFD00BD1A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B555B5AC1EC19DFD00BD1A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +107,8 @@
 		B555B6001EC489E700BD1A5F /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flight.m; sourceTree = SOURCE_ROOT; };
 		B555B6021EC48A0500BD1A5F /* Cabin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cabin.h; sourceTree = SOURCE_ROOT; };
 		B555B6031EC48A0500BD1A5F /* Cabin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cabin.m; sourceTree = SOURCE_ROOT; };
+		B555B6051EC48DA100BD1A5F /* QueryFlightResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryFlightResult.h; sourceTree = SOURCE_ROOT; };
+		B555B6061EC48DA100BD1A5F /* QueryFlightResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryFlightResult.m; sourceTree = SOURCE_ROOT; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,11 +218,7 @@
 				0DE81E101EC205F80001782B /* Login */,
 				B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */,
 				B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */,
-				B555B5A01EC19DFD00BD1A5F /* FirstViewController.h */,
-				B555B5A11EC19DFD00BD1A5F /* FirstViewController.m */,
 				B555B5A21EC19DFD00BD1A5F /* main.m */,
-				B555B5A31EC19DFD00BD1A5F /* SecondViewController.h */,
-				B555B5A41EC19DFD00BD1A5F /* SecondViewController.m */,
 			);
 			name = Controller;
 			path = Travel/Controller;
@@ -293,6 +286,8 @@
 				B555B6001EC489E700BD1A5F /* Flight.m */,
 				B555B6021EC48A0500BD1A5F /* Cabin.h */,
 				B555B6031EC48A0500BD1A5F /* Cabin.m */,
+				B555B6051EC48DA100BD1A5F /* QueryFlightResult.h */,
+				B555B6061EC48DA100BD1A5F /* QueryFlightResult.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -505,9 +500,9 @@
 				B555B5F01EC32A3300BD1A5F /* CitiesViewController.m in Sources */,
 				B555B5FE1EC47C0800BD1A5F /* QueryFlightModel.m in Sources */,
 				0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */,
+				B555B6071EC48DA100BD1A5F /* QueryFlightResult.m in Sources */,
 				B555B5D51EC1D48500BD1A5F /* NSObject+Cache.m in Sources */,
 				B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */,
-				B555B5B01EC19DFD00BD1A5F /* SecondViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */,
 				B555B6041EC48A0500BD1A5F /* Cabin.m in Sources */,
@@ -524,7 +519,6 @@
 				0DE81E201EC21F7B0001782B /* MeViewController.m in Sources */,
 				0DE81E191EC213980001782B /* BaseViewController.m in Sources */,
 				B555B5E41EC3232C00BD1A5F /* City.m in Sources */,
-				B555B5AE1EC19DFD00BD1A5F /* FirstViewController.m in Sources */,
 				0DE81E311EC22C7D0001782B /* DayCell.m in Sources */,
 				B555B5D21EC1C82800BD1A5F /* LoginUser.m in Sources */,
 				B555B5F81EC4571100BD1A5F /* CityCollectionCell.m in Sources */,
