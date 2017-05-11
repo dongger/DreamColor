@@ -205,13 +205,11 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.0, [[UIScreen mainScreen] bounds].size.width, 30)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0.0, [[UIScreen mainScreen] bounds].size.width, 30)];
     view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
     UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 0.0, [[UIScreen mainScreen] bounds].size.width - 15, 30)];
-    headerLabel.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
-    headerLabel.opaque = NO;
     headerLabel.textColor = [UIColor lightGrayColor];
-    headerLabel.font = [UIFont boldSystemFontOfSize:14];
+    headerLabel.font = [UIFont systemFontOfSize:14];
     CitiesGroup *group = _CitiesData[[self indexInTitles:section]];
     headerLabel.text = group.FirstLetter;
     [view addSubview:headerLabel];
