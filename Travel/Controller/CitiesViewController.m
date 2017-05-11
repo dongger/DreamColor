@@ -106,7 +106,6 @@
     _searchBar.enablesReturnKeyAutomatically = NO;
     [_searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [self.navigationController.navigationBar addSubview:_searchBar];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithHexString:@"#2685d7"]];
 }
 
 - (void)searchCities {

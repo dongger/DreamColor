@@ -27,9 +27,6 @@
     [super viewDidLoad];
     _startDate = [NSDate date];
     _endDate = [NSDate dateWithTimeInterval:60*60*24*180 sinceDate:_startDate];
-    
-    
-    
 }
 
 - (NSDate *)cellDateForIndexPath: (NSInteger)section {

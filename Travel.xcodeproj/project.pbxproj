@@ -12,12 +12,12 @@
 		0DE81E161EC20A350001782B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E151EC20A350001782B /* LoginViewController.m */; };
 		0DE81E191EC213980001782B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E181EC213980001782B /* BaseViewController.m */; };
 		0DE81E1C1EC218D70001782B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E1B1EC218D70001782B /* MBProgressHUD.m */; };
-		0DE81E201EC21F7B0001782B /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E1F1EC21F7B0001782B /* MeViewController.m */; };
 		0DE81E241EC223350001782B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E231EC223350001782B /* SearchViewController.m */; };
 		0DE81E2A1EC229280001782B /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E291EC229280001782B /* CalendarViewController.m */; };
 		0DE81E2E1EC22AEB0001782B /* MonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E2D1EC22AEB0001782B /* MonthCell.m */; };
 		0DE81E311EC22C7D0001782B /* DayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E301EC22C7D0001782B /* DayCell.m */; };
 		0DE81E371EC232B70001782B /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E361EC232B70001782B /* UIColor+Hex.m */; };
+		0DE81E3B1EC4A6D50001782B /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E3A1EC4A6D50001782B /* MeViewController.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */; };
 		B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B5A21EC19DFD00BD1A5F /* main.m */; };
@@ -58,8 +58,6 @@
 		0DE81E181EC213980001782B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = SOURCE_ROOT; };
 		0DE81E1A1EC218D70001782B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		0DE81E1B1EC218D70001782B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = SOURCE_ROOT; };
-		0DE81E1E1EC21F7B0001782B /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		0DE81E1F1EC21F7B0001782B /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		0DE81E221EC223350001782B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		0DE81E231EC223350001782B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		0DE81E281EC229280001782B /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		0DE81E301EC22C7D0001782B /* DayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCell.m; sourceTree = "<group>"; };
 		0DE81E351EC232B70001782B /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = SOURCE_ROOT; };
 		0DE81E361EC232B70001782B /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = SOURCE_ROOT; };
+		0DE81E391EC4A6D50001782B /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		0DE81E3A1EC4A6D50001782B /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -141,37 +141,31 @@
 		0DE81E101EC205F80001782B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81E3C1EC4A7290001782B /* Controller */,
 				B555B6111EC4973600BD1A5F /* Model */,
-				0DE81E111EC2061E0001782B /* LoginTypeController.h */,
-				0DE81E121EC2061E0001782B /* LoginTypeController.m */,
-				0DE81E141EC20A350001782B /* LoginViewController.h */,
-				0DE81E151EC20A350001782B /* LoginViewController.m */,
 			);
 			name = Login;
+			path = ../Travel/Controller;
 			sourceTree = "<group>";
 		};
 		0DE81E1D1EC21F5F0001782B /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				0DE81E1E1EC21F7B0001782B /* MeViewController.h */,
-				0DE81E1F1EC21F7B0001782B /* MeViewController.m */,
+				0DE81E3D1EC4A7360001782B /* Controller */,
 			);
 			name = Me;
+			path = ../Travel/Controller;
 			sourceTree = "<group>";
 		};
-		0DE81E211EC223020001782B /* Order */ = {
+		0DE81E211EC223020001782B /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81E381EC4A61B0001782B /* Controller */,
 				B555B5DE1EC3219500BD1A5F /* Model */,
 				0DE81E2B1EC22AD20001782B /* View */,
-				B555B5EE1EC32A3300BD1A5F /* CitiesViewController.h */,
-				B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */,
-				0DE81E221EC223350001782B /* SearchViewController.h */,
-				0DE81E231EC223350001782B /* SearchViewController.m */,
-				0DE81E281EC229280001782B /* CalendarViewController.h */,
-				0DE81E291EC229280001782B /* CalendarViewController.m */,
 			);
-			name = Order;
+			name = Book;
+			path = ../Travel/Controller;
 			sourceTree = "<group>";
 		};
 		0DE81E2B1EC22AD20001782B /* View */ = {
@@ -181,6 +175,39 @@
 				B555B5F41EC4569A00BD1A5F /* DatePicker */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		0DE81E381EC4A61B0001782B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B555B5EE1EC32A3300BD1A5F /* CitiesViewController.h */,
+				B555B5EF1EC32A3300BD1A5F /* CitiesViewController.m */,
+				0DE81E221EC223350001782B /* SearchViewController.h */,
+				0DE81E231EC223350001782B /* SearchViewController.m */,
+				0DE81E281EC229280001782B /* CalendarViewController.h */,
+				0DE81E291EC229280001782B /* CalendarViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0DE81E3C1EC4A7290001782B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DE81E111EC2061E0001782B /* LoginTypeController.h */,
+				0DE81E121EC2061E0001782B /* LoginTypeController.m */,
+				0DE81E141EC20A350001782B /* LoginViewController.h */,
+				0DE81E151EC20A350001782B /* LoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0DE81E3D1EC4A7360001782B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DE81E391EC4A6D50001782B /* MeViewController.h */,
+				0DE81E3A1EC4A6D50001782B /* MeViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
@@ -212,28 +239,27 @@
 		B555B5821EC0980700BD1A5F /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81E1D1EC21F5F0001782B /* Me */,
+				0DE81E101EC205F80001782B /* Login */,
+				0DE81E211EC223020001782B /* Book */,
 				B555B5C21EC1AA8400BD1A5F /* Entity */,
 				B555B5BE1EC19FCF00BD1A5F /* Tool */,
-				B555B5BD1EC19FC700BD1A5F /* Model */,
-				B555B5A81EC19DFD00BD1A5F /* View */,
-				B555B59D1EC19DFD00BD1A5F /* Controller */,
+				B555B5A81EC19DFD00BD1A5F /* StoryBoard */,
+				B555B59D1EC19DFD00BD1A5F /* Common */,
 				B555B5A51EC19DFD00BD1A5F /* Resource */,
 			);
 			name = Travel;
 			path = DreamColor;
 			sourceTree = "<group>";
 		};
-		B555B59D1EC19DFD00BD1A5F /* Controller */ = {
+		B555B59D1EC19DFD00BD1A5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0DE81E211EC223020001782B /* Order */,
-				0DE81E1D1EC21F5F0001782B /* Me */,
-				0DE81E101EC205F80001782B /* Login */,
 				B555B59E1EC19DFD00BD1A5F /* AppDelegate.h */,
 				B555B59F1EC19DFD00BD1A5F /* AppDelegate.m */,
 				B555B5A21EC19DFD00BD1A5F /* main.m */,
 			);
-			name = Controller;
+			name = Common;
 			path = Travel/Controller;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -247,25 +273,16 @@
 			path = Travel/Resource;
 			sourceTree = SOURCE_ROOT;
 		};
-		B555B5A81EC19DFD00BD1A5F /* View */ = {
+		B555B5A81EC19DFD00BD1A5F /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				B555B5A91EC19DFD00BD1A5F /* LaunchScreen.storyboard */,
 				B555B5AB1EC19DFD00BD1A5F /* Main.storyboard */,
 				0DE81E0E1EC1FEC30001782B /* Login.storyboard */,
 			);
-			name = View;
+			name = StoryBoard;
 			path = Travel/View;
 			sourceTree = SOURCE_ROOT;
-		};
-		B555B5BD1EC19FC700BD1A5F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B555B5C91EC1ADB900BD1A5F /* UserModel.h */,
-				B555B5CA1EC1ADB900BD1A5F /* UserModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
 		};
 		B555B5BE1EC19FCF00BD1A5F /* Tool */ = {
 			isa = PBXGroup;
@@ -384,6 +401,8 @@
 		B555B6111EC4973600BD1A5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B555B5C91EC1ADB900BD1A5F /* UserModel.h */,
+				B555B5CA1EC1ADB900BD1A5F /* UserModel.m */,
 				B555B6121EC4975000BD1A5F /* SendCodeModel.h */,
 				B555B6131EC4975000BD1A5F /* SendCodeModel.m */,
 			);
@@ -533,6 +552,7 @@
 				B555B5F31EC4395200BD1A5F /* BaseTableViewController.m in Sources */,
 				B555B5AD1EC19DFD00BD1A5F /* AppDelegate.m in Sources */,
 				B555B5FB1EC457C500BD1A5F /* CityMarkCell.m in Sources */,
+				0DE81E3B1EC4A6D50001782B /* MeViewController.m in Sources */,
 				B555B6041EC48A0500BD1A5F /* Cabin.m in Sources */,
 				B555B5CB1EC1ADB900BD1A5F /* UserModel.m in Sources */,
 				0DE81E2A1EC229280001782B /* CalendarViewController.m in Sources */,
@@ -547,7 +567,6 @@
 				B555B60A1EC4926E00BD1A5F /* Insurances.m in Sources */,
 				B555B5AF1EC19DFD00BD1A5F /* main.m in Sources */,
 				0DE81E161EC20A350001782B /* LoginViewController.m in Sources */,
-				0DE81E201EC21F7B0001782B /* MeViewController.m in Sources */,
 				0DE81E191EC213980001782B /* BaseViewController.m in Sources */,
 				B555B5E41EC3232C00BD1A5F /* City.m in Sources */,
 				0DE81E311EC22C7D0001782B /* DayCell.m in Sources */,

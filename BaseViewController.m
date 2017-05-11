@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "UIColor+Hex.h"
 
 @interface BaseViewController ()
 
@@ -22,6 +23,8 @@
                            barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithHexString:@"#2685d7"]];
+
 }
 
 @end
