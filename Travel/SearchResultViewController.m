@@ -44,6 +44,25 @@
      }];
 }
 
+- (IBAction)filtrate:(id)sender {
+}
+
+- (IBAction)sortedByTakeOffDate {
+    _result.Flights = [_result.Flights sortedArrayUsingComparator:^NSComparisonResult(Flight * _Nonnull obj1, Flight *  _Nonnull obj2) {
+        return [obj1.TakeOffDate compare:obj2.TakeOffDate];
+    }];
+    _selectedRow = -1;
+    [self.tableView reloadData];
+}
+
+- (IBAction)sortedByPrice {
+    _result.Flights = [_result.Flights sortedArrayUsingComparator:^NSComparisonResult(Flight * _Nonnull obj1, Flight *  _Nonnull obj2) {
+        return [@(obj1.LowestPrice) compare: @(obj2.LowestPrice)];
+    }];
+    _selectedRow = -1;
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
