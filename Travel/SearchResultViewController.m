@@ -11,15 +11,16 @@
 #import "QueryFlightModel.h"
 #import "FiltrateViewController.h"
 #import "FiltrateViewController.h"
+#import "NSObject+Cache.h"
+
+static NSString *saveKey = @"kQueryFlightResult";
 
 @interface SearchResultViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property QueryFlightResult* result;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSInteger selectedRow;
-@property NSArray *filtrateArray;
-@property NSMutableArray *selectedFiltrateArray;
 
 @end
+
 
 @implementation SearchResultViewController
 
@@ -34,6 +35,54 @@
     [self fetchData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self filtrate];
+}
+
+- (void)filtrate {
+    if (_result != nil && _selectedFiltrateArray.count == 3) {
+        NSMutableArray *flights = [[NSMutableArray alloc] init];
+        for (Flight *flight in _result.Flights) {
+            BOOL needShow = YES;
+            if ([_selectedFiltrateArray[0] count] > 0) {
+                //筛选时间
+                if (![_selectedFiltrateArray[0] containsObject:flight.TakeOffDatePeriods]) {
+                    needShow = NO;
+                    continue;
+                }
+            }
+            if ([_selectedFiltrateArray[1] count] > 0) {
+                //筛选航司
+                if (![_selectedFiltrateArray[1] containsObject:flight.AirlineName]) {
+                    needShow = NO;
+                    continue;
+                }
+            }
+            if ([_selectedFiltrateArray[2] count] > 0) {
+                //筛选舱位
+                NSMutableArray *cabins = [[NSMutableArray alloc] init];
+                for (Cabin *cabin in flight.Cabins) {
+                    if (![_selectedFiltrateArray[2] containsObject: cabin.CabinType]) {
+                        [cabins addObject:cabin];
+                    }
+                }
+                if (cabins.count > 0) {
+                    flight.Cabins = cabins;
+                } else {
+                    needShow = NO;
+                    continue;
+                }
+            }
+            if (needShow) {
+                [flights addObject:flight];
+            }
+        }
+        _result.Flights = flights;
+        [_tableView reloadData];
+    }
+}
+
 - (void)fetchData {
     [QueryFlightModel fetchWithStartCityCode:_startCity.Code
                          destinationCityCode:_destinationCity.Code
@@ -45,19 +94,24 @@
          if (_result == nil) {
              _selectedFiltrateArray = [[NSMutableArray alloc]
                                        initWithObjects:
-                                       [NSMutableArray arrayWithArray:result.TimePeriods],
-                                       [NSMutableArray arrayWithArray:result.Airlines],
-                                       [NSMutableArray arrayWithArray:result.CabinLevels],nil];
+                                       [NSMutableArray arrayWithArray:@[]],
+                                       [NSMutableArray arrayWithArray:@[]],
+                                       [NSMutableArray arrayWithArray:@[]],nil];
          }
          _result = result;
+         [_result saveWithKey: saveKey];
          [self.tableView reloadData];
      } failure:^(NSString *errorMessage) {
          
      }];
 }
 
+- (void)getCache {
+    _result = [QueryFlightModel getFromKey:saveKey];
+}
+
 - (IBAction)filtrate:(id)sender {
-    FiltrateViewController *vc = [FiltrateViewController instance:_result selectedFiltrateArray:_selectedFiltrateArray];
+    FiltrateViewController *vc = [FiltrateViewController instanceWithdelegate:self];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

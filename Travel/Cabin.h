@@ -13,7 +13,7 @@
 
 @property NSString *Key;
 @property NSString *CabinCode;
-@property NSString *CabinName;
+//@property NSString *CabinName;
 @property NSString *CabinType;
 @property NSInteger CabinDiscount; //折扣
 @property NSInteger Surplus; //剩余座位数

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "QueryFlightResult.h"
 #import "BaseViewController.h"
+#import "SearchResultViewController.h"
 
 @interface FiltrateViewController : BaseViewController
-+ (FiltrateViewController *)instance: (QueryFlightResult *)result
-               selectedFiltrateArray: (NSMutableArray *)selectedFiltrateArray;
++ (FiltrateViewController *)instanceWithdelegate: (SearchResultViewController *)searchResultVC;
 @end

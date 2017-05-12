@@ -13,6 +13,9 @@
 
 @interface SearchResultViewController : BaseViewController
 
+@property QueryFlightResult* result;
+@property NSArray *filtrateArray;
+@property NSMutableArray *selectedFiltrateArray;
 @property City *startCity;
 @property City *destinationCity;
 @property NSDate *searchDate;
@@ -20,4 +23,5 @@
 @property NSInteger travelType; //1:因公 2:因私
 
 + (SearchResultViewController *)instance;
+- (void)getCache;
 @end

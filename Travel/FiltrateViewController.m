@@ -10,10 +10,11 @@
 #import "UIColor+Hex.h"
 
 @interface FiltrateViewController ()<UITableViewDelegate, UITableViewDataSource>
-@property QueryFlightResult* result;
+@property SearchResultViewController *delegate;
 @property (weak, nonatomic) IBOutlet UITableView *titleTableView;
 @property (weak, nonatomic) IBOutlet UITableView *infoTableView;
 @property NSArray *titlesArray;
+
 @property NSMutableArray *selectedFiltrateArray;
 @property NSArray *allFiltrateArray;
 
@@ -23,13 +24,16 @@
 
 @implementation FiltrateViewController
 
-+ (FiltrateViewController *)instance: (QueryFlightResult *)result
-               selectedFiltrateArray: (NSMutableArray *)selectedFiltrateArray {
++ (FiltrateViewController *)instanceWithdelegate: (SearchResultViewController *)searchResultVC {
     FiltrateViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FiltrateViewController"];
-    vc.result = result;
+    vc.delegate = searchResultVC;
     vc.titlesArray = @[@"起飞时间", @"航空公司", @"舱位"];
-    vc.allFiltrateArray = [[NSArray alloc] initWithObjects:result.TimePeriods, result.Airlines, result.CabinLevels, nil];
-    vc.selectedFiltrateArray = selectedFiltrateArray;
+    
+    vc.allFiltrateArray = [[NSArray alloc] initWithObjects:
+                           searchResultVC.result.TimePeriods,
+                           searchResultVC.result.Airlines,
+                           searchResultVC.result.CabinLevels, nil];
+    vc.selectedFiltrateArray = searchResultVC.selectedFiltrateArray;
     return vc;
 }
 
@@ -39,13 +43,15 @@
 
     
 }
+- (IBAction)reloadFiltrate:(id)sender {
+    for (NSMutableArray *array in _selectedFiltrateArray) {
+        [array removeAllObjects];
+    }
+    [_delegate getCache];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (BOOL)isNOLimit {
-//    if ([_allFiltrateArray[_selectedTitle] count] == [_selectedFiltrateArray[_selectedTitle] count]) {
-//        return YES;
-//    } else {
-//        return NO;
-//    }
     if ([_selectedFiltrateArray[_selectedTitle] count] == 0) {
         return YES;
     } else {
@@ -91,7 +97,6 @@ backgroundColor: (UIColor *) backgroundColor {
 
 - (void)setNolimit {
     [_selectedFiltrateArray[_selectedTitle] removeAllObjects];
-//    _selectedFiltrateArray[_selectedTitle] = [NSMutableArray arrayWithArray:_allFiltrateArray[_selectedTitle]];
 }
 
 #pragma mark - Table view data source

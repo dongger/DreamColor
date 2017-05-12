@@ -34,4 +34,7 @@
 @property NSString *ArriveCityCode;
 @property NSString *ArriveCityName;
 
+@property NSString *TakeOffDatePeriods; //起飞时间所属时间段范围
+
+
 @end

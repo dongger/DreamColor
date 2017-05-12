@@ -1010,7 +1010,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" id="dvq-Pj-blw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="infoCell" id="dvq-Pj-blw">
                                         <rect key="frame" x="0.0" y="56" width="225" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvq-Pj-blw" id="OoH-aD-OJf">
@@ -1057,7 +1057,13 @@
                             <constraint firstItem="TUk-45-uIq" firstAttribute="top" secondItem="MKk-X0-HoT" secondAttribute="bottom" id="ipa-4h-AZS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="航班筛选" id="qI7-O9-XyR"/>
+                    <navigationItem key="navigationItem" title="航班筛选" id="qI7-O9-XyR">
+                        <barButtonItem key="rightBarButtonItem" title="恢复默认" id="pJo-Lm-6Aq">
+                            <connections>
+                                <action selector="reloadFiltrate:" destination="Jou-ps-lvk" id="ydR-1s-C6X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="infoTableView" destination="fuM-j3-eKq" id="4Zp-jv-N3s"/>
