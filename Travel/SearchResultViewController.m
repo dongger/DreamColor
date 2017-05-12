@@ -16,6 +16,9 @@
 @property QueryFlightResult* result;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSInteger selectedRow;
+@property NSArray *filtrateArray;
+@property NSMutableArray *selectedFiltrateArray;
+
 @end
 
 @implementation SearchResultViewController
@@ -39,6 +42,13 @@
                                   travelType:_travelType
                                      success:^(QueryFlightResult* result)
      {
+         if (_result == nil) {
+             _selectedFiltrateArray = [[NSMutableArray alloc]
+                                       initWithObjects:
+                                       [NSMutableArray arrayWithArray:result.TimePeriods],
+                                       [NSMutableArray arrayWithArray:result.Airlines],
+                                       [NSMutableArray arrayWithArray:result.CabinLevels],nil];
+         }
          _result = result;
          [self.tableView reloadData];
      } failure:^(NSString *errorMessage) {
@@ -47,7 +57,7 @@
 }
 
 - (IBAction)filtrate:(id)sender {
-    FiltrateViewController *vc = [FiltrateViewController instance:_result];
+    FiltrateViewController *vc = [FiltrateViewController instance:_result selectedFiltrateArray:_selectedFiltrateArray];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

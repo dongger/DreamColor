@@ -11,5 +11,6 @@
 #import "BaseViewController.h"
 
 @interface FiltrateViewController : BaseViewController
-+ (FiltrateViewController *)instance: (QueryFlightResult *)result;
++ (FiltrateViewController *)instance: (QueryFlightResult *)result
+               selectedFiltrateArray: (NSMutableArray *)selectedFiltrateArray;
 @end
