@@ -110,6 +110,7 @@ static NSString *saveKey = @"kQueryFlightResult";
 - (void)getCache {
     if ([QueryFlightResult getFromKey:saveKey] != nil) {
         _result = [QueryFlightResult getFromKey:saveKey];
+        _selectedRow = -1;
         [_tableView reloadData];
     }
 }
