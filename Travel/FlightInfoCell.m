@@ -42,6 +42,7 @@
     _startPlace.text = [NSString stringWithFormat:@"%@ %@", flight.TakeoffAirportName, flight.TakeoffTerm];
     _endPlace.text = [NSString stringWithFormat:@"%@ %@", flight.ArriveAirportName, flight.ArrivalTerm];
     _airLineInfo.text = [NSString stringWithFormat:@"%@%@ | %@", flight.AirlineName, flight.FligthNo, flight.PlaneModel];
+    [_tableView reloadData];
 }
 
 + (CGFloat)heightOfCabinsCount: (NSInteger)count {

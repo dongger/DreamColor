@@ -42,6 +42,7 @@ static NSString *saveKey = @"kQueryFlightResult";
 
 - (void)filtrate {
     if (_result != nil && _selectedFiltrateArray.count == 3) {
+        [self getCache];
         NSMutableArray *flights = [[NSMutableArray alloc] init];
         for (Flight *flight in _result.Flights) {
             BOOL needShow = YES;
@@ -63,7 +64,7 @@ static NSString *saveKey = @"kQueryFlightResult";
                 //筛选舱位
                 NSMutableArray *cabins = [[NSMutableArray alloc] init];
                 for (Cabin *cabin in flight.Cabins) {
-                    if (![_selectedFiltrateArray[2] containsObject: cabin.CabinType]) {
+                    if ([_selectedFiltrateArray[2] containsObject: cabin.CabinType]) {
                         [cabins addObject:cabin];
                     }
                 }
@@ -107,7 +108,10 @@ static NSString *saveKey = @"kQueryFlightResult";
 }
 
 - (void)getCache {
-    _result = [QueryFlightModel getFromKey:saveKey];
+    if ([QueryFlightResult getFromKey:saveKey] != nil) {
+        _result = [QueryFlightResult getFromKey:saveKey];
+        [_tableView reloadData];
+    }
 }
 
 - (IBAction)filtrate:(id)sender {

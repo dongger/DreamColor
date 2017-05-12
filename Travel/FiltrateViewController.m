@@ -40,14 +40,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
 }
+
 - (IBAction)reloadFiltrate:(id)sender {
     for (NSMutableArray *array in _selectedFiltrateArray) {
         [array removeAllObjects];
     }
-    [_delegate getCache];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
