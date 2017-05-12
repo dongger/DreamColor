@@ -9,6 +9,8 @@
 #import "SearchResultViewController.h"
 #import "FlightInfoCell.h"
 #import "QueryFlightModel.h"
+#import "FiltrateViewController.h"
+#import "FiltrateViewController.h"
 
 @interface SearchResultViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property QueryFlightResult* result;
@@ -45,6 +47,8 @@
 }
 
 - (IBAction)filtrate:(id)sender {
+    FiltrateViewController *vc = [FiltrateViewController instance:_result];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)sortedByTakeOffDate {

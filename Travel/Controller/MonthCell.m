@@ -57,7 +57,7 @@
     NSInteger cellCount = comp.weekday + days.length + 7;
     NSLog(@"%ld",(long)cellCount);
     NSInteger row = cellCount/7 + (cellCount%7==0?0:1);
-    return row*50;
+    return row*30;
 }
 
 - (BOOL)needShowDay: (NSIndexPath *)indexPath {
@@ -100,6 +100,12 @@
             [self.calendar.navigationController popViewControllerAnimated:YES];
         }
     }
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat margin = 4;
+    return CGSizeMake((width - margin*6 - 15)/7, 30);
 }
 
 @end

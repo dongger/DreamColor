@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
+
 typedef void(^_Nullable DatePickedBlock)(NSDate* _Nullable date);
 
-@interface CalendarViewController : UITableViewController
+@interface CalendarViewController : BaseTableViewController
 @property DatePickedBlock selectBlock;
 
 + (CalendarViewController *_Nullable)instance:(void(^_Nullable)(NSDate* _Nullable date))didSelectBlock;

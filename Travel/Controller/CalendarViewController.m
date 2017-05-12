@@ -90,6 +90,7 @@
     label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor blackColor];
+    label.font = [UIFont systemFontOfSize:13];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
@@ -109,7 +110,7 @@
     return [MonthCell heightOfDate:[self cellDateForIndexPath:indexPath.section]];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 55;
+    return 35;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

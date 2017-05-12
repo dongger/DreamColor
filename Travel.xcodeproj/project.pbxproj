@@ -52,6 +52,7 @@
 		0DE81F191EC4BC050001782B /* NSString+Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81F181EC4BC050001782B /* NSString+Attributed.m */; };
 		0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
+		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		0DE81F1A1EC4CC8E0001782B /* CabinInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinInfoCell.h; sourceTree = "<group>"; };
 		0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinInfoCell.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
+		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				0DE81E951EC4ABA50001782B /* CalendarViewController.m */,
 				0DE81F091EC4B38F0001782B /* SearchResultViewController.h */,
 				0DE81F0A1EC4B38F0001782B /* SearchResultViewController.m */,
+				B555B6151EC572B900BD1A5F /* FiltrateViewController.h */,
+				B555B6161EC572B900BD1A5F /* FiltrateViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -588,6 +593,7 @@
 				0DE81F191EC4BC050001782B /* NSString+Attributed.m in Sources */,
 				0DE81EEB1EC4ABA50001782B /* LoginUser.m in Sources */,
 				0DE81EE51EC4ABA50001782B /* SearchViewController.m in Sources */,
+				B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */,
 				0DE81EF01EC4ABA50001782B /* QueryFlightResult.m in Sources */,
 				0DE81F0E1EC4B7740001782B /* FlightInfoCell.m in Sources */,
 				0DE81ED51EC4ABA50001782B /* CheckPriceResult.m in Sources */,
