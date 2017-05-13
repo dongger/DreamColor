@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^_Nullable Block)(NSString * _Nullable string);
+
 @interface Book_LinkManCell : UITableViewCell
+
+- (void)loadInfo:(NSString *_Nonnull)name
+           block: (void(^_Nullable)(NSString * _Nullable string))block;
 
 @end

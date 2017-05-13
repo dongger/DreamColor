@@ -10,8 +10,8 @@
 
 @interface Insurances : NSObject
 
-@property NSInteger *ID;
-@property NSInteger *Price;
+@property NSInteger ID;
+@property NSInteger Price;
 @property NSString *Name;
 
 @end

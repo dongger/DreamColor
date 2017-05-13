@@ -64,6 +64,7 @@
 		0DECEAEC1EC71FA1005F1072 /* Book_NeedAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAEB1EC71FA1005F1072 /* Book_NeedAddressCell.m */; };
 		0DECEAEF1EC71FB4005F1072 /* Book_AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAEE1EC71FB4005F1072 /* Book_AddressCell.m */; };
 		0DECEAF21EC720D5005F1072 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */; };
+		0DECEAF51EC74EE6005F1072 /* BookOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -178,6 +179,8 @@
 		0DECEAEE1EC71FB4005F1072 /* Book_AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_AddressCell.m; sourceTree = "<group>"; };
 		0DECEAF01EC720D5005F1072 /* CreatOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatOrderViewController.h; sourceTree = "<group>"; };
 		0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatOrderViewController.m; sourceTree = "<group>"; };
+		0DECEAF31EC74EE6005F1072 /* BookOrderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOrderEntity.h; sourceTree = "<group>"; };
+		0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderEntity.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				0DE81EB31EC4ABA50001782B /* User.m */,
 				0D5636EE1EC6F33F00D6A86B /* CheckPriceResult.h */,
 				0D5636EF1EC6F33F00D6A86B /* CheckPriceResult.m */,
+				0DECEAF31EC74EE6005F1072 /* BookOrderEntity.h */,
+				0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				0DE81EE71EC4ABA50001782B /* CyAlertView.m in Sources */,
 				0DE81EDC1EC4ABA50001782B /* CityCollectionCell.m in Sources */,
 				0DE81EED1EC4ABA50001782B /* NetWorkTool.m in Sources */,
+				0DECEAF51EC74EE6005F1072 /* BookOrderEntity.m in Sources */,
 				0DE81EEE1EC4ABA50001782B /* NSObject+Cache.m in Sources */,
 				0DECEADD1EC71EC6005F1072 /* Book_PassengerNullCell.m in Sources */,
 				0D5636F41EC7018F00D6A86B /* UIView+CurrentVC.m in Sources */,

@@ -10,4 +10,6 @@
 
 @interface Book_PassengerTitleCell : UITableViewCell
 
+- (void)loadCount: (NSInteger)count;
+
 @end

@@ -10,10 +10,12 @@
 #import "BaseViewController.h"
 #import "Cabin.h"
 #import "Flight.h"
+#import "CheckPriceResult.h"
 
 @interface CreatOrderViewController : BaseViewController
 
 + (CreatOrderViewController *)instanceWithFlight: (Flight *)flight
-                                           cabin: (Cabin *)cabin;
+                                           cabin: (Cabin *)cabin
+                                     checkResult: (CheckPriceResult *)result;
 
 @end

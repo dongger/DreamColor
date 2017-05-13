@@ -8,9 +8,9 @@
 
 #import "Book_LinkPhoneCell.h"
 
-@interface Book_LinkPhoneCell()
+@interface Book_LinkPhoneCell()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phone;
-
+@property Block block;
 @end
 
 @implementation Book_LinkPhoneCell
@@ -20,10 +20,17 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)loadInfo:(NSString *)phone
+           block: (void(^_Nullable)(NSString * _Nullable string))block {
+    _block = block;
+    _phone.text = phone;
+}
 
-    // Configure the view for the selected state
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_block != nil) {
+        _block(textField.text);
+    }
+    return YES;
 }
 
 @end

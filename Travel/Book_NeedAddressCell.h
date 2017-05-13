@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^_Nullable SwitchBlock)(BOOL need);
+
 @interface Book_NeedAddressCell : UITableViewCell
+
+- (void)loadInfo: (BOOL)need
+           block: (void(^_Nullable)(BOOL need))block;
 
 @end

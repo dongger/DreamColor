@@ -7,6 +7,7 @@
 //
 
 #import "Book_PassengerTitleCell.h"
+#import "LoginUser.h"
 
 @interface Book_PassengerTitleCell()
 @property (weak, nonatomic) IBOutlet UILabel *count;
@@ -30,5 +31,7 @@
     } else {
         _count.hidden = YES;
     }
+    //个人用户无此按钮
+    [_addButton setHidden:([[LoginUser share] Type] == 4)];
 }
 @end

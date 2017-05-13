@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Passenger.h"
 
 @interface Book_PassengerCell : UITableViewCell
+
+- (void)loadInfo:(Passenger *)passenger;
 
 @end

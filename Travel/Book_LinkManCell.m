@@ -8,8 +8,9 @@
 
 #import "Book_LinkManCell.h"
 
-@interface Book_LinkManCell()
+@interface Book_LinkManCell()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *name;
+@property Block block;
 
 @end
 
@@ -20,10 +21,23 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)loadInfo:(NSString *)name
+           block: (void(^_Nullable)(NSString * _Nullable string))block {
+    _block = block;
+    _name.text = name;
+}
 
-    // Configure the view for the selected state
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+//    NSString *tempS
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_block != nil) {
+        _block(textField.text);
+    }
+    return YES;
 }
 
 @end

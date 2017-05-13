@@ -24,10 +24,10 @@
 - (IBAction)delete:(id)sender {
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)loadInfo:(Passenger *)passenger {
+    _name.text = passenger.Name;
+    _num.text = [NSString stringWithFormat:@"%@  %@",passenger.IdTypeName, passenger.IdNumber];
+    _phone.text = [NSString stringWithFormat:@"手机号  %@",passenger.Phone];
 }
 
 @end

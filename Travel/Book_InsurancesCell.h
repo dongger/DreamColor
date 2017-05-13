@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Insurances.h"
 
 @interface Book_InsurancesCell : UITableViewCell
+
+- (void)loadInfo: (NSInteger )InsKey
+      Insurances: (NSArray *)InsurancesArray;
 
 @end

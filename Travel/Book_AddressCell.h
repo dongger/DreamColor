@@ -10,4 +10,6 @@
 
 @interface Book_AddressCell : UITableViewCell
 
+- (void)loadInfo:(NSString *_Nonnull)address;
+
 @end

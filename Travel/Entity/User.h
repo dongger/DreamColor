@@ -10,8 +10,8 @@
 
 @interface User : NSObject
 
-@property UInt64 UserID;
-@property NSString *Type;
+//@property UInt64 UserID;
+@property NSInteger Type;
 @property NSString *Session;
 
 @property NSString *KfPhone;

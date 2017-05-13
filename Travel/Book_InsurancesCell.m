@@ -20,10 +20,15 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)loadInfo: (NSInteger )InsKey
+      Insurances: (NSArray *)InsurancesArray {
+    for (Insurances *insurance in InsurancesArray) {
+        if (insurance.ID == InsKey) {
+            _content.text = [NSString stringWithFormat:@"%@  %ld",insurance.Name, (long)insurance.Price];
+            return;
+        }
+    }
+    _content.text = @"无";
 }
 
 @end

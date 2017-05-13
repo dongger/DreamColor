@@ -8,19 +8,28 @@
 
 #import "Book_NeedAddressCell.h"
 
+
+@interface Book_NeedAddressCell()
+@property SwitchBlock block;
+@property (weak, nonatomic) IBOutlet UISwitch *needSwtich;
+
+
+@end
+
 @implementation Book_NeedAddressCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)loadInfo: (BOOL)need
+           block: (void(^_Nullable)(BOOL need))block {
+    _block = block;
+    [_needSwtich setOn:need];
 }
-- (IBAction)switch:(UISwitch *)sender {
+
+- (IBAction)valueChanged:(UISwitch *)sender {
+    _block(sender.on);
 }
 
 @end

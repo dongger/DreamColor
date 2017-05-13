@@ -42,7 +42,8 @@
                 }];
                 
                 UIAlertAction *actionBook = [UIAlertAction actionWithTitle:@"继续预订" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                    CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight: _flight cabin:_cabin];
+                    result.PriceChecked = 0;
+                    CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight:_flight cabin:_cabin checkResult:result];
                     [[self currentVC].navigationController pushViewController:vc animated:YES];
                 }];
                 [alert addAction:actionCancel];
@@ -61,7 +62,8 @@
                 [[self currentVC].navigationController popViewControllerAnimated:YES];
                 break;
             default: {
-                CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight: _flight cabin:_cabin];
+                result.PriceChecked = 1;
+                CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight:_flight cabin:_cabin checkResult:result];
                 [[self currentVC].navigationController pushViewController:vc animated:YES];
             }
                 break;

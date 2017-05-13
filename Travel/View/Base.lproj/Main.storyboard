@@ -72,7 +72,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rKF-LD-gaG">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.14901960780000001" green="0.52156862749999999" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_TitleCell" rowHeight="217" id="WcH-XM-dWr" customClass="Book_TitleCell">
@@ -321,7 +321,7 @@
                                             <outlet property="title" destination="0Lq-Zl-fRF" id="J9b-aR-9YB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book_PassengerTitleCell" id="elh-4B-7rY" customClass="Book_PassengerTitleCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_PassengerTitleCell" id="elh-4B-7rY" customClass="Book_PassengerTitleCell">
                                         <rect key="frame" x="0.0" y="245" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elh-4B-7rY" id="Olk-aO-zG3">
@@ -489,7 +489,7 @@
                                             <outlet property="phone" destination="Dgd-QC-k6u" id="tw6-x3-4mC"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book_LinkManCell" rowHeight="50" id="H8z-cl-rcZ" customClass="Book_LinkManCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_LinkManCell" rowHeight="50" id="H8z-cl-rcZ" customClass="Book_LinkManCell">
                                         <rect key="frame" x="0.0" y="479" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8z-cl-rcZ" id="R8e-Q6-8Iy">
@@ -509,7 +509,7 @@
                                                     <rect key="frame" x="100" y="9" width="260" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="H8z-cl-rcZ" id="ROw-YO-IfQ"/>
                                                     </connections>
@@ -529,7 +529,7 @@
                                             <outlet property="name" destination="YL1-2G-ucF" id="qJG-5N-R8H"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book_LinkPhoneCell" rowHeight="50" id="C0S-ik-Bnk" customClass="Book_LinkPhoneCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_LinkPhoneCell" rowHeight="50" id="C0S-ik-Bnk" customClass="Book_LinkPhoneCell">
                                         <rect key="frame" x="0.0" y="529" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0S-ik-Bnk" id="aaw-FY-zpg">
@@ -549,7 +549,7 @@
                                                     <rect key="frame" x="100" y="9" width="260" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -600,7 +600,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book_NeedAddressCell" rowHeight="50" id="1lQ-v4-epf" customClass="Book_NeedAddressCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_NeedAddressCell" rowHeight="50" id="1lQ-v4-epf" customClass="Book_NeedAddressCell">
                                         <rect key="frame" x="0.0" y="629" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1lQ-v4-epf" id="1mM-dI-7Jk">
@@ -623,7 +623,7 @@
                                                         <constraint firstAttribute="height" constant="31" id="eJK-OX-rAc"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="switch:" destination="1lQ-v4-epf" eventType="valueChanged" id="Jg0-XB-Hro"/>
+                                                        <action selector="valueChanged:" destination="1lQ-v4-epf" eventType="valueChanged" id="w0P-el-S8y"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -635,6 +635,9 @@
                                                 <constraint firstItem="bID-03-xM0" firstAttribute="leading" secondItem="1mM-dI-7Jk" secondAttribute="leading" constant="10" id="ql1-SN-5tK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="needSwtich" destination="yF3-rB-iYG" id="5QG-VN-yAa"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Book_AddressCell" id="Rk0-cw-HbD" customClass="Book_AddressCell">
                                         <rect key="frame" x="0.0" y="679" width="375" height="44"/>
@@ -671,6 +674,7 @@
                                                 <constraint firstItem="7wj-6M-sNo" firstAttribute="leading" secondItem="O5c-s1-We5" secondAttribute="trailing" constant="8" id="qWK-iC-QU4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="address" destination="7wj-6M-sNo" id="BNB-6i-bSm"/>
                                         </connections>
