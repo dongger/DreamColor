@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *endAirPort;
 @property (weak, nonatomic) IBOutlet UILabel *TicketPrice;
 @property (weak, nonatomic) IBOutlet UILabel *otherFee;
+@property ClickBlock clickBlock;
 
 @end
 
@@ -31,13 +32,18 @@
     [super awakeFromNib];
 }
 - (IBAction)showDetail:(id)sender {
+    if (_clickBlock != nil) {
+        _clickBlock();
+    }
 }
 - (IBAction)showRefundRule:(id)sender {
 }
 
 
 - (void)loadInfo: (Flight *)flight
-           cabin: (Cabin *)cabin {
+           cabin: (Cabin *)cabin
+      clickBlock: (void(^_Nullable)())clickBlock {
+    _clickBlock = clickBlock;
     NSDate *startDate = [flight.TakeOffDate convertWith:@"yyyy-MM-dd HH:mm"];
     NSDate *endDate = [flight.ArrivalDate convertWith:@"yyyy-MM-dd HH:mm"];
     _title.text = [NSString stringWithFormat:@"%@    %@ - %@",[startDate convertWith:@"MM月dd日"], flight.TakeoffCityName, flight.ArriveCityName];

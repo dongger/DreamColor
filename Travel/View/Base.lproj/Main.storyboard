@@ -61,7 +61,7 @@
         <!--北京-乌鲁木齐-->
         <scene sceneID="LEP-zk-JuA">
             <objects>
-                <viewController storyboardIdentifier="CreatOrderViewController" hidesBottomBarWhenPushed="YES" id="4eu-KP-ehJ" customClass="CreatOrderViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatOrderViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="4eu-KP-ehJ" customClass="CreatOrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JnS-fj-6pE"/>
                         <viewControllerLayoutGuide type="bottom" id="oZ8-Rp-AH0"/>
@@ -72,7 +72,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rKF-LD-gaG">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.52156862749999999" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Book_TitleCell" rowHeight="217" id="WcH-XM-dWr" customClass="Book_TitleCell">
@@ -147,7 +147,7 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flight_path" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-Qd-qMn">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flight_path" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-Qd-qMn">
                                                                     <rect key="frame" x="97" y="58" width="165" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="17" id="zYQ-Rc-9vd"/>
@@ -757,13 +757,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rKF-LD-gaG" firstAttribute="top" secondItem="JnS-fj-6pE" secondAttribute="bottom" id="BrU-2S-G9z"/>
-                            <constraint firstAttribute="trailing" secondItem="rKF-LD-gaG" secondAttribute="trailing" id="HgR-rW-hCS"/>
                             <constraint firstAttribute="trailing" secondItem="avP-hf-TH1" secondAttribute="trailing" id="KDE-oq-1tY"/>
+                            <constraint firstAttribute="trailing" secondItem="rKF-LD-gaG" secondAttribute="trailing" id="ScE-d0-CWb"/>
                             <constraint firstAttribute="bottom" secondItem="avP-hf-TH1" secondAttribute="bottom" id="UZq-NI-IfJ"/>
+                            <constraint firstAttribute="bottom" secondItem="rKF-LD-gaG" secondAttribute="bottom" constant="49" id="Zbb-se-x9K"/>
+                            <constraint firstItem="rKF-LD-gaG" firstAttribute="leading" secondItem="0DH-9D-rCl" secondAttribute="leading" id="cRr-BW-GbO"/>
                             <constraint firstItem="avP-hf-TH1" firstAttribute="leading" secondItem="0DH-9D-rCl" secondAttribute="leading" id="dAx-P8-YbP"/>
-                            <constraint firstItem="oZ8-Rp-AH0" firstAttribute="top" secondItem="rKF-LD-gaG" secondAttribute="bottom" id="q0Q-rP-IC5"/>
-                            <constraint firstItem="rKF-LD-gaG" firstAttribute="leading" secondItem="0DH-9D-rCl" secondAttribute="leading" id="viJ-gF-cQk"/>
+                            <constraint firstItem="rKF-LD-gaG" firstAttribute="top" secondItem="JnS-fj-6pE" secondAttribute="bottom" id="twZ-Dz-SDF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="北京-乌鲁木齐" id="ooJ-Rm-1Ox"/>

@@ -63,8 +63,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        Book_TitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Book_TitleCell" forIndexPath:indexPath];
+        [cell loadInfo:_flight cabin:_cabin clickBlock:^{
+            _needShowTitleDetail = !_needShowTitleDetail;
+            [tableView reloadRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationAutomatic];
+        }];
+        return cell;
+    }
     Book_TitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Book_TitleCell" forIndexPath:indexPath];
-    [cell loadInfo:_flight cabin:_cabin];
+    [cell loadInfo:_flight cabin:_cabin clickBlock:^{
+        _needShowTitleDetail = !_needShowTitleDetail;
+        [tableView reloadRowsAtIndexPaths: @[indexPath] withRowAnimation: UITableViewRowAnimationAutomatic];
+    }];
     return cell;
 }
 

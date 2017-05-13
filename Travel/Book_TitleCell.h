@@ -10,10 +10,13 @@
 #import "Flight.h"
 #import "Cabin.h"
 
+typedef void(^_Nullable ClickBlock)();
+
 @interface Book_TitleCell : UITableViewCell
 
-- (void)loadInfo: (Flight *)flight
-           cabin: (Cabin *)cabin;
+- (void)loadInfo: (Flight *_Nonnull)flight
+           cabin: (Cabin *_Nonnull)cabin
+      clickBlock: (void(^_Nullable)())clickBlock;
 
 + (CGFloat)height: (BOOL)showDetail;
 
