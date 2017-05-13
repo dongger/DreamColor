@@ -28,16 +28,10 @@
 }
 
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-//    NSString *tempS
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     if (_block != nil) {
         _block(textField.text);
     }
-    return YES;
 }
 
 @end

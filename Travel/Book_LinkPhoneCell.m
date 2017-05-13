@@ -26,11 +26,10 @@
     _phone.text = phone;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     if (_block != nil) {
         _block(textField.text);
     }
-    return YES;
 }
 
 @end

@@ -232,7 +232,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell isKindOfClass:[Book_PassengerCell class]]) {
+        
+    } else if ([cell isKindOfClass:[Book_AddPassengerCell class]]) {
+        
+    } else if ([cell isKindOfClass:[Book_PassengerNullCell class]]) {
+        
+    } else if ([cell isKindOfClass:[Book_InsurancesCell class]]) {
+        
+    } else if ([cell isKindOfClass:[Book_AddressCell class]]) {
+        
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
