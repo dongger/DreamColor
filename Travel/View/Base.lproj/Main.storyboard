@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -859,7 +860,7 @@
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="n5M-dk-nOL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="n5M-dk-nOL">
                                         <rect key="frame" x="0.0" y="30.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n5M-dk-nOL" id="xJO-1h-W3d">
@@ -890,7 +891,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="Kdb-bS-9E1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="Kdb-bS-9E1">
                                         <rect key="frame" x="0.0" y="85.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kdb-bS-9E1" id="vgm-Sa-OIM">
@@ -908,7 +909,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" tag="1001" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO7-nj-keE">
-                                                    <rect key="frame" x="94" y="16" width="86.5" height="22"/>
+                                                    <rect key="frame" x="105" y="2" width="64" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Kdd-bK-tlE"/>
+                                                        <constraint firstAttribute="width" constant="64" id="L5l-l2-STu"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="  身份证" image="radio_button">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -919,7 +924,11 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-MU-CPT">
-                                                    <rect key="frame" x="180.5" y="16" width="87" height="22"/>
+                                                    <rect key="frame" x="199" y="2" width="52" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="52" id="pDc-G8-Vna"/>
+                                                        <constraint firstAttribute="height" constant="50" id="zYH-Dn-7yk"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="  护照" image="radio_button">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -930,7 +939,11 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No3-cc-T0g">
-                                                    <rect key="frame" x="267.5" y="16" width="86.5" height="22"/>
+                                                    <rect key="frame" x="281" y="2" width="52" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="3Ja-5R-bFh"/>
+                                                        <constraint firstAttribute="width" constant="52" id="utv-Kg-9ed"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="  其他" image="radio_button">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -942,24 +955,18 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="rO7-nj-keE" firstAttribute="leading" secondItem="6Pv-TB-GSD" secondAttribute="trailing" constant="24" id="5hz-Au-BDh"/>
-                                                <constraint firstItem="No3-cc-T0g" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="16" id="68j-w0-3jW"/>
-                                                <constraint firstItem="lo0-MU-CPT" firstAttribute="leading" secondItem="rO7-nj-keE" secondAttribute="trailing" id="6R4-Yw-na4"/>
-                                                <constraint firstAttribute="bottom" secondItem="lo0-MU-CPT" secondAttribute="bottom" constant="16.5" id="HbK-py-U40"/>
-                                                <constraint firstAttribute="trailing" secondItem="No3-cc-T0g" secondAttribute="trailing" constant="21" id="JWE-bg-uHQ"/>
-                                                <constraint firstItem="No3-cc-T0g" firstAttribute="width" secondItem="rO7-nj-keE" secondAttribute="width" id="LLY-5h-qkW"/>
-                                                <constraint firstAttribute="bottom" secondItem="rO7-nj-keE" secondAttribute="bottom" constant="16.5" id="P2H-WO-E5u"/>
+                                                <constraint firstItem="rO7-nj-keE" firstAttribute="leading" secondItem="vgm-Sa-OIM" secondAttribute="leading" constant="105" id="1Ds-FU-bYQ"/>
+                                                <constraint firstItem="No3-cc-T0g" firstAttribute="leading" secondItem="lo0-MU-CPT" secondAttribute="trailing" constant="30" id="MI8-or-lGx"/>
+                                                <constraint firstItem="No3-cc-T0g" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="2" id="OO8-1u-g60"/>
                                                 <constraint firstItem="6Pv-TB-GSD" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="19" id="Q7b-6B-ZU5"/>
-                                                <constraint firstItem="rO7-nj-keE" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="16" id="So8-6X-y9r"/>
-                                                <constraint firstItem="lo0-MU-CPT" firstAttribute="width" secondItem="rO7-nj-keE" secondAttribute="width" id="dFw-dj-77d"/>
-                                                <constraint firstAttribute="bottom" secondItem="No3-cc-T0g" secondAttribute="bottom" constant="16.5" id="dT5-gz-81L"/>
+                                                <constraint firstItem="lo0-MU-CPT" firstAttribute="leading" secondItem="rO7-nj-keE" secondAttribute="trailing" constant="30" id="Zp8-Qc-zhV"/>
+                                                <constraint firstItem="rO7-nj-keE" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="2" id="caX-Ap-uMt"/>
                                                 <constraint firstItem="6Pv-TB-GSD" firstAttribute="leading" secondItem="vgm-Sa-OIM" secondAttribute="leading" constant="20" id="iWj-si-k2o"/>
-                                                <constraint firstItem="lo0-MU-CPT" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="16" id="omE-q6-yTK"/>
-                                                <constraint firstItem="No3-cc-T0g" firstAttribute="leading" secondItem="lo0-MU-CPT" secondAttribute="trailing" id="yni-Qe-hJl"/>
+                                                <constraint firstItem="lo0-MU-CPT" firstAttribute="top" secondItem="vgm-Sa-OIM" secondAttribute="top" constant="2" id="pyK-pL-IjO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="tOG-0I-QwY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="tOG-0I-QwY">
                                         <rect key="frame" x="0.0" y="140.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tOG-0I-QwY" id="qeW-hh-VT6">
@@ -990,7 +997,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="mHg-Oy-1rp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="mHg-Oy-1rp">
                                         <rect key="frame" x="0.0" y="195.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mHg-Oy-1rp" id="LrE-Id-geK">
@@ -1000,8 +1007,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XM-VZ-8JO">
                                                     <rect key="frame" x="20" y="19" width="50" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Aed-MY-xhJ"/>
-                                                        <constraint firstAttribute="height" constant="15" id="cRK-KM-LcE"/>
+                                                        <constraint firstAttribute="width" constant="50" id="qBV-01-0YO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -1010,8 +1016,7 @@
                                                 <button opaque="NO" tag="1001" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5S-zV-5fv">
                                                     <rect key="frame" x="100" y="0.0" width="50" height="55"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="55" id="NMS-Eg-htU"/>
-                                                        <constraint firstAttribute="width" constant="50" id="srT-JI-4dr"/>
+                                                        <constraint firstAttribute="width" constant="50" id="bbS-rg-gjG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="  男" image="radio_button">
@@ -1025,8 +1030,7 @@
                                                 <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-jO-yls">
                                                     <rect key="frame" x="180" y="0.0" width="50" height="55"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="55" id="1xL-lW-eRr"/>
-                                                        <constraint firstAttribute="width" constant="50" id="cb2-rw-9YD"/>
+                                                        <constraint firstAttribute="width" constant="50" id="1qV-V2-FdT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="  女" image="radio_button">
@@ -1039,16 +1043,19 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hd9-jO-yls" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="top" id="FDv-1N-sKk"/>
-                                                <constraint firstItem="7XM-VZ-8JO" firstAttribute="leading" secondItem="LrE-Id-geK" secondAttribute="leading" constant="20" id="KEb-c5-U80"/>
-                                                <constraint firstItem="7XM-VZ-8JO" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="top" constant="19" id="UKY-Wk-kVi"/>
-                                                <constraint firstItem="F5S-zV-5fv" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="top" id="dxp-9k-s3r"/>
-                                                <constraint firstItem="hd9-jO-yls" firstAttribute="leading" secondItem="LrE-Id-geK" secondAttribute="leading" constant="180" id="p27-xN-6is"/>
-                                                <constraint firstItem="F5S-zV-5fv" firstAttribute="leading" secondItem="LrE-Id-geK" secondAttribute="leading" constant="100" id="vL5-XA-gGa"/>
+                                                <constraint firstAttribute="bottom" secondItem="F5S-zV-5fv" secondAttribute="bottom" constant="-0.5" id="0TX-Kk-EFk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7XM-VZ-8JO" secondAttribute="bottom" constant="12.5" id="447-hL-bPe"/>
+                                                <constraint firstItem="F5S-zV-5fv" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="top" id="63c-aD-e0g"/>
+                                                <constraint firstItem="hd9-jO-yls" firstAttribute="leading" secondItem="F5S-zV-5fv" secondAttribute="trailing" constant="30" id="9fA-QE-3x1"/>
+                                                <constraint firstItem="7XM-VZ-8JO" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="topMargin" constant="11" id="A9G-AX-KdC"/>
+                                                <constraint firstItem="F5S-zV-5fv" firstAttribute="leading" secondItem="7XM-VZ-8JO" secondAttribute="trailing" constant="30" id="C69-Pi-54s"/>
+                                                <constraint firstItem="hd9-jO-yls" firstAttribute="top" secondItem="LrE-Id-geK" secondAttribute="top" id="UkN-E1-gCQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="hd9-jO-yls" secondAttribute="bottom" constant="-0.5" id="h9a-ck-d1U"/>
+                                                <constraint firstItem="7XM-VZ-8JO" firstAttribute="leading" secondItem="LrE-Id-geK" secondAttribute="leadingMargin" constant="12" id="i39-lZ-raP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="kFs-iI-whz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="kFs-iI-whz">
                                         <rect key="frame" x="0.0" y="250.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kFs-iI-whz" id="InS-zd-tyN">
@@ -1112,7 +1119,7 @@
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="0it-AV-Cot">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="0it-AV-Cot">
                                         <rect key="frame" x="0.0" y="337.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0it-AV-Cot" id="YCe-m3-btn">
@@ -1143,7 +1150,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="oOe-ni-Bns">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="oOe-ni-Bns">
                                         <rect key="frame" x="0.0" y="392.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oOe-ni-Bns" id="fwh-TH-kDi">

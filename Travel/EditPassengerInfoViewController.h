@@ -7,6 +7,7 @@
 //
 
 #import "ABStaticTableViewController.h"
+#import "Passenger.h"
 
 @interface EditPassengerInfoViewController : ABStaticTableViewController
 

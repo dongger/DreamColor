@@ -9,14 +9,13 @@
 #import "EditPassengerInfoViewController.h"
 #import "ASBirthSelectSheet.h"
 
-#define ConstIndexPath1 [NSIndexPath indexPathForRow:1 inSection:2]
-#define ConstIndexPath2 [NSIndexPath indexPathForRow:3 inSection:2]
-#define ConstSection 1
+#define SexIndexPath [NSIndexPath indexPathForRow:4 inSection:0]
 
 @interface EditPassengerInfoViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *num;
-
+@property BOOL isHideSex;
+@property Passenger *passenger;
 @end
 
 @implementation EditPassengerInfoViewController
@@ -28,9 +27,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //默认身份证 隐藏性别
+    [self hideSex];
 }
+
+- (void)hideSex {
+    if (!_isHideSex) {
+        _isHideSex = YES;
+        [self deleteRowsAtIndexPaths:@[SexIndexPath]];
+        [self.tableView reloadData];
+    }
+}
+
+- (void)showSex {
+    if (_isHideSex) {
+        _isHideSex = NO;
+        [self insertRowsAtIndexPaths:@[SexIndexPath]];
+        [self.tableView reloadData];
+    }
+}
+
 - (IBAction)typeChanged:(UIButton *)sender {
+    sender.selected = YES;
+    switch (sender.tag) {
+        case 1001: {
+            //身份证
+            _passenger.IdType = 0;
+            _passenger.IdTypeName = @"身份证";
+            UIButton *button1 = [sender.superview viewWithTag:1002];
+            UIButton *button2 = [sender.superview viewWithTag:1003];
+            button1.selected = NO;
+            button2.selected = NO;
+            [self hideSex];
+        }
+            break;
+        case 1002: {
+            //护照
+            _passenger.IdType = 1;
+            _passenger.IdTypeName = @"护照";
+            UIButton *button1 = [sender.superview viewWithTag:1001];
+            UIButton *button2 = [sender.superview viewWithTag:1003];
+            button1.selected = NO;
+            button2.selected = NO;
+            [self showSex];
+        }
+            break;
+        case 1003: {
+            //其他
+            _passenger.IdType = 2;
+            _passenger.IdTypeName = @"其他";
+            UIButton *button1 = [sender.superview viewWithTag:1001];
+            UIButton *button2 = [sender.superview viewWithTag:1002];
+            button1.selected = NO;
+            button2.selected = NO;
+            [self showSex];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)sexChanged:(UIButton *)sender {
