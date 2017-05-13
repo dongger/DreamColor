@@ -16,10 +16,10 @@
 + (void)login:(NSDictionary*)parameters
     success:(void(^)(User* user))successBlock
     failure:(void(^)(NSString * errorMessage))failueBlock {
-    [NetWorkTool POST:__login parameters:parameters success:^(id  _Nullable responseObject) {
+    [NetWorkTool POST:__login parameters:parameters success:^(id responseObject, NSInteger code) {
         User *user = [User yy_modelWithJSON:responseObject];
         successBlock(user);
-    } failure:^(NSString * _Nullable errorMessage) {
+    } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         failueBlock(errorMessage);
     }];
 }

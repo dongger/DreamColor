@@ -66,8 +66,8 @@ static const NSTimeInterval timeoutInterval = 15.0;
 
 + (void)POST:(NSString*)urlString
   parameters:(NSDictionary*)parameters
-     success:(void(^)(id responseObject))successBlock
-     failure:(void(^)(NSString * errorMessage))failueBlock {
+     success:(void(^)(id responseObject, NSInteger code))successBlock
+     failure:(void(^)(NSString * _Nullable errorMessage, NSInteger code))failueBlock {
     AFHTTPSessionManager *netManager   = [AFHTTPSessionManager manager];
     netManager.requestSerializer      = [AFHTTPRequestSerializer serializer];
     netManager.responseSerializer     = [AFHTTPResponseSerializer serializer];
@@ -85,16 +85,12 @@ static const NSTimeInterval timeoutInterval = 15.0;
         [hud hideAnimated:YES];
         if (successBlock) {
             NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-            if ([dic[@"Code"]  isEqual: @"0"]) {
-                successBlock(dic[@"Data"]);
-            } else {
-                failueBlock(dic[@"Message"]);
-            }
+            successBlock(dic[@"Data"], [dic[@"Code"] integerValue]);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [hud hideAnimated:YES];
         if (failueBlock) {
-            failueBlock(error.localizedDescription);
+            failueBlock(error.localizedDescription, error.code);
         }
     }];
 }

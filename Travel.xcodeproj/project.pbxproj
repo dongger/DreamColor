@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5636ED1EC6F2B500D6A86B /* CheckPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5636EC1EC6F2B500D6A86B /* CheckPriceModel.m */; };
+		0D5636F01EC6F33F00D6A86B /* CheckPriceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5636EF1EC6F33F00D6A86B /* CheckPriceResult.m */; };
+		0D5636F41EC7018F00D6A86B /* UIView+CurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5636F31EC7018F00D6A86B /* UIView+CurrentVC.m */; };
 		0DE81ED21EC4ABA50001782B /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E861EC4ABA50001782B /* BaseTableViewController.m */; };
 		0DE81ED31EC4ABA50001782B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E881EC4ABA50001782B /* BaseViewController.m */; };
 		0DE81ED41EC4ABA50001782B /* Cabin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E8A1EC4ABA50001782B /* Cabin.m */; };
-		0DE81ED51EC4ABA50001782B /* CheckPriceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E8C1EC4ABA50001782B /* CheckPriceResult.m */; };
 		0DE81ED61EC4ABA50001782B /* CitiesGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E8E1EC4ABA50001782B /* CitiesGroup.m */; };
 		0DE81ED71EC4ABA50001782B /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E901EC4ABA50001782B /* City.m */; };
 		0DE81ED81EC4ABA50001782B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81E931EC4ABA50001782B /* AppDelegate.m */; };
@@ -56,14 +58,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5636EB1EC6F2B500D6A86B /* CheckPriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPriceModel.h; sourceTree = "<group>"; };
+		0D5636EC1EC6F2B500D6A86B /* CheckPriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPriceModel.m; sourceTree = "<group>"; };
+		0D5636EE1EC6F33F00D6A86B /* CheckPriceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPriceResult.h; sourceTree = "<group>"; };
+		0D5636EF1EC6F33F00D6A86B /* CheckPriceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPriceResult.m; sourceTree = "<group>"; };
+		0D5636F21EC7018F00D6A86B /* UIView+CurrentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CurrentVC.h"; sourceTree = "<group>"; };
+		0D5636F31EC7018F00D6A86B /* UIView+CurrentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CurrentVC.m"; sourceTree = "<group>"; };
 		0DE81E851EC4ABA50001782B /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		0DE81E861EC4ABA50001782B /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		0DE81E871EC4ABA50001782B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		0DE81E881EC4ABA50001782B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		0DE81E891EC4ABA50001782B /* Cabin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cabin.h; path = ../Cabin.h; sourceTree = "<group>"; };
 		0DE81E8A1EC4ABA50001782B /* Cabin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cabin.m; path = ../Cabin.m; sourceTree = "<group>"; };
-		0DE81E8B1EC4ABA50001782B /* CheckPriceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckPriceResult.h; path = ../CheckPriceResult.h; sourceTree = "<group>"; };
-		0DE81E8C1EC4ABA50001782B /* CheckPriceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckPriceResult.m; path = ../CheckPriceResult.m; sourceTree = "<group>"; };
 		0DE81E8D1EC4ABA50001782B /* CitiesGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CitiesGroup.h; path = ../CitiesGroup.h; sourceTree = "<group>"; };
 		0DE81E8E1EC4ABA50001782B /* CitiesGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CitiesGroup.m; path = ../CitiesGroup.m; sourceTree = "<group>"; };
 		0DE81E8F1EC4ABA50001782B /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = ../City.h; sourceTree = "<group>"; };
@@ -159,6 +165,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5636F11EC7016000D6A86B /* CurrentVC */ = {
+			isa = PBXGroup;
+			children = (
+				0D5636F21EC7018F00D6A86B /* UIView+CurrentVC.h */,
+				0D5636F31EC7018F00D6A86B /* UIView+CurrentVC.m */,
+			);
+			name = CurrentVC;
+			sourceTree = "<group>";
+		};
 		0DE81E841EC4ABA50001782B /* Travel */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +200,6 @@
 				0DE81EC11EC4ABA50001782B /* Passenger.m */,
 				0DE81E891EC4ABA50001782B /* Cabin.h */,
 				0DE81E8A1EC4ABA50001782B /* Cabin.m */,
-				0DE81E8B1EC4ABA50001782B /* CheckPriceResult.h */,
-				0DE81E8C1EC4ABA50001782B /* CheckPriceResult.m */,
 				0DE81E8D1EC4ABA50001782B /* CitiesGroup.h */,
 				0DE81E8E1EC4ABA50001782B /* CitiesGroup.m */,
 				0DE81E8F1EC4ABA50001782B /* City.h */,
@@ -197,6 +210,8 @@
 				0DE81EB71EC4ABA50001782B /* Insurances.m */,
 				0DE81EB21EC4ABA50001782B /* User.h */,
 				0DE81EB31EC4ABA50001782B /* User.m */,
+				0D5636EE1EC6F33F00D6A86B /* CheckPriceResult.h */,
+				0D5636EF1EC6F33F00D6A86B /* CheckPriceResult.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -252,6 +267,7 @@
 		0DE81EFB1EC4ABD80001782B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0D5636F11EC7016000D6A86B /* CurrentVC */,
 				0DE81F161EC4BBDB0001782B /* AttributedString */,
 				0DE81F0F1EC4B8B50001782B /* DateMethod */,
 				0DE81F021EC4AC5E0001782B /* ColorHex */,
@@ -365,6 +381,8 @@
 				0DE81E971EC4ABA50001782B /* CitiesModel.m */,
 				0DE81EA91EC4ABA50001782B /* QueryFlightModel.h */,
 				0DE81EAA1EC4ABA50001782B /* QueryFlightModel.m */,
+				0D5636EB1EC6F2B500D6A86B /* CheckPriceModel.h */,
+				0D5636EC1EC6F2B500D6A86B /* CheckPriceModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -596,18 +614,19 @@
 				B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */,
 				0DE81EF01EC4ABA50001782B /* QueryFlightResult.m in Sources */,
 				0DE81F0E1EC4B7740001782B /* FlightInfoCell.m in Sources */,
-				0DE81ED51EC4ABA50001782B /* CheckPriceResult.m in Sources */,
 				0DE81EDF1EC4ABA50001782B /* LoginTypeController.m in Sources */,
 				0DE81EE71EC4ABA50001782B /* CyAlertView.m in Sources */,
 				0DE81EDC1EC4ABA50001782B /* CityCollectionCell.m in Sources */,
 				0DE81EED1EC4ABA50001782B /* NetWorkTool.m in Sources */,
 				0DE81EEE1EC4ABA50001782B /* NSObject+Cache.m in Sources */,
+				0D5636F41EC7018F00D6A86B /* UIView+CurrentVC.m in Sources */,
 				0DE81ED71EC4ABA50001782B /* City.m in Sources */,
 				0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */,
 				0DE81EE11EC4ABA50001782B /* main.m in Sources */,
 				0DE81EDE1EC4ABA50001782B /* DayCell.m in Sources */,
 				0DE81EF41EC4ABA50001782B /* UserModel.m in Sources */,
 				0DE81EE31EC4ABA50001782B /* MonthCell.m in Sources */,
+				0D5636ED1EC6F2B500D6A86B /* CheckPriceModel.m in Sources */,
 				0DE81ED61EC4ABA50001782B /* CitiesGroup.m in Sources */,
 				0DE81EEC1EC4ABA50001782B /* MBProgressHUD.m in Sources */,
 				0DE81EE81EC4ABA50001782B /* User.m in Sources */,
@@ -620,6 +639,7 @@
 				0DE81EEF1EC4ABA50001782B /* Passenger.m in Sources */,
 				0DE81ED31EC4ABA50001782B /* BaseViewController.m in Sources */,
 				0DE81EE91EC4ABA50001782B /* Flight.m in Sources */,
+				0D5636F01EC6F33F00D6A86B /* CheckPriceResult.m in Sources */,
 				0DE81ED81EC4ABA50001782B /* AppDelegate.m in Sources */,
 				0DE81EDA1EC4ABA50001782B /* CitiesModel.m in Sources */,
 				0DE81EE01EC4ABA50001782B /* LoginViewController.m in Sources */,

@@ -28,9 +28,9 @@
                                  @"TakeoffDate":takeoffDate,
                                  @"BookType":@(bookType),
                                  @"TravelType":@(travelType)};
-    [NetWorkTool POST:__queryFlight parameters:parameters success:^(id  _Nullable responseObject) {
+    [NetWorkTool POST:__queryFlight parameters:parameters success:^(id responseObject, NSInteger code) {
         successBlock([QueryFlightResult yy_modelWithJSON:responseObject]);
-    } failure:^(NSString * _Nullable errorMessage) {
+    } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         failueBlock(errorMessage);
     }];
 }

@@ -17,9 +17,9 @@
     //验证码类型 1:登彔 2:注册 3:忘记密码 4:修改密码
     NSDictionary *parameters = @{@"Phone": phone,
                                  @"Type": @(type)};
-    [NetWorkTool POST:__getCities parameters:parameters success:^(id  _Nullable responseObject) {
+    [NetWorkTool POST:__getCities parameters:parameters success:^(id responseObject, NSInteger code) {
         successBlock();
-    } failure:^(NSString * _Nullable errorMessage) {
+    } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         failueBlock(errorMessage);
     }];
 }

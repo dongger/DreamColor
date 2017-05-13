@@ -35,8 +35,8 @@
 
 + (void)POST:(NSString*_Nonnull)urlString
   parameters:(NSDictionary*_Nullable)parameters
-     success:(void(^_Nullable)(id _Nullable responseObject))successBlock
-     failure:(void(^_Nullable)(NSString * _Nullable errorMessage))failueBlock;
+     success:(void(^_Nullable)(id _Nullable responseObject, NSInteger code))successBlock
+     failure:(void(^_Nullable)(NSString * _Nullable errorMessage, NSInteger code))failueBlock;
 
 /**
  *  图片上传

@@ -13,9 +13,9 @@
 
 + (void)fetchWithSuccess: (void(^)(NSArray* citiesData))successBlock
                  failure: (void(^)(NSString * errorMessage))failueBlock {
-    [NetWorkTool POST:__getCities parameters:nil success:^(id  _Nullable responseObject) {
+    [NetWorkTool POST:__getCities parameters:nil success:^(id responseObject, NSInteger code) {
         successBlock([NSArray yy_modelArrayWithClass:[CitiesGroup class] json:responseObject]);
-    } failure:^(NSString * _Nullable errorMessage) {
+    } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         failueBlock(errorMessage);
     }];
 }

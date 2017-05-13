@@ -66,7 +66,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CabinInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CabinInfoCell" forIndexPath:indexPath];
     Cabin *cabin = _flight.Cabins[indexPath.row];
-    [cell loadInfo:cabin];
+    [cell loadInfo:cabin flightKey:_flight.Key];
     return cell;
 }
 

@@ -11,6 +11,7 @@
 
 @interface CabinInfoCell : UITableViewCell
 
-- (void)loadInfo: (Cabin *)cabin;
+- (void)loadInfo: (Cabin *)cabin
+       flightKey: (NSString *)flightKey;
 
 @end
