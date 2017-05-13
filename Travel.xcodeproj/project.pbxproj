@@ -66,6 +66,8 @@
 		0DECEAF21EC720D5005F1072 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */; };
 		0DECEAF51EC74EE6005F1072 /* BookOrderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */; };
 		0DECEAF81EC76DDE005F1072 /* EditPassengerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF71EC76DDE005F1072 /* EditPassengerInfoViewController.m */; };
+		0DECEAFC1EC77724005F1072 /* ABStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAFB1EC77724005F1072 /* ABStaticTableViewController.m */; };
+		0DECEB001EC77988005F1072 /* ASBirthSelectSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -184,6 +186,10 @@
 		0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderEntity.m; sourceTree = "<group>"; };
 		0DECEAF61EC76DDE005F1072 /* EditPassengerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPassengerInfoViewController.h; sourceTree = "<group>"; };
 		0DECEAF71EC76DDE005F1072 /* EditPassengerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPassengerInfoViewController.m; sourceTree = "<group>"; };
+		0DECEAFA1EC77724005F1072 /* ABStaticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABStaticTableViewController.h; sourceTree = "<group>"; };
+		0DECEAFB1EC77724005F1072 /* ABStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStaticTableViewController.m; sourceTree = "<group>"; };
+		0DECEAFE1EC77988005F1072 /* ASBirthSelectSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBirthSelectSheet.h; sourceTree = "<group>"; };
+		0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBirthSelectSheet.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -308,6 +314,8 @@
 		0DE81EFB1EC4ABD80001782B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0DECEAFD1EC7797F005F1072 /* ASBirthSheet */,
+				0DECEAF91EC7771B005F1072 /* ABStaticTableViewController */,
 				0D5636F11EC7016000D6A86B /* CurrentVC */,
 				0DE81F161EC4BBDB0001782B /* AttributedString */,
 				0DE81F0F1EC4B8B50001782B /* DateMethod */,
@@ -519,6 +527,24 @@
 			name = CreatOrder;
 			sourceTree = "<group>";
 		};
+		0DECEAF91EC7771B005F1072 /* ABStaticTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0DECEAFA1EC77724005F1072 /* ABStaticTableViewController.h */,
+				0DECEAFB1EC77724005F1072 /* ABStaticTableViewController.m */,
+			);
+			name = ABStaticTableViewController;
+			sourceTree = "<group>";
+		};
+		0DECEAFD1EC7797F005F1072 /* ASBirthSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0DECEAFE1EC77988005F1072 /* ASBirthSelectSheet.h */,
+				0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */,
+			);
+			name = ASBirthSheet;
+			sourceTree = "<group>";
+		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +707,7 @@
 			files = (
 				0DECEAF21EC720D5005F1072 /* CreatOrderViewController.m in Sources */,
 				0DE81ED41EC4ABA50001782B /* Cabin.m in Sources */,
+				0DECEAFC1EC77724005F1072 /* ABStaticTableViewController.m in Sources */,
 				0DECEAE31EC71EF9005F1072 /* Book_LinkManCell.m in Sources */,
 				0DECEADA1EC71EB8005F1072 /* Book_PassengerCell.m in Sources */,
 				0DE81EDD1EC4ABA50001782B /* CityMarkCell.m in Sources */,
@@ -721,6 +748,7 @@
 				0DE81F121EC4B9040001782B /* NSDate+ToString.m in Sources */,
 				0DE81EF31EC4ABA50001782B /* UIColor+Hex.m in Sources */,
 				0DE81EEF1EC4ABA50001782B /* Passenger.m in Sources */,
+				0DECEB001EC77988005F1072 /* ASBirthSelectSheet.m in Sources */,
 				0DE81ED31EC4ABA50001782B /* BaseViewController.m in Sources */,
 				0DE81EE91EC4ABA50001782B /* Flight.m in Sources */,
 				0DECEAE01EC71ED7005F1072 /* Book_AddPassengerCell.m in Sources */,

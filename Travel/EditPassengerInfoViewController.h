@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Nil. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "ABStaticTableViewController.h"
 
-@interface EditPassengerInfoViewController : BaseTableViewController
+@interface EditPassengerInfoViewController : ABStaticTableViewController
 
 + (EditPassengerInfoViewController *)instance;
 
