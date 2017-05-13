@@ -11,7 +11,7 @@
 
 #define SexIndexPath [NSIndexPath indexPathForRow:4 inSection:0]
 
-@interface EditPassengerInfoViewController ()
+@interface EditPassengerInfoViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *num;
 @property BOOL isHideSex;
@@ -27,8 +27,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //默认身份证 隐藏性别
-    [self hideSex];
+    if (!_passenger) {
+        //默认身份证 隐藏性别
+        [self hideSex];
+        _passenger = [[Passenger alloc] init];
+        _passenger.IdType = 0;
+        _passenger.IdTypeName = @"身份证";
+    } else {
+        switch (_passenger.IdType) {
+            case 0:
+                [self hideSex];
+                break;
+            default:
+                [self showSex];
+                break;
+        }
+    }
 }
 
 - (void)hideSex {
@@ -89,6 +103,26 @@
 }
 
 - (IBAction)sexChanged:(UIButton *)sender {
+    sender.selected = YES;
+    switch (sender.tag) {
+        case 1001: {
+            //男
+            _passenger.Sex = 1;
+            UIButton *button = [sender.superview viewWithTag:1002];
+            button.selected = NO;
+        }
+            break;
+        case 1002: {
+            //女
+            _passenger.Sex = 0;
+            UIButton *button = [sender.superview viewWithTag:1001];
+            button.selected = NO;
+        }
+            break;
+        default:
+            break;
+    }
+
 }
 
 - (IBAction)pickDate:(UIButton *)sender {
@@ -97,6 +131,7 @@
     datesheet.GetSelectDate = ^(NSString *dateStr) {
         NSLog(@"ok Date:%@", dateStr);
         [sender setTitle:dateStr forState:UIControlStateNormal];
+        _passenger.Birthday = dateStr;
     };
     [self.view addSubview:datesheet];
 }
@@ -110,4 +145,11 @@
     return 0.0001;
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if ([textField isEqual:_name]) {
+        _passenger.Name = textField.text;
+    } else if ([textField isEqual:_num]) {
+        _passenger.IdNumber = textField.text;
+    }
+}
 @end

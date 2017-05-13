@@ -21,7 +21,7 @@
 @property NSString *IdTypeName;
 @property NSString *IdNumber;
 @property NSString *Birthday; //乘机人生日(出生年月) 格式:yyyy-MM-dd
-@property NSInteger Sex;
+@property NSInteger Sex; //乘机人性别 0:女 1:男
 @property NSString *ServantBank; //公务卡发卡银行
 @property NSString *ServantBankCode; //公务卡发卡银行编号
 @property NSString *MileageAirlineCode; //里程卡所属航司
