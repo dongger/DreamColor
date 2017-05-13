@@ -30,8 +30,8 @@
 
 - (void)loadInfo: (Cabin *)cabin {
     _cabin = cabin;
-    NSString *moneyString = [NSString stringWithFormat:@"￥%.0f元", cabin.SalePrice];
-    _money.attributedText = [moneyString setColor:_money.textColor font: [UIFont systemFontOfSize:12] forSubString:@"￥"];
+    NSString *moneyString = [NSString stringWithFormat:@"￥ %.0f元", cabin.SalePrice];
+    _money.attributedText = [moneyString setColor:_money.textColor font: [UIFont systemFontOfSize:10] forSubString:@"￥"];
     _discount.text = [NSString stringWithFormat:@"%@ %ld 折", cabin.CabinType, (long)cabin.CabinDiscount];
     _refundFee.text = [NSString stringWithFormat:@"退改费 ￥%0.0f 起", cabin.MinRefundFee];
 }

@@ -44,6 +44,8 @@
     _endPlace.text = [NSString stringWithFormat:@"%@ %@", flight.ArriveAirportName, flight.ArrivalTerm];
     _airLineInfo.text = [NSString stringWithFormat:@"%@%@ | %@", flight.AirlineName, flight.FligthNo, flight.PlaneModel];
     
+    [_logo setImage:[UIImage imageNamed:[NSString stringWithFormat:@"airline_%@",[flight.Airline lowercaseString]]]];
+    
     if (self.bounds.size.height > 113) {
         self.backgroundColor = [UIColor colorWithHexString:@"#E5F6FF"];
     } else {
@@ -53,7 +55,7 @@
 }
 
 + (CGFloat)heightOfCabinsCount: (NSInteger)count {
-    return count*60 + 113;
+    return count*70 + 113;
 }
 #pragma mark - Table view data source
 
@@ -69,7 +71,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 70;
 }
 
 @end
