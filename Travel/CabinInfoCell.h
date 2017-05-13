@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Cabin.h"
+#import "Flight.h"
 
 @interface CabinInfoCell : UITableViewCell
 
 - (void)loadInfo: (Cabin *)cabin
-       flightKey: (NSString *)flightKey;
+          flight: (Flight *)flight;
 
 @end

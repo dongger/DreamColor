@@ -10,7 +10,7 @@
 
 @interface Insurances : NSObject
 
-@property NSInteger *Key;
+@property NSInteger *ID;
 @property NSInteger *Price;
 @property NSString *Name;
 

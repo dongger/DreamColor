@@ -53,6 +53,17 @@
 		0DE81F151EC4B9150001782B /* NSString+ToDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81F141EC4B9150001782B /* NSString+ToDate.m */; };
 		0DE81F191EC4BC050001782B /* NSString+Attributed.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81F181EC4BC050001782B /* NSString+Attributed.m */; };
 		0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */; };
+		0DECEAD41EC71E87005F1072 /* Book_TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAD31EC71E87005F1072 /* Book_TitleCell.m */; };
+		0DECEAD71EC71EA7005F1072 /* Book_PassengerTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAD61EC71EA7005F1072 /* Book_PassengerTitleCell.m */; };
+		0DECEADA1EC71EB8005F1072 /* Book_PassengerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAD91EC71EB8005F1072 /* Book_PassengerCell.m */; };
+		0DECEADD1EC71EC6005F1072 /* Book_PassengerNullCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEADC1EC71EC6005F1072 /* Book_PassengerNullCell.m */; };
+		0DECEAE01EC71ED7005F1072 /* Book_AddPassengerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEADF1EC71ED7005F1072 /* Book_AddPassengerCell.m */; };
+		0DECEAE31EC71EF9005F1072 /* Book_LinkManCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAE21EC71EF9005F1072 /* Book_LinkManCell.m */; };
+		0DECEAE61EC71F09005F1072 /* Book_LinkPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAE51EC71F09005F1072 /* Book_LinkPhoneCell.m */; };
+		0DECEAE91EC71F3B005F1072 /* Book_InsurancesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAE81EC71F3B005F1072 /* Book_InsurancesCell.m */; };
+		0DECEAEC1EC71FA1005F1072 /* Book_NeedAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAEB1EC71FA1005F1072 /* Book_NeedAddressCell.m */; };
+		0DECEAEF1EC71FB4005F1072 /* Book_AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAEE1EC71FB4005F1072 /* Book_AddressCell.m */; };
+		0DECEAF21EC720D5005F1072 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -145,6 +156,28 @@
 		0DE81F181EC4BC050001782B /* NSString+Attributed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Attributed.m"; sourceTree = "<group>"; };
 		0DE81F1A1EC4CC8E0001782B /* CabinInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabinInfoCell.h; sourceTree = "<group>"; };
 		0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabinInfoCell.m; sourceTree = "<group>"; };
+		0DECEAD21EC71E87005F1072 /* Book_TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_TitleCell.h; sourceTree = "<group>"; };
+		0DECEAD31EC71E87005F1072 /* Book_TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_TitleCell.m; sourceTree = "<group>"; };
+		0DECEAD51EC71EA7005F1072 /* Book_PassengerTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_PassengerTitleCell.h; sourceTree = "<group>"; };
+		0DECEAD61EC71EA7005F1072 /* Book_PassengerTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_PassengerTitleCell.m; sourceTree = "<group>"; };
+		0DECEAD81EC71EB8005F1072 /* Book_PassengerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_PassengerCell.h; sourceTree = "<group>"; };
+		0DECEAD91EC71EB8005F1072 /* Book_PassengerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_PassengerCell.m; sourceTree = "<group>"; };
+		0DECEADB1EC71EC6005F1072 /* Book_PassengerNullCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_PassengerNullCell.h; sourceTree = "<group>"; };
+		0DECEADC1EC71EC6005F1072 /* Book_PassengerNullCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_PassengerNullCell.m; sourceTree = "<group>"; };
+		0DECEADE1EC71ED7005F1072 /* Book_AddPassengerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_AddPassengerCell.h; sourceTree = "<group>"; };
+		0DECEADF1EC71ED7005F1072 /* Book_AddPassengerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_AddPassengerCell.m; sourceTree = "<group>"; };
+		0DECEAE11EC71EF9005F1072 /* Book_LinkManCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_LinkManCell.h; sourceTree = "<group>"; };
+		0DECEAE21EC71EF9005F1072 /* Book_LinkManCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_LinkManCell.m; sourceTree = "<group>"; };
+		0DECEAE41EC71F09005F1072 /* Book_LinkPhoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_LinkPhoneCell.h; sourceTree = "<group>"; };
+		0DECEAE51EC71F09005F1072 /* Book_LinkPhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_LinkPhoneCell.m; sourceTree = "<group>"; };
+		0DECEAE71EC71F3B005F1072 /* Book_InsurancesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_InsurancesCell.h; sourceTree = "<group>"; };
+		0DECEAE81EC71F3B005F1072 /* Book_InsurancesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_InsurancesCell.m; sourceTree = "<group>"; };
+		0DECEAEA1EC71FA1005F1072 /* Book_NeedAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_NeedAddressCell.h; sourceTree = "<group>"; };
+		0DECEAEB1EC71FA1005F1072 /* Book_NeedAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_NeedAddressCell.m; sourceTree = "<group>"; };
+		0DECEAED1EC71FB4005F1072 /* Book_AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book_AddressCell.h; sourceTree = "<group>"; };
+		0DECEAEE1EC71FB4005F1072 /* Book_AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book_AddressCell.m; sourceTree = "<group>"; };
+		0DECEAF01EC720D5005F1072 /* CreatOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatOrderViewController.h; sourceTree = "<group>"; };
+		0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatOrderViewController.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -370,6 +403,8 @@
 				0DE81F0A1EC4B38F0001782B /* SearchResultViewController.m */,
 				B555B6151EC572B900BD1A5F /* FiltrateViewController.h */,
 				B555B6161EC572B900BD1A5F /* FiltrateViewController.m */,
+				0DECEAF01EC720D5005F1072 /* CreatOrderViewController.h */,
+				0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -390,6 +425,7 @@
 		0DE81F061EC4ACAC0001782B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DECEAD11EC71E32005F1072 /* CreatOrder */,
 				0DE81E9A1EC4ABA50001782B /* CityCollectionCell.h */,
 				0DE81E9B1EC4ABA50001782B /* CityCollectionCell.m */,
 				0DE81E9C1EC4ABA50001782B /* CityMarkCell.h */,
@@ -444,6 +480,33 @@
 				0DE81F181EC4BC050001782B /* NSString+Attributed.m */,
 			);
 			name = AttributedString;
+			sourceTree = "<group>";
+		};
+		0DECEAD11EC71E32005F1072 /* CreatOrder */ = {
+			isa = PBXGroup;
+			children = (
+				0DECEAD21EC71E87005F1072 /* Book_TitleCell.h */,
+				0DECEAD31EC71E87005F1072 /* Book_TitleCell.m */,
+				0DECEAD51EC71EA7005F1072 /* Book_PassengerTitleCell.h */,
+				0DECEAD61EC71EA7005F1072 /* Book_PassengerTitleCell.m */,
+				0DECEAD81EC71EB8005F1072 /* Book_PassengerCell.h */,
+				0DECEAD91EC71EB8005F1072 /* Book_PassengerCell.m */,
+				0DECEADB1EC71EC6005F1072 /* Book_PassengerNullCell.h */,
+				0DECEADC1EC71EC6005F1072 /* Book_PassengerNullCell.m */,
+				0DECEADE1EC71ED7005F1072 /* Book_AddPassengerCell.h */,
+				0DECEADF1EC71ED7005F1072 /* Book_AddPassengerCell.m */,
+				0DECEAE11EC71EF9005F1072 /* Book_LinkManCell.h */,
+				0DECEAE21EC71EF9005F1072 /* Book_LinkManCell.m */,
+				0DECEAE41EC71F09005F1072 /* Book_LinkPhoneCell.h */,
+				0DECEAE51EC71F09005F1072 /* Book_LinkPhoneCell.m */,
+				0DECEAE71EC71F3B005F1072 /* Book_InsurancesCell.h */,
+				0DECEAE81EC71F3B005F1072 /* Book_InsurancesCell.m */,
+				0DECEAEA1EC71FA1005F1072 /* Book_NeedAddressCell.h */,
+				0DECEAEB1EC71FA1005F1072 /* Book_NeedAddressCell.m */,
+				0DECEAED1EC71FB4005F1072 /* Book_AddressCell.h */,
+				0DECEAEE1EC71FB4005F1072 /* Book_AddressCell.m */,
+			);
+			name = CreatOrder;
 			sourceTree = "<group>";
 		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
@@ -606,20 +669,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DECEAF21EC720D5005F1072 /* CreatOrderViewController.m in Sources */,
 				0DE81ED41EC4ABA50001782B /* Cabin.m in Sources */,
+				0DECEAE31EC71EF9005F1072 /* Book_LinkManCell.m in Sources */,
+				0DECEADA1EC71EB8005F1072 /* Book_PassengerCell.m in Sources */,
 				0DE81EDD1EC4ABA50001782B /* CityMarkCell.m in Sources */,
 				0DE81F191EC4BC050001782B /* NSString+Attributed.m in Sources */,
 				0DE81EEB1EC4ABA50001782B /* LoginUser.m in Sources */,
 				0DE81EE51EC4ABA50001782B /* SearchViewController.m in Sources */,
 				B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */,
 				0DE81EF01EC4ABA50001782B /* QueryFlightResult.m in Sources */,
+				0DECEAEF1EC71FB4005F1072 /* Book_AddressCell.m in Sources */,
 				0DE81F0E1EC4B7740001782B /* FlightInfoCell.m in Sources */,
 				0DE81EDF1EC4ABA50001782B /* LoginTypeController.m in Sources */,
 				0DE81EE71EC4ABA50001782B /* CyAlertView.m in Sources */,
 				0DE81EDC1EC4ABA50001782B /* CityCollectionCell.m in Sources */,
 				0DE81EED1EC4ABA50001782B /* NetWorkTool.m in Sources */,
 				0DE81EEE1EC4ABA50001782B /* NSObject+Cache.m in Sources */,
+				0DECEADD1EC71EC6005F1072 /* Book_PassengerNullCell.m in Sources */,
 				0D5636F41EC7018F00D6A86B /* UIView+CurrentVC.m in Sources */,
+				0DECEAE91EC71F3B005F1072 /* Book_InsurancesCell.m in Sources */,
+				0DECEAE61EC71F09005F1072 /* Book_LinkPhoneCell.m in Sources */,
 				0DE81ED71EC4ABA50001782B /* City.m in Sources */,
 				0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */,
 				0DE81EE11EC4ABA50001782B /* main.m in Sources */,
@@ -628,23 +698,27 @@
 				0DE81EE31EC4ABA50001782B /* MonthCell.m in Sources */,
 				0D5636ED1EC6F2B500D6A86B /* CheckPriceModel.m in Sources */,
 				0DE81ED61EC4ABA50001782B /* CitiesGroup.m in Sources */,
+				0DECEAD41EC71E87005F1072 /* Book_TitleCell.m in Sources */,
 				0DE81EEC1EC4ABA50001782B /* MBProgressHUD.m in Sources */,
 				0DE81EE81EC4ABA50001782B /* User.m in Sources */,
 				0DE81ED91EC4ABA50001782B /* CalendarViewController.m in Sources */,
 				0DE81EDB1EC4ABA50001782B /* CitiesViewController.m in Sources */,
 				0DE81F0B1EC4B38F0001782B /* SearchResultViewController.m in Sources */,
+				0DECEAD71EC71EA7005F1072 /* Book_PassengerTitleCell.m in Sources */,
 				0DE81ED21EC4ABA50001782B /* BaseTableViewController.m in Sources */,
 				0DE81F121EC4B9040001782B /* NSDate+ToString.m in Sources */,
 				0DE81EF31EC4ABA50001782B /* UIColor+Hex.m in Sources */,
 				0DE81EEF1EC4ABA50001782B /* Passenger.m in Sources */,
 				0DE81ED31EC4ABA50001782B /* BaseViewController.m in Sources */,
 				0DE81EE91EC4ABA50001782B /* Flight.m in Sources */,
+				0DECEAE01EC71ED7005F1072 /* Book_AddPassengerCell.m in Sources */,
 				0D5636F01EC6F33F00D6A86B /* CheckPriceResult.m in Sources */,
 				0DE81ED81EC4ABA50001782B /* AppDelegate.m in Sources */,
 				0DE81EDA1EC4ABA50001782B /* CitiesModel.m in Sources */,
 				0DE81EE01EC4ABA50001782B /* LoginViewController.m in Sources */,
 				0DE81EE61EC4ABA50001782B /* SendCodeModel.m in Sources */,
 				0DE81EE41EC4ABA50001782B /* QueryFlightModel.m in Sources */,
+				0DECEAEC1EC71FA1005F1072 /* Book_NeedAddressCell.m in Sources */,
 				0DE81EEA1EC4ABA50001782B /* Insurances.m in Sources */,
 				0DE81EE21EC4ABA50001782B /* MeViewController.m in Sources */,
 				0DE81F151EC4B9150001782B /* NSString+ToDate.m in Sources */,

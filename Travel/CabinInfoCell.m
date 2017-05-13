@@ -11,13 +11,14 @@
 #import "CheckPriceModel.h"
 #import "UIView+CurrentVC.h"
 #import "CyAlertView.h"
+#import "CreatOrderViewController.h"
 
 @interface CabinInfoCell()
 @property (weak, nonatomic) IBOutlet UILabel *money;
 @property (weak, nonatomic) IBOutlet UILabel *discount;
 @property (weak, nonatomic) IBOutlet UILabel *refundFee;
 @property Cabin *cabin;
-@property NSString *flightKey;
+@property Flight *flight;
 @end
 
 @implementation CabinInfoCell
@@ -28,7 +29,7 @@
 }
 
 - (IBAction)book:(id)sender {
-    [CheckPriceModel checkWithFlightKey:_flightKey cabinKey:_cabin.Key success:^(CheckPriceResult *result, NSInteger code) {
+    [CheckPriceModel checkWithFlightKey:_flight.Key cabinKey:_cabin.Key success:^(CheckPriceResult *result, NSInteger code) {
         switch (code) {
             case 20400: {
                 //价格发生变化
@@ -41,7 +42,8 @@
                 }];
                 
                 UIAlertAction *actionBook = [UIAlertAction actionWithTitle:@"继续预订" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                    
+                    CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight: _flight cabin:_cabin];
+                    [[self currentVC].navigationController pushViewController:vc animated:YES];
                 }];
                 [alert addAction:actionCancel];
                 [alert addAction:actionBook];
@@ -58,7 +60,10 @@
                 [CyAlertView message:@"验价失败，需要重新选择航班"];
                 [[self currentVC].navigationController popViewControllerAnimated:YES];
                 break;
-            default:
+            default: {
+                CreatOrderViewController *vc = [CreatOrderViewController instanceWithFlight: _flight cabin:_cabin];
+                [[self currentVC].navigationController pushViewController:vc animated:YES];
+            }
                 break;
         }
     } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
@@ -68,9 +73,9 @@
 }
 
 - (void)loadInfo: (Cabin *)cabin
-       flightKey: (NSString *)flightKey{
+          flight: (Flight *)flight {
     _cabin = cabin;
-    _flightKey = flightKey;
+    _flight = flight;
     NSString *moneyString = [NSString stringWithFormat:@"￥ %.0f元", cabin.SalePrice];
     _money.attributedText = [moneyString setColor:_money.textColor font: [UIFont systemFontOfSize:10] forSubString:@"￥"];
     _discount.text = [NSString stringWithFormat:@"%@ %ld 折", cabin.CabinType, (long)cabin.CabinDiscount];
