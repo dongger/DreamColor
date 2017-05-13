@@ -27,7 +27,6 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithHexString:@"#2685d7"]];
-    
     if (self.rt_navigationController.rt_viewControllers.count > 1) {
         UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
         [backButton setImage:[UIImage imageNamed:@"back_arrow_white"] forState:UIControlStateNormal];

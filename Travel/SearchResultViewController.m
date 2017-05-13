@@ -165,5 +165,6 @@ static NSString *saveKey = @"kQueryFlightResult";
         _selectedRow = indexPath.row;
     }
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 @end

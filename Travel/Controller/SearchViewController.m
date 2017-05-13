@@ -34,6 +34,7 @@
     [super viewDidLoad];
     _bookType = 1;
     _travelType = 1;
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (IBAction)pickDate:(id)sender {
