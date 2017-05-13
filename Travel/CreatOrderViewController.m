@@ -21,6 +21,7 @@
 #import "LoginUser.h"
 #import "CheckPriceResult.h"
 #import "UIColor+Hex.h"
+#import "EditPassengerInfoViewController.h"
 
 
 @interface CreatOrderViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -244,6 +245,9 @@
     } else if ([cell isKindOfClass:[Book_AddressCell class]]) {
         
     }
+    
+    EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instance];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
