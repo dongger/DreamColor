@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ABStaticTableViewController.h"
+#import "BaseTableViewController.h"
 
-@interface OrderPayViewController : ABStaticTableViewController
+@interface OrderPayViewController : BaseTableViewController
 
 + (OrderPayViewController *)instanceWithOrderId: (NSString *)orderId;
 

@@ -77,6 +77,7 @@
 		0DECEB171EC84F93005F1072 /* OrderFeeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB161EC84F93005F1072 /* OrderFeeDetailCell.m */; };
 		0DECEB1A1EC84FAD005F1072 /* OrderPayPassengerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB191EC84FAD005F1072 /* OrderPayPassengerCell.m */; };
 		0DECEB1D1EC84FD1005F1072 /* OrderPaylinkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB1C1EC84FD1005F1072 /* OrderPaylinkInfoCell.m */; };
+		0DECEB211EC86B13005F1072 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB201EC86B13005F1072 /* PayModel.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -217,6 +218,8 @@
 		0DECEB191EC84FAD005F1072 /* OrderPayPassengerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayPassengerCell.m; sourceTree = "<group>"; };
 		0DECEB1B1EC84FD1005F1072 /* OrderPaylinkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPaylinkInfoCell.h; sourceTree = "<group>"; };
 		0DECEB1C1EC84FD1005F1072 /* OrderPaylinkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPaylinkInfoCell.m; sourceTree = "<group>"; };
+		0DECEB1F1EC86B13005F1072 /* PayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModel.h; sourceTree = "<group>"; };
+		0DECEB201EC86B13005F1072 /* PayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModel.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -472,6 +475,8 @@
 				0DECEB061EC82304005F1072 /* BookOrderModel.m */,
 				0DECEB121EC841FD005F1072 /* OrderModel.h */,
 				0DECEB131EC841FD005F1072 /* OrderModel.m */,
+				0DECEB1F1EC86B13005F1072 /* PayModel.h */,
+				0DECEB201EC86B13005F1072 /* PayModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -835,6 +840,7 @@
 				0DE81EE61EC4ABA50001782B /* SendCodeModel.m in Sources */,
 				0DE81EE41EC4ABA50001782B /* QueryFlightModel.m in Sources */,
 				0DECEAEC1EC71FA1005F1072 /* Book_NeedAddressCell.m in Sources */,
+				0DECEB211EC86B13005F1072 /* PayModel.m in Sources */,
 				0DECEB1D1EC84FD1005F1072 /* OrderPaylinkInfoCell.m in Sources */,
 				0DECEB141EC841FD005F1072 /* OrderModel.m in Sources */,
 				0DE81EEA1EC4ABA50001782B /* Insurances.m in Sources */,

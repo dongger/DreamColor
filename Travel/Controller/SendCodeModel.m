@@ -16,7 +16,7 @@
                  failure: (void(^)(NSString * errorMessage))failueBlock {
     //验证码类型 1:登彔 2:注册 3:忘记密码 4:修改密码
     NSDictionary *parameters = @{@"Phone": phone,
-                                 @"Type": @(type)};
+                                 @"Type": [NSString stringWithFormat:@"%ld",type]};
     [NetWorkTool POST:__getCities parameters:parameters success:^(id responseObject, NSInteger code) {
         successBlock();
     } failure:^(NSString * _Nullable errorMessage, NSInteger code) {

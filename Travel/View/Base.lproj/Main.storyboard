@@ -414,7 +414,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <state key="normal" title="增加人数" image="add_person">
-                                                        <color key="titleColor" red="0.8666666666666667" green="0.46666666666666667" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="titleColor" red="0.86274509799999999" green="0.33333333329999998" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -790,7 +790,7 @@
         <scene sceneID="MLg-SC-9DL">
             <objects>
                 <tableViewController storyboardIdentifier="OrderPayViewController" hidesBottomBarWhenPushed="YES" id="Kck-wu-1yN" customClass="OrderPayViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BXy-8T-Wdz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BXy-8T-Wdz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -811,7 +811,7 @@
                                                     <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderFeeDetailCell" rowHeight="88" id="lGZ-ET-LCp" customClass="OrderFeeDetailCell">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderFeeDetailCell" rowHeight="88" id="lGZ-ET-LCp" customClass="OrderFeeDetailCell">
                                                             <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lGZ-ET-LCp" id="ik2-UM-KZm">
@@ -912,7 +912,7 @@
                                                                 <outlet property="price" destination="oSs-Of-q8A" id="fPB-fQ-X4h"/>
                                                             </connections>
                                                         </tableViewCell>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderPayPassengerCell" rowHeight="58" id="t9P-w9-KgK" customClass="OrderPayPassengerCell">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderPayPassengerCell" rowHeight="58" id="t9P-w9-KgK" customClass="OrderPayPassengerCell">
                                                             <rect key="frame" x="0.0" y="116" width="375" height="58"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9P-w9-KgK" id="41A-0i-Z1V">
@@ -965,7 +965,7 @@
                                                                 <outlet property="titleMark" destination="rsg-HB-JD8" id="nrS-9N-To3"/>
                                                             </connections>
                                                         </tableViewCell>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderPaylinkInfoCell" rowHeight="40" id="XaC-SF-atL" customClass="OrderPaylinkInfoCell">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderPaylinkInfoCell" rowHeight="40" id="XaC-SF-atL" customClass="OrderPaylinkInfoCell">
                                                             <rect key="frame" x="0.0" y="174" width="375" height="40"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XaC-SF-atL" id="B0E-Ap-cP9">
@@ -1140,7 +1140,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="iCc-zC-D6e">
-                            <rect key="frame" x="0.0" y="492" width="375" height="100"/>
+                            <rect key="frame" x="0.0" y="520" width="375" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nC-rV-UTL">
@@ -1170,76 +1170,73 @@
                                 <constraint firstItem="5nC-rV-UTL" firstAttribute="top" secondItem="iCc-zC-D6e" secondAttribute="top" constant="28" id="zba-On-FJt"/>
                             </constraints>
                         </view>
-                        <sections>
-                            <tableViewSection id="Pra-41-pe9">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="rTP-oP-bFi">
-                                        <rect key="frame" x="0.0" y="342" width="375" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rTP-oP-bFi" id="lcr-LM-1Wl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alipay_logo" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-12-CUh">
-                                                    <rect key="frame" x="20" y="17" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="企业支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa0-2f-I6P">
-                                                    <rect key="frame" x="80" y="26" width="74" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button_on" translatesAutoresizingMaskIntoConstraints="NO" id="N9D-fA-Hef">
-                                                    <rect key="frame" x="325" y="22" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="Duh-E9-iQ6"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="normal" rowHeight="75" id="rTP-oP-bFi">
+                                <rect key="frame" x="0.0" y="370" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rTP-oP-bFi" id="lcr-LM-1Wl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alipay_logo" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-12-CUh">
+                                            <rect key="frame" x="20" y="17" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="企业支付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa0-2f-I6P">
+                                            <rect key="frame" x="80" y="26" width="74" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button_on" translatesAutoresizingMaskIntoConstraints="NO" id="N9D-fA-Hef">
+                                            <rect key="frame" x="325" y="22" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstItem="N9D-fA-Hef" firstAttribute="top" secondItem="lcr-LM-1Wl" secondAttribute="top" constant="22" id="Vou-3D-tNj"/>
-                                                <constraint firstAttribute="bottom" secondItem="N9D-fA-Hef" secondAttribute="bottom" constant="22.5" id="bvr-uQ-93s"/>
-                                                <constraint firstAttribute="trailing" secondItem="N9D-fA-Hef" secondAttribute="trailing" constant="20" id="oB4-bu-YT1"/>
+                                                <constraint firstAttribute="width" constant="30" id="Duh-E9-iQ6"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="WBt-E4-zb0">
-                                        <rect key="frame" x="0.0" y="417" width="375" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WBt-E4-zb0" id="8rX-Yp-p7y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alipay_logo" translatesAutoresizingMaskIntoConstraints="NO" id="chu-0y-ZJW">
-                                                    <rect key="frame" x="20" y="17" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="支付宝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujm-Ki-0Ec">
-                                                    <rect key="frame" x="80" y="26" width="56" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-mN-X1m">
-                                                    <rect key="frame" x="325" y="22" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="wwC-aZ-Zrq"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N9D-fA-Hef" firstAttribute="top" secondItem="lcr-LM-1Wl" secondAttribute="top" constant="22" id="Vou-3D-tNj"/>
+                                        <constraint firstAttribute="bottom" secondItem="N9D-fA-Hef" secondAttribute="bottom" constant="22.5" id="bvr-uQ-93s"/>
+                                        <constraint firstAttribute="trailing" secondItem="N9D-fA-Hef" secondAttribute="trailing" constant="20" id="oB4-bu-YT1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="alipay" rowHeight="75" id="WBt-E4-zb0">
+                                <rect key="frame" x="0.0" y="445" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WBt-E4-zb0" id="8rX-Yp-p7y">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alipay_logo" translatesAutoresizingMaskIntoConstraints="NO" id="chu-0y-ZJW">
+                                            <rect key="frame" x="20" y="17" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="支付宝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujm-Ki-0Ec">
+                                            <rect key="frame" x="80" y="26" width="56" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_button" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-mN-X1m">
+                                            <rect key="frame" x="325" y="22" width="30" height="30"/>
                                             <constraints>
-                                                <constraint firstItem="wT3-mN-X1m" firstAttribute="top" secondItem="8rX-Yp-p7y" secondAttribute="top" constant="22" id="By6-zB-rrm"/>
-                                                <constraint firstAttribute="trailing" secondItem="wT3-mN-X1m" secondAttribute="trailing" constant="20" id="VFj-7g-WkP"/>
-                                                <constraint firstAttribute="bottom" secondItem="wT3-mN-X1m" secondAttribute="bottom" constant="22.5" id="m3R-VO-ibz"/>
+                                                <constraint firstAttribute="width" constant="30" id="wwC-aZ-Zrq"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wT3-mN-X1m" firstAttribute="top" secondItem="8rX-Yp-p7y" secondAttribute="top" constant="22" id="By6-zB-rrm"/>
+                                        <constraint firstAttribute="trailing" secondItem="wT3-mN-X1m" secondAttribute="trailing" constant="20" id="VFj-7g-WkP"/>
+                                        <constraint firstAttribute="bottom" secondItem="wT3-mN-X1m" secondAttribute="bottom" constant="22.5" id="m3R-VO-ibz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Kck-wu-1yN" id="PQh-Zw-fCD"/>
                             <outlet property="delegate" destination="Kck-wu-1yN" id="xKk-ee-cc4"/>

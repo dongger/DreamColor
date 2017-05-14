@@ -29,3 +29,9 @@ static NSString *__bookOrder = @"BookOrder.cc"; //创建订单
 
 static NSString *__orderDetail = @"OrderDetail.cc"; //订单详情
 
+static NSString *__pay = @"Pay.cc"; //确认支付
+static NSString *__getPayType = @"GetPayType.cc"; //获取支付方式
+
+
+
+
