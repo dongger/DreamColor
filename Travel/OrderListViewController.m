@@ -11,6 +11,7 @@
 #import "CyAlertView.h"
 #import <MJRefresh.h>
 #import "OrderListCell.h"
+#import "OrderDetailViewController.h"
 
 @interface OrderListViewController ()
 @property NSInteger page;
@@ -97,7 +98,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    Order *order = _orderList.Orders[indexPath.row];
+    OrderDetailViewController *vc = [OrderDetailViewController instance:order];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

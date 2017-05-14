@@ -76,7 +76,7 @@
     _price.attributedText = [priceString setColor:_price.textColor font:[UIFont systemFontOfSize:10] forSubString:@"￥"];
     
     _dateInfo.text = [NSString stringWithFormat:@"%@ 起飞",_order.TakeOffDate];
-    _flightInfo.text = [NSString stringWithFormat:@"%@%@",_order.Airline,_order.FligthNo];
+    _flightInfo.text = [NSString stringWithFormat:@"%@%@",_order.AirlineName,_order.FligthNo];
     
     _payButton.layer.borderColor = [[UIColor colorWithHexString:@"#ff4000"] CGColor];
     _payButton.layer.borderWidth = 1;

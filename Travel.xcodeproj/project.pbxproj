@@ -81,6 +81,7 @@
 		0DECEB261EC894F2005F1072 /* OrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB251EC894F2005F1072 /* OrderListViewController.m */; };
 		0DECEB2A1EC89C02005F1072 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB291EC89C02005F1072 /* OrderListCell.m */; };
 		0DECEB2E1EC8A603005F1072 /* OrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB2D1EC8A603005F1072 /* OrderList.m */; };
+		0DECEB311EC8C0A6005F1072 /* OrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB301EC8C0A6005F1072 /* OrderDetailViewController.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -229,6 +230,8 @@
 		0DECEB291EC89C02005F1072 /* OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
 		0DECEB2C1EC8A603005F1072 /* OrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderList.h; sourceTree = "<group>"; };
 		0DECEB2D1EC8A603005F1072 /* OrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderList.m; sourceTree = "<group>"; };
+		0DECEB2F1EC8C0A6005F1072 /* OrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailViewController.h; sourceTree = "<group>"; };
+		0DECEB301EC8C0A6005F1072 /* OrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailViewController.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -634,7 +637,6 @@
 		0DECEB221EC894BE005F1072 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				0DECEB2B1EC8A4C7005F1072 /* New Group */,
 				0DECEB271EC89BC8005F1072 /* View */,
 				0DECEB231EC894D5005F1072 /* Controller */,
 			);
@@ -646,6 +648,8 @@
 			children = (
 				0DECEB241EC894F2005F1072 /* OrderListViewController.h */,
 				0DECEB251EC894F2005F1072 /* OrderListViewController.m */,
+				0DECEB2F1EC8C0A6005F1072 /* OrderDetailViewController.h */,
+				0DECEB301EC8C0A6005F1072 /* OrderDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -657,13 +661,6 @@
 				0DECEB291EC89C02005F1072 /* OrderListCell.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		0DECEB2B1EC8A4C7005F1072 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
@@ -860,6 +857,7 @@
 				0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */,
 				0DE81EE11EC4ABA50001782B /* main.m in Sources */,
 				0DE81EDE1EC4ABA50001782B /* DayCell.m in Sources */,
+				0DECEB311EC8C0A6005F1072 /* OrderDetailViewController.m in Sources */,
 				0DE81EF41EC4ABA50001782B /* UserModel.m in Sources */,
 				0DE81EE31EC4ABA50001782B /* MonthCell.m in Sources */,
 				0D5636ED1EC6F2B500D6A86B /* CheckPriceModel.m in Sources */,
