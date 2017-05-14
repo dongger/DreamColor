@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Travel/CreatOrderViewController.m"
-            timestampString = "516433421.921315"
+            filePath = "Travel/BookOrderModel.m"
+            timestampString = "516434508.717907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "-commit:"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "+bookWithEntity:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

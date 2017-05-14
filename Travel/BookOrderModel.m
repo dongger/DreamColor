@@ -18,8 +18,11 @@
     NSDictionary *parameters = [NSJSONSerialization JSONObjectWithData: jsonData options:NSJSONReadingMutableLeaves error:nil];
     [NetWorkTool POST:__bookOrder parameters:parameters success:^(id responseObject, NSInteger code) {
         if (responseObject) {
-            NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-            successBlock(dic[@"OrderId"], code);
+            if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                successBlock(((NSDictionary *)responseObject)[@"OrderId"], code);
+            } else {
+                successBlock(nil, code);
+            }
         } else {
             successBlock(nil, code);
         }
