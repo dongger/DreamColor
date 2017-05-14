@@ -9,6 +9,8 @@
 #import "OrderListCell.h"
 #import "UIColor+Hex.h"
 #import "NSString+Attributed.h"
+#import "OrderPayViewController.h"
+#import "UIView+CurrentVC.h"
 
 @interface OrderListCell()
 @property (weak, nonatomic) IBOutlet UIButton *typeMark;
@@ -90,7 +92,8 @@
 }
 
 - (IBAction)pay:(id)sender {
-    
+    OrderPayViewController *vc = [OrderPayViewController instanceWithOrderId:_order.OrderId];
+    [[self currentVC].navigationController pushViewController:vc animated:YES];
 }
 
 - (float) widthForString:(NSString *)value andHeight:(float)height{
