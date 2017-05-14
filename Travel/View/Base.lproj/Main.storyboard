@@ -512,7 +512,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="H8z-cl-rcZ" id="ROw-YO-IfQ"/>
+                                                        <outlet property="delegate" destination="H8z-cl-rcZ" id="M9Q-SF-t7D"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -551,6 +551,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="C0S-ik-Bnk" id="IsF-E9-1xn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -801,7 +804,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="OWD-FO-WSh">
-                            <rect key="frame" x="0.0" y="558.5" width="375" height="100"/>
+                            <rect key="frame" x="0.0" y="503.5" width="375" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-ch-A9F">
@@ -818,6 +821,7 @@
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="queryFlight:" destination="Hf4-gB-RJA" eventType="touchUpInside" id="szp-Xg-yaI"/>
+                                        <action selector="save:" destination="9Td-Kb-3m1" eventType="touchUpInside" id="7gE-g1-LTg"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -880,6 +884,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Td-Kb-3m1" id="Drk-Pu-Fsa"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -986,6 +993,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Td-Kb-3m1" id="lUv-jL-sMT"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1071,7 +1081,7 @@
                                                     <rect key="frame" x="0.0" y="6" width="375" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <inset key="titleEdgeInsets" minX="105" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal" title="1990-09-1">
+                                                    <state key="normal">
                                                         <color key="titleColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                     <connections>
@@ -1139,6 +1149,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Td-Kb-3m1" id="ak9-zI-lWf"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1170,6 +1183,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9Td-Kb-3m1" id="ajz-AV-JcR"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1179,44 +1195,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="55" id="7NT-h3-Ses">
-                                        <rect key="frame" x="0.0" y="447.5" width="375" height="55"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7NT-h3-Ses" id="7fp-xr-XNr">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="54.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所属部门" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-XN-Cbx">
-                                                    <rect key="frame" x="20" y="19" width="50" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Ei2-Sl-rKh"/>
-                                                        <constraint firstAttribute="height" constant="15" id="oga-nl-ToM"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riz-Q8-PAC">
-                                                    <rect key="frame" x="78" y="20" width="264" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="W7o-TT-6lS"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Riz-Q8-PAC" firstAttribute="top" secondItem="7fp-xr-XNr" secondAttribute="top" constant="20" id="BuE-CL-r8F"/>
-                                                <constraint firstItem="Riz-Q8-PAC" firstAttribute="leading" secondItem="6gT-XN-Cbx" secondAttribute="trailing" constant="8" id="EHS-EQ-PFm"/>
-                                                <constraint firstItem="6gT-XN-Cbx" firstAttribute="top" secondItem="7fp-xr-XNr" secondAttribute="top" constant="19" id="Fxu-5M-LAa"/>
-                                                <constraint firstItem="6gT-XN-Cbx" firstAttribute="leading" secondItem="7fp-xr-XNr" secondAttribute="leading" constant="20" id="GGq-ad-VeZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="Riz-Q8-PAC" secondAttribute="trailing" id="frn-RZ-5gM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="55" id="3Ei-IC-1r3">
-                                        <rect key="frame" x="0.0" y="502.5" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="447.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ei-IC-1r3" id="Q2D-NL-eC8">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="54.5"/>
@@ -1261,8 +1241,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="编辑乘客信息" id="UY7-PF-8fq"/>
                     <connections>
+                        <outlet property="brithdayButton" destination="8oE-XR-KYs" id="FWc-oT-oto"/>
                         <outlet property="name" destination="ZEK-RA-Za6" id="fFy-Hz-z2U"/>
                         <outlet property="num" destination="hh2-yv-R7c" id="lHs-iF-9ch"/>
+                        <outlet property="phone" destination="g4S-rT-kly" id="BOd-9r-jT2"/>
+                        <outlet property="sexView" destination="LrE-Id-geK" id="ZgF-Ng-rMa"/>
+                        <outlet property="typeView" destination="vgm-Sa-OIM" id="3mH-fA-nDs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNs-9L-GBL" userLabel="First Responder" sceneMemberID="firstResponder"/>

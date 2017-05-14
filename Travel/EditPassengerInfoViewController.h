@@ -8,9 +8,11 @@
 
 #import "ABStaticTableViewController.h"
 #import "Passenger.h"
+#import "CreatOrderViewController.h"
 
 @interface EditPassengerInfoViewController : ABStaticTableViewController
 
-+ (EditPassengerInfoViewController *)instance;
++ (EditPassengerInfoViewController *)instanceWithPassenger: (Passenger *)passenger
+                                              creatOrderVC: (CreatOrderViewController *)creatOrderVC;
 
 @end

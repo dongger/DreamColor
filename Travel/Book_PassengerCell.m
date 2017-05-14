@@ -7,6 +7,7 @@
 //
 
 #import "Book_PassengerCell.h"
+#import "NSString+Check.h"
 
 @interface Book_PassengerCell()
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -27,7 +28,11 @@
 - (void)loadInfo:(Passenger *)passenger {
     _name.text = passenger.Name;
     _num.text = [NSString stringWithFormat:@"%@  %@",passenger.IdTypeName, passenger.IdNumber];
-    _phone.text = [NSString stringWithFormat:@"手机号  %@",passenger.Phone];
+    if ([passenger.Phone valiMobile]) {
+        _phone.text = [NSString stringWithFormat:@"手机号  %@",passenger.Phone];
+    } else {
+        _phone.text = @"未填写手机号码";
+    }
 }
 
 @end

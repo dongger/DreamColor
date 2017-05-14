@@ -7,6 +7,8 @@
 //
 
 #import "Book_LinkPhoneCell.h"
+#import "NSString+Check.h"
+#import "CyAlertView.h"
 
 @interface Book_LinkPhoneCell()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phone;
@@ -28,7 +30,12 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (_block != nil) {
-        _block(textField.text);
+        if ([textField.text valiMobile]) {
+            _block(textField.text);
+        } else {
+            [CyAlertView message:@"请输入正确格式的手机号码"];
+            textField.text = @"";
+        }
     }
 }
 

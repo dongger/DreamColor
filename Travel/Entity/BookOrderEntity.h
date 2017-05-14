@@ -18,6 +18,6 @@
 @property NSString *LinkPhone;
 @property NSString *ReimAddress;
 @property NSInteger InsKey;
-@property NSArray *Passengers;
+@property NSMutableArray *Passengers;
 
 @end

@@ -24,6 +24,8 @@
                                                      barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithHexString:@"#2685d7"]];
     [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"back_arrow_white"]];
     

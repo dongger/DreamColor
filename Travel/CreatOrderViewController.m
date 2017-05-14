@@ -17,16 +17,14 @@
 #import "Book_InsurancesCell.h"
 #import "Book_NeedAddressCell.h"
 #import "Book_AddressCell.h"
-#import "BookOrderEntity.h"
 #import "LoginUser.h"
 #import "CheckPriceResult.h"
 #import "UIColor+Hex.h"
 #import "EditPassengerInfoViewController.h"
+#import "BookOrderModel.h"
+#import "CyAlertView.h"
 
-
-@interface CreatOrderViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property BookOrderEntity *bookOrderEntity;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface CreatOrderViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property Cabin *cabin;
 @property Flight *flight;
 @property CheckPriceResult *checkResult;
@@ -62,9 +60,15 @@
     _bookOrderEntity.LinkPhone = [[LoginUser share] LinkPhone];
     _bookOrderEntity.ReimAddress = [[LoginUser share] Address];
     _bookOrderEntity.InsKey = 0;
-    _bookOrderEntity.Passengers = @[];
+    _bookOrderEntity.Passengers = [[NSMutableArray alloc] init];
     _needShowTitleDetail = NO;
     _needAddress = NO;
+    
+    if (_checkResult.PriceChecked == 0) {
+        _totalPrice.text = [NSString stringWithFormat:@"%0.0f",_checkResult.NewPrice];
+    } else {
+        _totalPrice.text = [NSString stringWithFormat:@"%0.0f",_cabin.SalePrice];
+    }
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectZero];
     [_tableView setTableFooterView:footerView];
@@ -77,6 +81,14 @@
 }
 
 - (IBAction)commit:(id)sender {
+    
+    
+    [BookOrderModel bookWithEntity:_bookOrderEntity success:^(NSString * _Nullable orderId, NSInteger code) {
+        NSLog(@"%@", orderId);
+    } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
+        [CyAlertView message:errorMessage];
+    }];
+    
 }
 
 - (IBAction)showDetail:(id)sender {
@@ -137,7 +149,7 @@
             Book_PassengerNullCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Book_PassengerNullCell" forIndexPath:indexPath];
             return cell;
         } else if (_bookOrderEntity.Passengers.count < 9) {
-            if (indexPath.row + 1 < _bookOrderEntity.Passengers.count ) {
+            if (indexPath.row - 1 < _bookOrderEntity.Passengers.count ) {
                 Book_PassengerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Book_PassengerCell" forIndexPath:indexPath];
                 Passenger *passenger = _bookOrderEntity.Passengers[indexPath.row - 1];
                 [cell loadInfo:passenger];
@@ -201,7 +213,7 @@
         } else if (_bookOrderEntity.Passengers.count == 0) {
             return 75;
         } else if (_bookOrderEntity.Passengers.count < 9) {
-            if (indexPath.row + 1 < _bookOrderEntity.Passengers.count ) {
+            if (indexPath.row -1 < _bookOrderEntity.Passengers.count ) {
                 return 75;
             } else {
                 return 40;
@@ -235,19 +247,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if ([cell isKindOfClass:[Book_PassengerCell class]]) {
-        
+        Passenger *passenger = _bookOrderEntity.Passengers[indexPath.row - 1];
+        EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instanceWithPassenger:passenger creatOrderVC:self];
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([cell isKindOfClass:[Book_AddPassengerCell class]]) {
-        
+        EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instanceWithPassenger:nil creatOrderVC:self];
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([cell isKindOfClass:[Book_PassengerNullCell class]]) {
-        
+        EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instanceWithPassenger:nil creatOrderVC:self];
+        [self.navigationController pushViewController:vc animated:YES];
     } else if ([cell isKindOfClass:[Book_InsurancesCell class]]) {
         
     } else if ([cell isKindOfClass:[Book_AddressCell class]]) {
         
     }
     
-    EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instance];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -258,6 +272,5 @@
         scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
     }
 }
-
 
 @end

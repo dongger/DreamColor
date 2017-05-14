@@ -11,8 +11,11 @@
 #import "Cabin.h"
 #import "Flight.h"
 #import "CheckPriceResult.h"
+#import "BookOrderEntity.h"
 
 @interface CreatOrderViewController : BaseViewController
+@property BookOrderEntity *bookOrderEntity;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 + (CreatOrderViewController *)instanceWithFlight: (Flight *)flight
                                            cabin: (Cabin *)cabin

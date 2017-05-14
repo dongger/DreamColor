@@ -68,6 +68,8 @@
 		0DECEAF81EC76DDE005F1072 /* EditPassengerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAF71EC76DDE005F1072 /* EditPassengerInfoViewController.m */; };
 		0DECEAFC1EC77724005F1072 /* ABStaticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAFB1EC77724005F1072 /* ABStaticTableViewController.m */; };
 		0DECEB001EC77988005F1072 /* ASBirthSelectSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */; };
+		0DECEB031EC8126A005F1072 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB021EC8126A005F1072 /* NSString+Check.m */; };
+		0DECEB071EC82304005F1072 /* BookOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB061EC82304005F1072 /* BookOrderModel.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -190,6 +192,10 @@
 		0DECEAFB1EC77724005F1072 /* ABStaticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABStaticTableViewController.m; sourceTree = "<group>"; };
 		0DECEAFE1EC77988005F1072 /* ASBirthSelectSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBirthSelectSheet.h; sourceTree = "<group>"; };
 		0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBirthSelectSheet.m; sourceTree = "<group>"; };
+		0DECEB011EC8126A005F1072 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
+		0DECEB021EC8126A005F1072 /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
+		0DECEB051EC82304005F1072 /* BookOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOrderModel.h; sourceTree = "<group>"; };
+		0DECEB061EC82304005F1072 /* BookOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderModel.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -314,6 +320,7 @@
 		0DE81EFB1EC4ABD80001782B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				0DECEB041EC81285005F1072 /* NSString+Check */,
 				0DECEAFD1EC7797F005F1072 /* ASBirthSheet */,
 				0DECEAF91EC7771B005F1072 /* ABStaticTableViewController */,
 				0D5636F11EC7016000D6A86B /* CurrentVC */,
@@ -436,6 +443,8 @@
 				0DE81EAA1EC4ABA50001782B /* QueryFlightModel.m */,
 				0D5636EB1EC6F2B500D6A86B /* CheckPriceModel.h */,
 				0D5636EC1EC6F2B500D6A86B /* CheckPriceModel.m */,
+				0DECEB051EC82304005F1072 /* BookOrderModel.h */,
+				0DECEB061EC82304005F1072 /* BookOrderModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -543,6 +552,15 @@
 				0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */,
 			);
 			name = ASBirthSheet;
+			sourceTree = "<group>";
+		};
+		0DECEB041EC81285005F1072 /* NSString+Check */ = {
+			isa = PBXGroup;
+			children = (
+				0DECEB011EC8126A005F1072 /* NSString+Check.h */,
+				0DECEB021EC8126A005F1072 /* NSString+Check.m */,
+			);
+			name = "NSString+Check";
 			sourceTree = "<group>";
 		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
@@ -713,6 +731,7 @@
 				0DE81EDD1EC4ABA50001782B /* CityMarkCell.m in Sources */,
 				0DE81F191EC4BC050001782B /* NSString+Attributed.m in Sources */,
 				0DE81EEB1EC4ABA50001782B /* LoginUser.m in Sources */,
+				0DECEB071EC82304005F1072 /* BookOrderModel.m in Sources */,
 				0DE81EE51EC4ABA50001782B /* SearchViewController.m in Sources */,
 				B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */,
 				0DE81EF01EC4ABA50001782B /* QueryFlightResult.m in Sources */,
@@ -729,6 +748,7 @@
 				0D5636F41EC7018F00D6A86B /* UIView+CurrentVC.m in Sources */,
 				0DECEAE91EC71F3B005F1072 /* Book_InsurancesCell.m in Sources */,
 				0DECEAE61EC71F09005F1072 /* Book_LinkPhoneCell.m in Sources */,
+				0DECEB031EC8126A005F1072 /* NSString+Check.m in Sources */,
 				0DE81ED71EC4ABA50001782B /* City.m in Sources */,
 				0DE81F1C1EC4CC8E0001782B /* CabinInfoCell.m in Sources */,
 				0DE81EE11EC4ABA50001782B /* main.m in Sources */,
