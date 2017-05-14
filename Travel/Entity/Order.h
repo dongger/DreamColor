@@ -23,6 +23,9 @@
 @property NSString *FlipCity;
 @property NSString *OrderId;
 @property NSInteger OrderStatus; //订单状态 新订单等待支付 = 0, 已支付待出票 = 1, 出票成功交易结束 = 2, 已取消 = 3
+@property NSString *OrderStatusString;
+@property NSString *OrderStatusColor;
+
 @property NSInteger BookMode; //预订类型 直客 = 0, 因公 = 1, 因私 = 2
 @property NSString *CreateDate;
 @property CGFloat SettlePrice; //订单结算价

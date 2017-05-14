@@ -56,7 +56,7 @@ static CGFloat baseHeightForHeaderView = 150;
 }
 
 - (void)orderDetail {
-    [OrderModel detailForOrderId:_orderId success:^(Order * _Nullable order, NSInteger code) {
+    [OrderModel detailForOrderId:_orderId success:^(Order *order, NSInteger code) {
         _order = order;
         _orderTitle.text = [NSString stringWithFormat:@"%@%@ 一 %@%@",
                             order.TakeoffCityName,
