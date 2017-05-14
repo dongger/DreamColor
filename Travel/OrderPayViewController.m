@@ -9,6 +9,10 @@
 #import "OrderPayViewController.h"
 #import "OrderPayTitleView.h"
 #import "OrderModel.h"
+#import "UIColor+Hex.h"
+#import "NSString+Attributed.h"
+#import "NSDate+ToString.h"
+#import "NSString+ToDate.m"
 
 static CGFloat baseHeightForHeaderView = 150;
 
@@ -19,6 +23,8 @@ static CGFloat baseHeightForHeaderView = 150;
 @property (weak, nonatomic) IBOutlet UILabel *orderTitle;
 @property (weak, nonatomic) IBOutlet UILabel *orderTime;
 @property (weak, nonatomic) IBOutlet OrderPayTitleView *titleView;
+@property (weak, nonatomic) IBOutlet UILabel *totalPrice;
+@property (weak, nonatomic) IBOutlet UILabel *payTime;
 
 @end
 
@@ -52,7 +58,12 @@ static CGFloat baseHeightForHeaderView = 150;
                             order.TakeoffAirportName,
                             order.ArriveCityName,
                             order.ArriveAirportName];
+        _orderTime.text = [NSString stringWithFormat:@"%@ 起飞", order.TakeOffDate];
         [_titleView loadInfo:_order];
+        NSString *totalPriceString = [NSString stringWithFormat:@"￥%0.0f", _order.SettlePrice];
+        _totalPrice.attributedText = [totalPriceString setColor:_totalPrice.textColor font:[UIFont systemFontOfSize:12] forSubString:@"￥"];
+        NSDate *date = [_order.LastPayTime convertWith:@"yyyy-MM-dd HH:mm"];
+        _payTime.text =[NSString stringWithFormat:@"为确保出票，请在%@前完成支付", [date convertWith:@"HH:mm"]];
     } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         
     }];
