@@ -23,6 +23,7 @@
 #import "EditPassengerInfoViewController.h"
 #import "BookOrderModel.h"
 #import "CyAlertView.h"
+#import "OrderPayViewController.h"
 
 @interface CreatOrderViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property Cabin *cabin;
@@ -81,14 +82,13 @@
 }
 
 - (IBAction)commit:(id)sender {
-    
-    
     [BookOrderModel bookWithEntity:_bookOrderEntity success:^(NSString * _Nullable orderId, NSInteger code) {
         NSLog(@"%@", orderId);
+         OrderPayViewController *vc = [OrderPayViewController instanceWithOrderId:orderId];
+        [self.navigationController pushViewController:vc animated:YES];
     } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         [CyAlertView message:errorMessage];
     }];
-    
 }
 
 - (IBAction)showDetail:(id)sender {

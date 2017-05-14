@@ -172,6 +172,8 @@
 }
 
 - (IBAction)save:(id)sender {
+    [self.view endEditing:YES];
+
     if (_passenger.Name.length < 1) {
         [CyAlertView message:@"请输入姓名"];
         return;

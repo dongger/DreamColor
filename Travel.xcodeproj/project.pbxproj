@@ -70,6 +70,13 @@
 		0DECEB001EC77988005F1072 /* ASBirthSelectSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEAFF1EC77988005F1072 /* ASBirthSelectSheet.m */; };
 		0DECEB031EC8126A005F1072 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB021EC8126A005F1072 /* NSString+Check.m */; };
 		0DECEB071EC82304005F1072 /* BookOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB061EC82304005F1072 /* BookOrderModel.m */; };
+		0DECEB0A1EC83BD4005F1072 /* OrderPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB091EC83BD4005F1072 /* OrderPayViewController.m */; };
+		0DECEB0E1EC83D55005F1072 /* OrderPayTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB0D1EC83D55005F1072 /* OrderPayTitleView.m */; };
+		0DECEB111EC83FF1005F1072 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB101EC83FF1005F1072 /* Order.m */; };
+		0DECEB141EC841FD005F1072 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB131EC841FD005F1072 /* OrderModel.m */; };
+		0DECEB171EC84F93005F1072 /* OrderFeeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB161EC84F93005F1072 /* OrderFeeDetailCell.m */; };
+		0DECEB1A1EC84FAD005F1072 /* OrderPayPassengerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB191EC84FAD005F1072 /* OrderPayPassengerCell.m */; };
+		0DECEB1D1EC84FD1005F1072 /* OrderPaylinkInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB1C1EC84FD1005F1072 /* OrderPaylinkInfoCell.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
 /* End PBXBuildFile section */
@@ -196,6 +203,20 @@
 		0DECEB021EC8126A005F1072 /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
 		0DECEB051EC82304005F1072 /* BookOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookOrderModel.h; sourceTree = "<group>"; };
 		0DECEB061EC82304005F1072 /* BookOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookOrderModel.m; sourceTree = "<group>"; };
+		0DECEB081EC83BD4005F1072 /* OrderPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPayViewController.h; sourceTree = "<group>"; };
+		0DECEB091EC83BD4005F1072 /* OrderPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayViewController.m; sourceTree = "<group>"; };
+		0DECEB0C1EC83D55005F1072 /* OrderPayTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPayTitleView.h; sourceTree = "<group>"; };
+		0DECEB0D1EC83D55005F1072 /* OrderPayTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayTitleView.m; sourceTree = "<group>"; };
+		0DECEB0F1EC83FF1005F1072 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		0DECEB101EC83FF1005F1072 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		0DECEB121EC841FD005F1072 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		0DECEB131EC841FD005F1072 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		0DECEB151EC84F93005F1072 /* OrderFeeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFeeDetailCell.h; sourceTree = "<group>"; };
+		0DECEB161EC84F93005F1072 /* OrderFeeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFeeDetailCell.m; sourceTree = "<group>"; };
+		0DECEB181EC84FAD005F1072 /* OrderPayPassengerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPayPassengerCell.h; sourceTree = "<group>"; };
+		0DECEB191EC84FAD005F1072 /* OrderPayPassengerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPayPassengerCell.m; sourceTree = "<group>"; };
+		0DECEB1B1EC84FD1005F1072 /* OrderPaylinkInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderPaylinkInfoCell.h; sourceTree = "<group>"; };
+		0DECEB1C1EC84FD1005F1072 /* OrderPaylinkInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderPaylinkInfoCell.m; sourceTree = "<group>"; };
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
@@ -265,6 +286,8 @@
 				0D5636EF1EC6F33F00D6A86B /* CheckPriceResult.m */,
 				0DECEAF31EC74EE6005F1072 /* BookOrderEntity.h */,
 				0DECEAF41EC74EE6005F1072 /* BookOrderEntity.m */,
+				0DECEB0F1EC83FF1005F1072 /* Order.h */,
+				0DECEB101EC83FF1005F1072 /* Order.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -430,6 +453,8 @@
 				0DECEAF11EC720D5005F1072 /* CreatOrderViewController.m */,
 				0DECEAF61EC76DDE005F1072 /* EditPassengerInfoViewController.h */,
 				0DECEAF71EC76DDE005F1072 /* EditPassengerInfoViewController.m */,
+				0DECEB081EC83BD4005F1072 /* OrderPayViewController.h */,
+				0DECEB091EC83BD4005F1072 /* OrderPayViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -445,6 +470,8 @@
 				0D5636EC1EC6F2B500D6A86B /* CheckPriceModel.m */,
 				0DECEB051EC82304005F1072 /* BookOrderModel.h */,
 				0DECEB061EC82304005F1072 /* BookOrderModel.m */,
+				0DECEB121EC841FD005F1072 /* OrderModel.h */,
+				0DECEB131EC841FD005F1072 /* OrderModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -452,19 +479,9 @@
 		0DE81F061EC4ACAC0001782B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DECEB1E1EC85706005F1072 /* Search */,
+				0DECEB0B1EC83D33005F1072 /* OrderPay */,
 				0DECEAD11EC71E32005F1072 /* CreatOrder */,
-				0DE81E9A1EC4ABA50001782B /* CityCollectionCell.h */,
-				0DE81E9B1EC4ABA50001782B /* CityCollectionCell.m */,
-				0DE81E9C1EC4ABA50001782B /* CityMarkCell.h */,
-				0DE81E9D1EC4ABA50001782B /* CityMarkCell.m */,
-				0DE81E9E1EC4ABA50001782B /* DayCell.h */,
-				0DE81E9F1EC4ABA50001782B /* DayCell.m */,
-				0DE81EA71EC4ABA50001782B /* MonthCell.h */,
-				0DE81EA81EC4ABA50001782B /* MonthCell.m */,
-				0DE81F0C1EC4B7740001782B /* FlightInfoCell.h */,
-				0DE81F0D1EC4B7740001782B /* FlightInfoCell.m */,
-				0DE81F1A1EC4CC8E0001782B /* CabinInfoCell.h */,
-				0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -561,6 +578,40 @@
 				0DECEB021EC8126A005F1072 /* NSString+Check.m */,
 			);
 			name = "NSString+Check";
+			sourceTree = "<group>";
+		};
+		0DECEB0B1EC83D33005F1072 /* OrderPay */ = {
+			isa = PBXGroup;
+			children = (
+				0DECEB0C1EC83D55005F1072 /* OrderPayTitleView.h */,
+				0DECEB0D1EC83D55005F1072 /* OrderPayTitleView.m */,
+				0DECEB151EC84F93005F1072 /* OrderFeeDetailCell.h */,
+				0DECEB161EC84F93005F1072 /* OrderFeeDetailCell.m */,
+				0DECEB181EC84FAD005F1072 /* OrderPayPassengerCell.h */,
+				0DECEB191EC84FAD005F1072 /* OrderPayPassengerCell.m */,
+				0DECEB1B1EC84FD1005F1072 /* OrderPaylinkInfoCell.h */,
+				0DECEB1C1EC84FD1005F1072 /* OrderPaylinkInfoCell.m */,
+			);
+			name = OrderPay;
+			sourceTree = "<group>";
+		};
+		0DECEB1E1EC85706005F1072 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0DE81E9A1EC4ABA50001782B /* CityCollectionCell.h */,
+				0DE81E9B1EC4ABA50001782B /* CityCollectionCell.m */,
+				0DE81E9C1EC4ABA50001782B /* CityMarkCell.h */,
+				0DE81E9D1EC4ABA50001782B /* CityMarkCell.m */,
+				0DE81E9E1EC4ABA50001782B /* DayCell.h */,
+				0DE81E9F1EC4ABA50001782B /* DayCell.m */,
+				0DE81EA71EC4ABA50001782B /* MonthCell.h */,
+				0DE81EA81EC4ABA50001782B /* MonthCell.m */,
+				0DE81F0C1EC4B7740001782B /* FlightInfoCell.h */,
+				0DE81F0D1EC4B7740001782B /* FlightInfoCell.m */,
+				0DE81F1A1EC4CC8E0001782B /* CabinInfoCell.h */,
+				0DE81F1B1EC4CC8E0001782B /* CabinInfoCell.m */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		2585498618EDF411453C2678 /* Frameworks */ = {
@@ -736,9 +787,13 @@
 				B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */,
 				0DE81EF01EC4ABA50001782B /* QueryFlightResult.m in Sources */,
 				0DECEAEF1EC71FB4005F1072 /* Book_AddressCell.m in Sources */,
+				0DECEB0E1EC83D55005F1072 /* OrderPayTitleView.m in Sources */,
+				0DECEB171EC84F93005F1072 /* OrderFeeDetailCell.m in Sources */,
 				0DE81F0E1EC4B7740001782B /* FlightInfoCell.m in Sources */,
 				0DE81EDF1EC4ABA50001782B /* LoginTypeController.m in Sources */,
 				0DE81EE71EC4ABA50001782B /* CyAlertView.m in Sources */,
+				0DECEB0A1EC83BD4005F1072 /* OrderPayViewController.m in Sources */,
+				0DECEB111EC83FF1005F1072 /* Order.m in Sources */,
 				0DECEAF81EC76DDE005F1072 /* EditPassengerInfoViewController.m in Sources */,
 				0DE81EDC1EC4ABA50001782B /* CityCollectionCell.m in Sources */,
 				0DE81EED1EC4ABA50001782B /* NetWorkTool.m in Sources */,
@@ -759,6 +814,7 @@
 				0DE81ED61EC4ABA50001782B /* CitiesGroup.m in Sources */,
 				0DECEAD41EC71E87005F1072 /* Book_TitleCell.m in Sources */,
 				0DE81EEC1EC4ABA50001782B /* MBProgressHUD.m in Sources */,
+				0DECEB1A1EC84FAD005F1072 /* OrderPayPassengerCell.m in Sources */,
 				0DE81EE81EC4ABA50001782B /* User.m in Sources */,
 				0DE81ED91EC4ABA50001782B /* CalendarViewController.m in Sources */,
 				0DE81EDB1EC4ABA50001782B /* CitiesViewController.m in Sources */,
@@ -779,6 +835,8 @@
 				0DE81EE61EC4ABA50001782B /* SendCodeModel.m in Sources */,
 				0DE81EE41EC4ABA50001782B /* QueryFlightModel.m in Sources */,
 				0DECEAEC1EC71FA1005F1072 /* Book_NeedAddressCell.m in Sources */,
+				0DECEB1D1EC84FD1005F1072 /* OrderPaylinkInfoCell.m in Sources */,
+				0DECEB141EC841FD005F1072 /* OrderModel.m in Sources */,
 				0DE81EEA1EC4ABA50001782B /* Insurances.m in Sources */,
 				0DE81EE21EC4ABA50001782B /* MeViewController.m in Sources */,
 				0DE81F151EC4B9150001782B /* NSString+ToDate.m in Sources */,

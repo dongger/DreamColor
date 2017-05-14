@@ -27,4 +27,5 @@ static NSString *__checkPrice = @"CheckPrice.cc"; //价格验证
 
 static NSString *__bookOrder = @"BookOrder.cc"; //创建订单
 
+static NSString *__orderDetail = @"OrderDetail.cc"; //订单详情
 
