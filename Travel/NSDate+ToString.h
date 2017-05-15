@@ -10,4 +10,5 @@
 
 @interface NSDate (ToString)
 - (NSString *)convertWith:(NSString *)format;
+- (NSString *)dayName;
 @end

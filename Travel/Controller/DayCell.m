@@ -8,9 +8,14 @@
 
 #import "DayCell.h"
 #import "UIColor+Hex.h"
+#import "NSObject+Cache.h"
+#import "NSDate+ToString.h"
+
+static NSString *searchDateKey = @"kSearchDate";
 
 @interface DayCell ()
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIView *mark;
 @end
 
 @implementation DayCell
@@ -18,6 +23,7 @@
 - (void)loadInfo: (NSString *)info {
     self.infoLabel.text = info;
     self.infoLabel.textColor = [UIColor colorWithHexString:@"#bbbbbb"];
+    [_mark setHidden:YES];
 }
 
 - (void)loadInfo: (NSInteger)day date: (NSDate *)date {
@@ -57,6 +63,13 @@
     NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
     //转为现在时间
     _cellDate = [[NSDate alloc] initWithTimeInterval:interval sinceDate:_cellDate];
+    
+    NSString *selectDate = [NSUserDefaults.standardUserDefaults valueForKey:searchDateKey];
+    if ([selectDate isEqualToString:[_cellDate convertWith:@"yyyy-MM-dd"]]) {
+        [_mark setHidden:NO];
+    } else {
+        [_mark setHidden:YES];
+    }
     NSDate *lastDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*180];
     if ([[_cellDate earlierDate:[NSDate date]] isEqualToDate:_cellDate] || [[_cellDate laterDate:lastDate] isEqualToDate:_cellDate]) {
         return NO;

@@ -10,6 +10,7 @@
 #import "MonthCell.h"
 
 @interface CalendarViewController ()
+@property NSDate *selectedDate;
 @property NSDate *startDate;
 @property NSDate *endDate;
 @end
@@ -54,18 +55,10 @@
 
 - (NSInteger)monthForDate: (NSDate *)date {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    
-    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
-    
+    unsigned unitFlags = NSCalendarUnitMonth;
     NSDateComponents *components = [calendar components:unitFlags fromDate:date];
-    
-    NSInteger iCurYear = [components year];  //当前的年份
-    
-    NSInteger iCurMonth = [components month];  //当前的月份
-    
-    NSInteger iCurDay = [components day];  // 当前的号数
-
-    return iCurMonth;
+    NSInteger month = [components month];  //当前的月份
+    return month;
 }
 
 #pragma mark - Table view data source
@@ -93,22 +86,18 @@
     label.font = [UIFont systemFontOfSize:13];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
-    
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth;
     NSDateComponents *components = [calendar components:unitFlags fromDate:[self cellDateForIndexPath:section]];
-    
-    NSInteger iCurYear = [components year];  //当前的年份
-    
-    NSInteger iCurMonth = [components month];  //当前的月份
-    
-    label.text =  [NSString stringWithFormat:@"%ld-%ld",(long)iCurYear,(long)iCurMonth];
-
+    NSInteger year = [components year];  //当前的年份
+    NSInteger month = [components month];  //当前的月份
+    label.text =  [NSString stringWithFormat:@"%ld-%ld",(long)year,(long)month];
     return label;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [MonthCell heightOfDate:[self cellDateForIndexPath:indexPath.section]];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 35;
 }

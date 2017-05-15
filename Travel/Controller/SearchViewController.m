@@ -15,6 +15,12 @@
 #import "QueryFlightModel.h"
 #import "SearchResultViewController.h"
 #import "NSDate+ToString.h"
+#import "NSObject+Cache.h"
+#import "NSString+ToDate.h"
+#import "NSString+Attributed.h"
+#import "UIColor+Hex.h"
+
+static NSString *searchDateKey = @"kSearchDate";
 
 @interface SearchViewController ()
 @property City *startCity;
@@ -32,19 +38,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initUI];
+}
+
+- (void)initUI {
+    [self.navigationController.navigationBar setHidden:YES];
     _bookType = 1;
     _travelType = 1;
-    [self.navigationController.navigationBar setHidden:YES];
+    //默认搜索时间明天
+    [self setDate:[[NSDate date] dateByAddingTimeInterval:60*60*24]];
+    //设置默认搜索城市
+    NSArray *history = [City getArrayFromKey:@"kCitiesHistory"];
+    if (history.count > 1) {
+        _startCity = history[history.count - 1];
+        _destinationCity = history[history.count - 2];
+        [_startCityButton setTitle: _startCity.Name forState:UIControlStateNormal];
+        [_destinationCityButton setTitle: _destinationCity.Name forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)pickDate:(id)sender {
     CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
-        NSLog(@"%@", [date description]);
-        _searchDate = date;
-        _dateLabel.text = [_searchDate convertWith:@"yyyy-MM-dd"];
-
+        [self setDate:date];
     }];
     [self.navigationController pushViewController:calendar animated:YES];
+}
+
+- (void)setDate: (NSDate *)date {
+    _searchDate = date;
+    [[NSUserDefaults standardUserDefaults] setObject:[_searchDate convertWith:@"yyyy-MM-dd"] forKey:searchDateKey];
+    NSString *tomorrow = [[[NSDate date] dateByAddingTimeInterval:60*60*24] convertWith:@"yyyy-MM-dd"];
+    NSString *searchDateString = [_searchDate convertWith:@"yyyy-MM-dd"];
+    if ([tomorrow isEqualToString:searchDateString]) {
+        NSString* dateString = [NSString stringWithFormat:@"%@  %@",searchDateString,@"明天"];
+        _dateLabel.attributedText = [dateString setColor:[UIColor colorWithHexString:@"bbbbbb"] font:[UIFont systemFontOfSize:12] forSubString:@"明天"];
+    } else {
+        _dateLabel.text = searchDateString;
+    }
 }
 
 - (IBAction)pickStartCity:(id)sender {
@@ -67,6 +97,18 @@
     [self.navigationController pushViewController:citiesVC animated:YES];
 }
 - (IBAction)queryFlight:(id)sender {
+    if (_startCity == nil) {
+        [CyAlertView message:@"请选择出发城市"];
+        return;
+    }
+    if (_destinationCity == nil) {
+        [CyAlertView message:@"请选择到达城市"];
+        return;
+    }
+    if (_searchDate == nil) {
+        [CyAlertView message:@"请选择出发日期"];
+        return;
+    }
     SearchResultViewController *vc = [SearchResultViewController instance];
     vc.startCity = _startCity;
     vc.destinationCity = _destinationCity;

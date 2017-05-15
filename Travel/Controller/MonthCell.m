@@ -95,7 +95,6 @@
     if ([self needShowDay:indexPath]) {
         DayCell *cell = (DayCell *)[collectionView cellForItemAtIndexPath:indexPath];
         if ([cell isEnble:[self day:indexPath] date:_startDate]) {
-            [CyAlertView message:[cell.cellDate description]];
             self.calendar.selectBlock(cell.cellDate);
             [self.calendar.navigationController popViewControllerAnimated:YES];
         }

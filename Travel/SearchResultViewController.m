@@ -12,12 +12,18 @@
 #import "FiltrateViewController.h"
 #import "FiltrateViewController.h"
 #import "NSObject+Cache.h"
+#import "CalendarViewController.h"
+#import "NSDate+ToString.h"
+#import "NSString+ToDate.h"
+#import "CyAlertView.h"
 
 static NSString *saveKey = @"kQueryFlightResult";
+static NSString *searchDateKey = @"kSearchDate";
 
 @interface SearchResultViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSInteger selectedRow;
+@property (weak, nonatomic) IBOutlet UIButton *pickDateButton;
 
 @end
 
@@ -31,13 +37,77 @@ static NSString *saveKey = @"kQueryFlightResult";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _selectedRow = -1;
-    [self fetchData];
+    [self setUp];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self filtrate];
+}
+
+- (void)setUp {
+    _selectedRow = -1;
+    [self setDate:_searchDate];
+    [self fetchData];
+}
+
+- (IBAction)pickDate:(id)sender {
+    CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
+        _searchDate = date;
+        [self setDate:date];
+    }];
+    [self.navigationController pushViewController:calendar animated:YES];
+}
+
+- (void)setDate: (NSDate *)date {
+    [[NSUserDefaults standardUserDefaults] setObject:[date convertWith:@"yyyy-MM-dd"] forKey:searchDateKey];
+    NSString *dateString = [_searchDate convertWith:@"MM-dd"];
+    [_pickDateButton setTitle:[NSString stringWithFormat:@" %@ %@",dateString,[date dayName]] forState:UIControlStateNormal];
+}
+
+- (BOOL)isEnble: (NSDate *)date  {
+    NSDate *lastDate = [[NSDate date] dateByAddingTimeInterval:60*60*24*180];
+    if ([[date earlierDate:[NSDate date]] isEqualToDate:date] || [[date laterDate:lastDate] isEqualToDate:date]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (IBAction)before:(id)sender {
+    NSDate *newDate = [_searchDate dateByAddingTimeInterval:-60*60*24];
+    newDate = [self GMTOffset:newDate];
+    if ([self isEnble:newDate]) {
+        _searchDate = [_searchDate dateByAddingTimeInterval:-60*60*24];
+        [self setUp];
+    } else {
+        [CyAlertView message:@"不可以查询今天以前的航班"];
+    }
+}
+- (IBAction)after:(id)sender {
+    NSDate *newDate = [_searchDate dateByAddingTimeInterval:60*60*24];
+    newDate = [self GMTOffset:newDate];
+    if ([self isEnble:newDate]) {
+        _searchDate = [_searchDate dateByAddingTimeInterval:60*60*24];
+        [self setUp];
+    } else {
+        [CyAlertView message:@"不可以查询180天以后的航班"];
+    }
+}
+
+- (NSDate *)GMTOffset: (NSDate *)date {
+    //设置源日期时区
+    NSTimeZone* sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT
+    //设置转换后的目标日期时区
+    NSTimeZone* destinationTimeZone = [NSTimeZone localTimeZone];
+    //得到源日期与世界标准时间的偏移量
+    NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:_searchDate];
+    //目标日期与本地时区的偏移量
+    NSInteger destinationGMTOffset = [destinationTimeZone secondsFromGMTForDate:_searchDate];
+    //得到时间偏移量的差值
+    NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
+    //转为现在时间
+    return [[NSDate alloc] initWithTimeInterval:interval sinceDate:date];
 }
 
 - (void)filtrate {
