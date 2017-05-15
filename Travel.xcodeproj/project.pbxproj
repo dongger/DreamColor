@@ -158,8 +158,8 @@
 		0DE81EC71EC4ABA50001782B /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		0DE81EC81EC4ABA50001782B /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		0DE81EC91EC4ABA50001782B /* URLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLConfig.h; sourceTree = "<group>"; };
-		0DE81ECA1EC4ABA50001782B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = ../UserModel.h; sourceTree = "<group>"; };
-		0DE81ECB1EC4ABA50001782B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = ../UserModel.m; sourceTree = "<group>"; };
+		0DE81ECA1EC4ABA50001782B /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		0DE81ECB1EC4ABA50001782B /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		0DE81ECE1EC4ABA50001782B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DE81ED01EC4ABA50001782B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DE81ED11EC4ABA50001782B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -283,8 +283,6 @@
 		0DE81EB11EC4ABA50001782B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				0DE81ECA1EC4ABA50001782B /* UserModel.h */,
-				0DE81ECB1EC4ABA50001782B /* UserModel.m */,
 				0DE81EC21EC4ABA50001782B /* QueryFlightResult.h */,
 				0DE81EC31EC4ABA50001782B /* QueryFlightResult.m */,
 				0DE81EC01EC4ABA50001782B /* Passenger.h */,
@@ -485,6 +483,8 @@
 		0DE81F051EC4ACA70001782B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DE81ECA1EC4ABA50001782B /* UserModel.h */,
+				0DE81ECB1EC4ABA50001782B /* UserModel.m */,
 				0DE81E961EC4ABA50001782B /* CitiesModel.h */,
 				0DE81E971EC4ABA50001782B /* CitiesModel.m */,
 				0DE81EA91EC4ABA50001782B /* QueryFlightModel.h */,

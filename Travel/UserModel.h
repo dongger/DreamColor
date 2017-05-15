@@ -13,8 +13,13 @@
 
 @interface UserModel : NSObject
 
+//个人用户
 + (void)login:(NSDictionary*)parameters
       success:(void(^)(User* user))successBlock
       failure:(void(^)(NSString * errorMessage))failueBlock;
 
+//企业用户
++ (void)enterpriseLogin:(NSDictionary*)parameters
+                success:(void(^)(User* user))successBlock
+                failure:(void(^)(NSString * errorMessage))failueBlock;
 @end

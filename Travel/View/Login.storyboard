@@ -49,19 +49,19 @@
                                 <rect key="frame" x="23" y="119" width="319" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-jK-UyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="59"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-jK-UyR">
+                                        <rect key="frame" x="25" y="19" width="94" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="快捷登录">
+                                        <state key="normal" title="快捷登录" image="select_on">
                                             <color key="titleColor" red="0.32156862749999998" green="0.52156862749999999" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-Vx-Gyt">
-                                        <rect key="frame" x="162" y="0.0" width="143" height="59"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-Vx-Gyt">
+                                        <rect key="frame" x="168" y="19" width="131" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="动态密码登录">
+                                        <state key="normal" title="动态密码登录" image="select_on">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -138,7 +138,7 @@
         <scene sceneID="po3-my-e1U">
             <objects>
                 <navigationController id="rgt-8A-10M" customClass="RTRootNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dBp-69-0mT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dBp-69-0mT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -207,4 +207,7 @@
             <point key="canvasLocation" x="-861.60000000000002" y="-14.842578710644679"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="select_on" width="20" height="20"/>
+    </resources>
 </document>

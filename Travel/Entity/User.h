@@ -11,7 +11,7 @@
 @interface User : NSObject
 
 //@property UInt64 UserID;
-@property NSInteger Type;
+@property NSInteger Type; //用户类型 1:公务卡企业用户 2:预算单位企业用户 3:集团单位企业用户 4:个人用户
 @property NSString *Session;
 
 @property NSString *KfPhone;
