@@ -8,7 +8,8 @@
 
 // 网络请求地址
 
-static NSString *baseUrl = @"http://app.mifo36.com/";
+//static NSString *baseUrl = @"http://app.mifo36.com/";
+static NSString *baseUrl = @"http://testpay.720u.com:7037/";
 
 
 
