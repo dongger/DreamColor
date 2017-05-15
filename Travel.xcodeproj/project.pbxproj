@@ -84,6 +84,7 @@
 		0DECEB311EC8C0A6005F1072 /* OrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DECEB301EC8C0A6005F1072 /* OrderDetailViewController.m */; };
 		8BCECEE2EA28EC05789D2D5E /* libPods-Travel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */; };
 		B555B6171EC572B900BD1A5F /* FiltrateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6161EC572B900BD1A5F /* FiltrateViewController.m */; };
+		B555B61A1EC99E5100BD1A5F /* InsurancesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B555B6191EC99E5100BD1A5F /* InsurancesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,6 +236,8 @@
 		B555B5801EC0980700BD1A5F /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B555B6151EC572B900BD1A5F /* FiltrateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltrateViewController.h; sourceTree = "<group>"; };
 		B555B6161EC572B900BD1A5F /* FiltrateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltrateViewController.m; sourceTree = "<group>"; };
+		B555B6181EC99E5100BD1A5F /* InsurancesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsurancesViewController.h; sourceTree = "<group>"; };
+		B555B6191EC99E5100BD1A5F /* InsurancesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsurancesViewController.m; sourceTree = "<group>"; };
 		BEBD91E9151B5F35DB40EC08 /* libPods-Travel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Travel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEAAD41348E26170B3E684 /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		E0D406C9B14C21ABCA87EBF8 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -473,6 +476,8 @@
 				0DECEAF71EC76DDE005F1072 /* EditPassengerInfoViewController.m */,
 				0DECEB081EC83BD4005F1072 /* OrderPayViewController.h */,
 				0DECEB091EC83BD4005F1072 /* OrderPayViewController.m */,
+				B555B6181EC99E5100BD1A5F /* InsurancesViewController.h */,
+				B555B6191EC99E5100BD1A5F /* InsurancesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -862,6 +867,7 @@
 				0DE81EE31EC4ABA50001782B /* MonthCell.m in Sources */,
 				0D5636ED1EC6F2B500D6A86B /* CheckPriceModel.m in Sources */,
 				0DE81ED61EC4ABA50001782B /* CitiesGroup.m in Sources */,
+				B555B61A1EC99E5100BD1A5F /* InsurancesViewController.m in Sources */,
 				0DECEAD41EC71E87005F1072 /* Book_TitleCell.m in Sources */,
 				0DE81EEC1EC4ABA50001782B /* MBProgressHUD.m in Sources */,
 				0DECEB1A1EC84FAD005F1072 /* OrderPayPassengerCell.m in Sources */,

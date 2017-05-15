@@ -24,11 +24,11 @@
       Insurances: (NSArray *)InsurancesArray {
     for (Insurances *insurance in InsurancesArray) {
         if (insurance.ID == InsKey) {
-            _content.text = [NSString stringWithFormat:@"%@  %ld",insurance.Name, (long)insurance.Price];
+            _content.text = [NSString stringWithFormat:@"%@",insurance.Name];
             return;
         }
     }
-    _content.text = @"无";
+    _content.text = @"未购买";
 }
 
 @end

@@ -24,6 +24,7 @@
 #import "BookOrderModel.h"
 #import "CyAlertView.h"
 #import "OrderPayViewController.h"
+#import "InsurancesViewController.h"
 
 @interface CreatOrderViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 @property Cabin *cabin;
@@ -50,6 +51,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)setUpData {
@@ -94,6 +100,15 @@
         [CyAlertView message:@"请填写联系人手机号"];
         return;
     }
+    
+    //强制购买保险(1:强制，0: 不强制)，为 1 的情况下，保险 不能选择为不购买
+    if (_checkResult.Force == 1) {
+        if (_bookOrderEntity.InsKey < 1) {
+            [CyAlertView message:@"请购买保险"];
+            return;
+        }
+    }
+    
     [BookOrderModel bookWithEntity:_bookOrderEntity success:^(NSString * _Nullable orderId, NSInteger code) {
         NSLog(@"%@", orderId);
          OrderPayViewController *vc = [OrderPayViewController instanceWithOrderId:orderId];
@@ -269,7 +284,12 @@
         EditPassengerInfoViewController *vc = [EditPassengerInfoViewController instanceWithPassenger:nil creatOrderVC:self];
         [self.navigationController pushViewController:vc animated:YES];
     } else if ([cell isKindOfClass:[Book_InsurancesCell class]]) {
-        
+        if (_checkResult.Insurances.count < 1) {
+            [CyAlertView message:@"无可购买保险"];
+        } else {
+            InsurancesViewController *insurancesVC = [InsurancesViewController instanceWithResult:_checkResult selectedID:_bookOrderEntity];
+            [self.navigationController pushViewController:insurancesVC animated:YES];
+        }
     } else if ([cell isKindOfClass:[Book_AddressCell class]]) {
         
     }

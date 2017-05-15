@@ -15,6 +15,8 @@
 #import "NSString+ToDate.m"
 #import "PayModel.h"
 #import "CyAlertView.h"
+#import <RTRootNavigationController.h>
+#import "SearchResultViewController.h"
 
 static CGFloat baseHeightForHeaderView = 150;
 
@@ -53,6 +55,25 @@ static CGFloat baseHeightForHeaderView = 150;
     CGFloat newHeight = baseHeightForHeaderView;
     view.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, newHeight);
     self.tableView.tableHeaderView = view;
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
+    [backButton setImage:[UIImage imageNamed:@"back_arrow_white"] forState:UIControlStateNormal];
+    [backButton setContentEdgeInsets:UIEdgeInsetsMake(0, -40, 0, 0)];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    [self.navigationItem setLeftBarButtonItem:item];
+}
+
+- (void)back {
+    if (self.rt_navigationController.rt_viewControllers.count > 1) {
+        UIViewController *vc = self.rt_navigationController.rt_viewControllers[self.rt_navigationController.rt_viewControllers.count - 2];
+        if ([vc isKindOfClass:[SearchResultViewController class]]) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        } else {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)orderDetail {
@@ -68,7 +89,7 @@ static CGFloat baseHeightForHeaderView = 150;
         NSString *totalPriceString = [NSString stringWithFormat:@"￥%0.0f", _order.SettlePrice];
         _totalPrice.attributedText = [totalPriceString setColor:_totalPrice.textColor font:[UIFont systemFontOfSize:12] forSubString:@"￥"];
         NSDate *date = [_order.LastPayTime convertWith:@"yyyy-MM-dd HH:mm"];
-        _payTime.text =[NSString stringWithFormat:@"为确保出票，请在%@前完成支付", [date convertWith:@"HH:mm"]];
+        _payTime.text =[NSString stringWithFormat:@"请在%@前完成支付", [date convertWith:@"HH:mm"]];
     } failure:^(NSString * _Nullable errorMessage, NSInteger code) {
         
     }];
