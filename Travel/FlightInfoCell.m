@@ -38,7 +38,7 @@
     _flight = flight;
     _startTime.text = [[flight.TakeOffDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"HH:MM"];
     _endTime.text = [[flight.ArrivalDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"HH:MM"];
-    NSString *moneyString = [NSString stringWithFormat:@"￥ %.0f元",flight.LowestPrice];
+    NSString *moneyString = [NSString stringWithFormat:@"￥%.0f",flight.LowestPrice];
     _money.attributedText = [moneyString setColor:_money.textColor font: [UIFont systemFontOfSize:10] forSubString:@"￥"];
     _startPlace.text = [NSString stringWithFormat:@"%@ %@", flight.TakeoffAirportName, flight.TakeoffTerm];
     _endPlace.text = [NSString stringWithFormat:@"%@ %@", flight.ArriveAirportName, flight.ArrivalTerm];
@@ -50,6 +50,11 @@
         self.backgroundColor = [UIColor colorWithHexString:@"#E5F6FF"];
     } else {
         self.backgroundColor = [UIColor whiteColor];
+    }
+    if ([[[flight.TakeOffDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"dd"] isEqualToString:[[flight.ArrivalDate convertWith:@"yyyy-MM-dd HH:mm"] convertWith:@"dd"]]) {
+        [_moreDayMark setHidden:YES];
+    } else {
+        [_moreDayMark setHidden:NO];
     }
     [_tableView reloadData];
 }

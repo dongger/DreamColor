@@ -24,6 +24,9 @@ static NSString *searchDateKey = @"kSearchDate";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSInteger selectedRow;
 @property (weak, nonatomic) IBOutlet UIButton *pickDateButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeButton;
+@property (weak, nonatomic) IBOutlet UIButton *priceButton;
+@property (weak, nonatomic) IBOutlet UIButton *filtrateButton;
 
 @end
 
@@ -54,7 +57,7 @@ static NSString *searchDateKey = @"kSearchDate";
 - (IBAction)pickDate:(id)sender {
     CalendarViewController *calendar = [CalendarViewController instance:^(NSDate * _Nullable date) {
         _searchDate = date;
-        [self setDate:date];
+        [self setUp];
     }];
     [self.navigationController pushViewController:calendar animated:YES];
 }
@@ -112,6 +115,11 @@ static NSString *searchDateKey = @"kSearchDate";
 
 - (void)filtrate {
     if (_result != nil && _selectedFiltrateArray.count == 3) {
+        if ([_selectedFiltrateArray[0] count] == 0 && [_selectedFiltrateArray[1] count] == 0 && [_selectedFiltrateArray[2] count] == 0) {
+            _filtrateButton.selected = NO;
+        } else {
+            _filtrateButton.selected = YES;
+        }
         [self getCache];
         NSMutableArray *flights = [[NSMutableArray alloc] init];
         for (Flight *flight in _result.Flights) {
@@ -191,6 +199,8 @@ static NSString *searchDateKey = @"kSearchDate";
 }
 
 - (IBAction)sortedByTakeOffDate {
+    _priceButton.selected = NO;
+    _timeButton.selected = YES;
     _result.Flights = [_result.Flights sortedArrayUsingComparator:^NSComparisonResult(Flight * _Nonnull obj1, Flight *  _Nonnull obj2) {
         return [obj1.TakeOffDate compare:obj2.TakeOffDate];
     }];
@@ -199,6 +209,8 @@ static NSString *searchDateKey = @"kSearchDate";
 }
 
 - (IBAction)sortedByPrice {
+    _priceButton.selected = YES;
+    _timeButton.selected = NO;
     _result.Flights = [_result.Flights sortedArrayUsingComparator:^NSComparisonResult(Flight * _Nonnull obj1, Flight *  _Nonnull obj2) {
         return [@(obj1.LowestPrice) compare: @(obj2.LowestPrice)];
     }];

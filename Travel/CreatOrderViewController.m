@@ -82,6 +82,18 @@
 }
 
 - (IBAction)commit:(id)sender {
+    if (_bookOrderEntity.Passengers.count < 1) {
+        [CyAlertView message:@"请填写乘机人"];
+        return;
+    }
+    if (_bookOrderEntity.LinkName.length < 1) {
+        [CyAlertView message:@"请填写联系人姓名"];
+        return;
+    }
+    if (_bookOrderEntity.LinkPhone.length < 1) {
+        [CyAlertView message:@"请填写联系人手机号"];
+        return;
+    }
     [BookOrderModel bookWithEntity:_bookOrderEntity success:^(NSString * _Nullable orderId, NSInteger code) {
         NSLog(@"%@", orderId);
          OrderPayViewController *vc = [OrderPayViewController instanceWithOrderId:orderId];

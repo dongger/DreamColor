@@ -61,9 +61,9 @@
        selected: (BOOL) selected {
     UIImageView *imageView = [cell viewWithTag:998];
     if (selected) {
-        [imageView setImage:[UIImage imageNamed:@"first"]];
+        [imageView setImage:[UIImage imageNamed:@"radio_button_on"]];
     } else {
-        [imageView setImage:nil];
+        [imageView setImage:[UIImage imageNamed:@"radio_button"]];
     }
 }
 
