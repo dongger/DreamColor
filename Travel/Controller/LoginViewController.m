@@ -55,12 +55,9 @@
 
         return;
     }
-    
-    
     NSDictionary *dic = @{@"Account":_phoneTextField.text,
                           @"Password":_passwordTextField.text,
                           @"Type":@(_type)};
-
     if (_type == 1) {
         [UserModel login:dic success:^(User *user) {
             [LoginUser loadInfo:user];

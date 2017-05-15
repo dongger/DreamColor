@@ -19,6 +19,7 @@
 #import "NSString+ToDate.h"
 #import "NSString+Attributed.h"
 #import "UIColor+Hex.h"
+#import "LoginUser.h"
 
 static NSString *searchDateKey = @"kSearchDate";
 
@@ -31,6 +32,8 @@ static NSString *searchDateKey = @"kSearchDate";
 @property (weak, nonatomic) IBOutlet UIButton *startCityButton;
 @property (weak, nonatomic) IBOutlet UIButton *destinationCityButton;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIButton *personalButton;
+@property (weak, nonatomic) IBOutlet UIButton *businessButton;
 
 @end
 
@@ -44,7 +47,7 @@ static NSString *searchDateKey = @"kSearchDate";
 - (void)initUI {
     [self.navigationController.navigationBar setHidden:YES];
     _bookType = 1;
-    _travelType = 1;
+    _travelType = -1;
     //默认搜索时间明天
     [self setDate:[[NSDate date] dateByAddingTimeInterval:60*60*24]];
     //设置默认搜索城市
@@ -96,6 +99,19 @@ static NSString *searchDateKey = @"kSearchDate";
     }];
     [self.navigationController pushViewController:citiesVC animated:YES];
 }
+
+- (IBAction)business:(UIButton *)sender {
+    _travelType = 1;
+    _businessButton.selected = YES;
+    _personalButton.selected = NO;
+}
+
+- (IBAction)personal:(UIButton *)sender {
+    _travelType = 2;
+    _businessButton.selected = NO;
+    _personalButton.selected = YES;
+}
+
 - (IBAction)queryFlight:(id)sender {
     if (_startCity == nil) {
         [CyAlertView message:@"请选择出发城市"];
@@ -107,6 +123,10 @@ static NSString *searchDateKey = @"kSearchDate";
     }
     if (_searchDate == nil) {
         [CyAlertView message:@"请选择出发日期"];
+        return;
+    }
+    if (LoginUser.share.Type != 4 && _travelType < 0) {
+        [CyAlertView message:@"请选择出行方式"];
         return;
     }
     SearchResultViewController *vc = [SearchResultViewController instance];
